@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  
+  {%- include head.html -%}
+
+  {%- include background.html -%}
+  
+  <body class="{% if page.layout == 'home' %} home{% endif %}{% if page.layout == 'post' %} blog{% endif %}">
+    
+    {%- include preloader.html -%}
+
+    <!-- Container -->
+    <div class="container">
+      
+      {%- include header.html -%}
+      
+      <!-- Wrapper -->
+      <div class="wrapper">
+        {{ content }}
+      </div>
+      
+      {%- include footer.html -%}
+    
+      <!-- Lines -->
+      <div class="line top"></div>
+      <div class="line bottom"></div>
+      <div class="line left"></div>
+      <div class="line right"></div>
+    </div>
+
+    {%- include scripts.html -%}
+
+  </body>
+
+</html>

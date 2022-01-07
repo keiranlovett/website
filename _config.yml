@@ -1,0 +1,105 @@
+
+#
+# Jekyll basic configurations
+#
+source:         _website
+destination:    public
+timezone:       America/Los_Angeles
+permalink:      /:title.html
+markdown:       kramdown
+highlighter:    rouge
+
+
+# basic settings
+title: "Keiran Lovett"
+email: "kvclovett@gmail.com"
+description: "I’m Keiran Lovett a passionate Game & Visual Designer with several years of experience, starting from the concept to the final result. I’m based in Hong Kong, currently working on VR & Game Production."
+author: "Admin"
+baseurl: "website/" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+date_format: "%d %B %Y"
+
+# paginations & permalinks
+paginate: 9
+paginate_path: "/blog/page:num/"
+permalink: pretty
+
+# Used by Safari mask-icon, Chrome Web App theme color
+colors:
+  theme:        "#ff00b4"
+  background:   "#fff"
+
+# disqus comments
+disqus_comments: "no" # yes - show disqus comments, no - hide disqus comments
+disqus_shortname: "glitche-jekyll-theme" # read more here https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+
+# Google Analytics tracking code
+google_analytics:
+  enabled:      false
+  id:           UA-xxxxxxx
+  url:          https://www.google-analytics.com/analytics.js
+
+# Site Twitter account handle
+twitter:        keiranlovett
+
+# Twitter Cards large images
+#
+# Use summary card with large image for Twitter Cards, require theme support
+#
+# Default:      true
+tc_large_image: true
+
+# Force UTF-8 encoding
+#
+# Enable this will simply add <meta charset="utf-8"> to the head of your pages
+#
+# Default:      true
+force_utf_8:    true
+
+# formsubmit.io
+#formsubmit_email: "beshleyweb@gmail.com" # sign up on https://formsubmit.io/ and confirm your email
+
+# collections
+collections:
+  - works
+
+# archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive
+    tag: archive
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+# Build settings
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+
+include:        ["_pages"]
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+sass:
+  style: compressed

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<!-- Started -->
+<div class="section started">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="started-content">
+				<div class="h-title glitch-effect" data-text="{{ page.title }}">{{ page.title }}</div>
+				<div class="h-subtitle typing-bread">
+					{% if page.subtitle == '' or page.subtitle == nil %}
+					<p><a href="{{ site.url }}">{{ ui_text.home }}</a> / <a href="{{ page.url }}">{{ page.title }}</a></p>
+					{% else %}
+					<p>{{ page.subtitle }}</p>
+					{% endif %}
+				</div>
+				<span class="typed-bread"></span>
+			</div>
+		</div>
+	</div>
+	{% if page.content != '' %}
+	<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+	{% endif %}
+</div>
+
+<!-- Blog -->
+<div class="section blog">
+	<div class="content">
+		
+		<div class="single-post-text">
+			{{ page.content }}
+		</div>
+
+		<div class="clear"></div>
+	</div>
+</div>

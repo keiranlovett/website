@@ -1,0 +1,17 @@
+# Footer configuration file
+##
+### param "social" - Social Links, icon class name you can find here https://ionicons.com/v2/
+### param "copy" - Copyright text
+
+main:
+  social:
+    - title: "Twitter"
+      icon: "social-twitter"
+      url: "https://twitter.com/keiranlovett"
+    - title: "GitHub"
+      icon: "social-github"
+      url: "https://github.com/keiranlovett"
+    - title: "Linkedin"
+      icon: "social-linkedin"
+      url: "https://hk.linkedin.com/in/keiranlovett"
+  copy: "© 2022 Keiran Lovett. All rights reserved."

@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<!-- Started -->
+<div class="section started">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="started-content">
+				<div class="h-title glitch-effect" data-text="{{ ui_text.archive }}: {{ page.title }}">{{ ui_text.archive }}: {{ page.title }}</div>
+				<div class="h-subtitle typing-bread">
+					<p><a href="{{ site.url }}">{{ ui_text.home }}</a> / <a href="{{ page.url }}">{{ page.title }}</a></p>
+				</div>
+				<span class="typed-bread"></span>
+			</div>
+		</div>
+	</div>
+	<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+</div>
+
+<!-- Blog -->
+<div class="section blog">
+	<div class="content">
+		<div class="box-items post-items">
+			{% for post in page.posts %}
+			<div class="box-item post-item">
+				<div class="image">
+					<a href="{{ post.url }}">
+						{% if post.image != nil %}
+						<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
+						{% endif %}
+						<span class="info">
+							<span class="centrize full-width">
+								<span class="vertical-center">
+									<span class="ion ion-ios-book-outline"></span>
+								</span>
+							</span>
+						</span>
+					</a>
+				</div>
+				<div class="desc">
+					<div class="date">{{ post.date | date: site.date_format }}</div>
+					<!--<div class="categories">{{ post.categories | join: ", " }}</div>-->
+					<a href="{{ post.url }}" class="name">{{ post.title }}</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+
+		<div class="clear"></div>
+	</div>
+</div>

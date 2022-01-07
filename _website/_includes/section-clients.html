@@ -1,0 +1,31 @@
+{% assign content = site.data.content['clients'] %}
+
+<!-- Clients -->
+<div class="section clients">
+	<div class="content">
+		{{ if content.title != '' }}
+		<div class="title">
+			<div class="title_inner">{{ content.title }}</div>
+		</div>
+		{{ endif }}
+		<div class="box-items">
+			{% for item in content.items %}
+			<div class="box-item">
+				<div class="image">
+					<a target="_blank" href="{{ item.url }}">
+						<img src="{{ item.image | relative_url }}" alt="" />
+						<span class="info">
+							<span class="centrize full-width">
+								<span class="vertical-center">
+									<span class="ion ion-link"></span>
+								</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+{% assign footer = site.data.footer['main'] %}
+
+<!-- Footer -->
+<footer>
+	<div class="soc">
+	  {% for link in footer.social %}
+	  <a target="_blank" href="{{ link.url }}" title="{{ link.title }}"><span class="ion ion-{{ link.icon }}"></span></a>
+	  {% endfor %}
+	</div>
+	<div class="copy">{{ footer.copy }}</div>
+	<div class="clr"></div>
+</footer>

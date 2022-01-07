@@ -1,0 +1,10 @@
+# Home content configuration file
+##
+### here you can find all content for home page
+
+### Started
+started:
+  title: "Keiran Lovett"
+  typed:
+    - "Games and VR Producer."
+    - "Based in Hong Kong."
