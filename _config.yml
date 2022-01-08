@@ -2,8 +2,8 @@
 #
 # Jekyll basic configurations
 #
-source:         _website
-destination:    ./_site
+source:         
+destination:    _site
 timezone:       America/Los_Angeles
 permalink:      /:title.html
 markdown:       kramdown
