@@ -222,7 +222,7 @@ contacts_info:
   list:
     - label: "Email"
       icon:  "email"
-      value: "<a href="mailto:{{ "kvclovett@gmail.com" | encode_email }}" title="Contact me">Contact me</a>"
+      value: "<a href="mailto:{{ site.email | encode_email }}" title="Contact me">Contact me</a>"
 
 #    - label: "Address"
 #      icon: "ios-location"
