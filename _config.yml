@@ -15,8 +15,8 @@ title: "Keiran Lovett"
 email: "kvclovett@gmail.com"
 description: "I’m Keiran Lovett a passionate Game & Visual Designer with several years of experience, starting from the concept to the final result. I’m based in Hong Kong, currently working on VR & Game Production."
 author: "Admin"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://keiranlovett.com" # the base hostname & protocol for your site, e.g. http://example.com
 date_format: "%d %B %Y"
 
 # paginations & permalinks
