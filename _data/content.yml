@@ -51,6 +51,9 @@ resume:
   experience:
     title: "Experience"
     items:
+      - year: "02/2022 - present"
+        name: "Production Manager, Ubisoft Winnipeg"
+        text: "Managing the design and development for ongoing Ubisoft developments."
       - year: "12/2018 - 12/2021"
         name: "Product Manager, Shadow Factory"
         text: "Managing the design and development of all studio projects to meet client vision."
