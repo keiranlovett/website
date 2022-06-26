@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Keiran Lovett | I’m Keiran Lovett a passionate Game &amp; Visual Designer with several years of experience, starting from the concept to the final result. I’m based in Hong Kong, currently working on VR &amp; Game Production.</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Keiran Lovett" />
+<meta name="author" content="Admin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I’m Keiran Lovett a passionate Game &amp; Visual Designer with several years of experience, starting from the concept to the final result. I’m based in Hong Kong, currently working on VR &amp; Game Production." />
+<meta property="og:description" content="I’m Keiran Lovett a passionate Game &amp; Visual Designer with several years of experience, starting from the concept to the final result. I’m based in Hong Kong, currently working on VR &amp; Game Production." />
+<link rel="canonical" href="https://keiranlovett.com/" />
+<meta property="og:url" content="https://keiranlovett.com/" />
+<meta property="og:site_name" content="Keiran Lovett" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Keiran Lovett" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Admin" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Admin"},"description":"I’m Keiran Lovett a passionate Game &amp; Visual Designer with several years of experience, starting from the concept to the final result. I’m based in Hong Kong, currently working on VR &amp; Game Production.","url":"https://keiranlovett.com/","@type":"WebSite","headline":"Keiran Lovett","name":"Keiran Lovett","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Load Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
+
+  <!-- Load CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/ionicons.css" />
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="/assets/css/animate.css" />
+  <link rel="stylesheet" href="/assets/css/owl.carousel.css" />
+  <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+  
+
+  <!-- Template RTL -->
+  
+
+  <!-- Template Colors -->
+  
+
+  <!-- Template Dark -->
+  
+  <link rel="stylesheet" href="/assets/css/template-dark/dark.css" />
+  
+  
+
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="{ 'assets/images/favicons/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{ 'assets/images/favicons/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{ 'assets/images/favicons/favicon-16x16.png' | relative_url }}">
+  <link rel="manifest" href="{ 'assets/images/favicons/site.webmanifest' | relative_url }}">
+  <link rel="mask-icon" href="{ 'assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff"><link type="application/atom+xml" rel="alternate" href="https://keiranlovett.com/feed.xml" title="Keiran Lovett" /></head>
+
+
+
+
+<script>
+    var imageurl = "/assets/images/background.jpg";
+</script>
+
+<canvas id="webgl"></canvas>
+
+<script type="x-shader/x-fragment" id="fragmentShader">
+#define TWO_PI 6.2831853072
+#define PI 3.14159265359
+
+precision highp float;
+
+uniform float globaltime;
+uniform vec2 resolution;
+uniform float aspect;
+uniform float scroll;
+uniform float velocity;
+uniform sampler2D texture;
+
+const float timescale = 0.05;
+const float twist = 1.0;
+
+vec2 rotate(vec2 v, float angle) {
+    float c = cos(angle);
+    float s = sin(angle);
+    return v * mat2(c, -s, s, c);
+}
+
+float nsin(float value) {
+    return sin(value * TWO_PI) * 0.5 + 0.5;
+}
+
+void main(void) {
+    float time = globaltime * timescale;
+    vec2 center = vec2(sin(TWO_PI * time * 0.2), cos(TWO_PI * time * 0.2)) * nsin(time * 0.3) * 0.5;
+    vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5 - center) * vec2(aspect, 1.0);
+    float len = 1.0 - length(tx);
+    float zoom = 1.0 + scroll - len * 3.0 * (1.0 - scroll) + len * velocity * 2.0;
+
+    vec4 imgColor = texture2D(
+            texture,
+            rotate(
+                    (tx + center) * vec2(1.0, -1.0) * zoom,
+                    twist * TWO_PI * nsin(len + time) * scroll + time
+            ) + 0.5
+    );
+
+    gl_FragColor = imgColor;
+}
+</script>
+
+<body class=" home">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="centrize full-width">
+    <div class="vertical-center">
+      <div class="pre-inner">
+        <div class="load typing-load"><p>loading...</p></div>
+        <span class="typed-load"></span>
+      </div>
+    </div>
+  </div>
+</div><!-- Container -->
+    <div class="container">
+
+
+
+<!-- Header -->
+<header>
+	<div class="head-top">
+		
+		
+		<a href="#" class="menu-btn"><span></span></a>
+
+		<div class="top-menu">
+			<ul>
+				
+				
+				<li class="active">
+					<a href="/" class="lnk">Home</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</header><!-- Wrapper -->
+      <div class="wrapper">
+        
+
+<!-- Started -->
+<div class="section started">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="started-content">
+				
+				<div class="h-title glitch-effect" data-text="Keiran Lovett">Keiran Lovett</div>
+				
+				<div class="h-subtitle typing-subtitle">
+					
+					<p>Games and VR Producer.</p>
+					
+					<p>Based in Hong Kong.</p>
+					
+				</div>
+				<span class="h-subtitle typed-subtitle"></span>
+			</div>
+		</div>
+	</div>
+	<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+</div>
+
+
+
+
+
+<!-- About -->
+<div class="section about">
+	<div class="content">
+		
+		<div class="title">
+			<div class="title_inner">About Me</div>
+		</div>
+		
+
+		
+		<div class="image">
+			<img src="/assets/images/profile.jpg" alt="My Profile" />
+		</div>
+		
+
+		<div class="desc">
+			 <p> <strong>G'day! I’m Keiran Lovett.</strong><br>Based in Canada, and working in Game Production at Ubisoft. Over the last decade I've shipped games and projects across various roles (producer, game designer, developer). </p> 
+
+			<div class="info-list">
+				<ul>
+					
+				</ul>
+			</div>
+
+			<div class="button-list">
+				<ul>
+					<li>
+						<div class="bts"><a target="_blank" href="/assets/files/keiranlovett_cv_2022.pdf" class="btn fill" data-text="Download CV">Download CV</a></div>
+					</li>
+					
+					
+						<li><a target="_blank" href="https://twitter.com/keiranlovett" title="Twitter" class="h-subtitle"><span class="ion ion-social-twitter"></span></a></li>
+					
+						<li><a target="_blank" href="https://github.com/keiranlovett" title="GitHub" class="h-subtitle"><span class="ion ion-social-github"></span></a></li>
+					
+						<li><a target="_blank" href="https://hk.linkedin.com/in/keiranlovett" title="Linkedin" class="h-subtitle"><span class="ion ion-social-linkedin"></span></a></li>
+					
+			
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+
+<!-- Showreel -->
+<div class="section about">
+	<div class="content">
+		
+		<div class="title">
+			<div class="title_inner">Showreel</div>
+		</div>
+		
+		
+		
+			<div class="embed-container">
+  <iframe
+      src="https://www.youtube.com/embed/we9rnDoJdKM" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+		
+
+		<div class="clear"></div>
+	</div>
+</div>
+
+
+<!-- Resume -->
+<div class="section resume">
+	<div class="content">
+		<div class="cols">
+			<div class="col col-md">
+				<div class="title">
+					<div class="title_inner">Experience</div>
+				</div>
+				<div class="resume-items">
+					
+					<div class="resume-item active">
+						<div class="date">02/2022 - present</div>
+						<div class="name">Production Manager, Ubisoft Winnipeg</div>
+						<p>
+							Managing the design and development for ongoing Ubisoft developments.
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">12/2018 - 12/2021</div>
+						<div class="name">Senior Product Manager, Shadow Factory</div>
+						<p>
+							Managing the design and development of all studio projects to meet client vision.
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">11/2017 - 12/2018</div>
+						<div class="name">Technical Director, Shadow Factory</div>
+						<p>
+							Developing technical architecture of various studio projects. Setting up studio pipelines.
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">06/2016 - 10/2017</div>
+						<div class="name">Game Developer, Lan Kwai Fong Group</div>
+						<p>
+							Research / Development of new technologyin AR, VR, and mobile platforms. (Unity, Unreal Engine).
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">06/2014 - 03/2016</div>
+						<div class="name">User Interface Designer, Insight Robotics</div>
+						<p>
+							Designing and developing tools for robotics powered early-warning fire detection system and software.
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">11/2012 - 05/2014</div>
+						<div class="name">Game Designer, Frenzoo Limited</div>
+						<p>
+							Developer of popular “MeGirl” IOS / Android mobile games series.
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col col-md">
+				<div class="title">
+					<div class="title_inner">Highlights</div>
+				</div>
+				<div class="resume-items">
+					
+					<div class="resume-item">
+						<div class="date">2020</div>
+						<div class="name">Today At Apple</div>
+						<p>
+							A brief talk on the history and technology of AR, and where its heading.
+						</p>
+					</div>
+					
+					<div class="resume-item">
+						<div class="date">2019</div>
+						<div class="name">Big Indie Pitch - Judge</div>
+						<p>
+							Judging indie developers new games and concepts for Pocket Game Connects
+						</p>
+					</div>
+					
+					<div class="resume-item">
+						<div class="date">2019</div>
+						<div class="name">Game Developers Conference</div>
+						<p>
+							Participating in GDC show floor to showcase the VR game Stupid Cupid
+						</p>
+					</div>
+					
+					<div class="resume-item">
+						<div class="date">2018</div>
+						<div class="name">Roundtable F8</div>
+						<p>
+							Participating in roundtables with Facebook leadership on the future of Augmented Reality.
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Conacts Info -->
+
+<div class="section contacts">
+	<div class="content">
+		
+		<div class="title">
+			<div class="title_inner">Get in Touch</div>
+		</div>
+		
+
+		<div class="service-items">
+			
+			<div class="service-item">
+				<div class="icon"><span class="ion ion-email"></span></div>
+				<div class="name">Email</div>
+				<p>
+					Recruiter reaching out about roles? Student looking for advice or a free protfolio review? Or you simply want to chat? Feel free to <a href='mailto:{{ site.email | encode_email }}' title='Email'>email me!</a>
+				</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+      </div>
+
+<!-- Footer -->
+<footer>
+	<div class="soc">
+	  
+	  <a target="_blank" href="https://twitter.com/keiranlovett" title="Twitter"><span class="ion ion-social-twitter"></span></a>
+	  
+	  <a target="_blank" href="https://github.com/keiranlovett" title="GitHub"><span class="ion ion-social-github"></span></a>
+	  
+	  <a target="_blank" href="https://hk.linkedin.com/in/keiranlovett" title="Linkedin"><span class="ion ion-social-linkedin"></span></a>
+	  
+	</div>
+	<div class="copy">© 2022 Keiran Lovett. All rights reserved.</div>
+	<div class="clr"></div>
+</footer><!-- Lines -->
+      <div class="line top"></div>
+      <div class="line bottom"></div>
+      <div class="line left"></div>
+      <div class="line right"></div>
+    </div><!-- Plugins -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.validate.js"></script>
+<script src="/assets/js/jquery.magnific-popup.js"></script>
+<script src="/assets/js/imagesloaded.pkgd.js"></script>
+<script src="/assets/js/isotope.pkgd.js"></script>
+<script src="/assets/js/owl.carousel.js"></script>
+<script src="/assets/js/regl.min.js"></script>
+<script src="/assets/js/typed.js"></script>
+<script src="/assets/js/rrssb.js"></script>
+<script src="/assets/js/simple-jekyll-search.js"></script>
+<script src="/assets/js/webgl.js"></script>
+
+<!-- Main -->
+<script src="/assets/js/glitche-scripts.js"></script></body>
+
+</html>
