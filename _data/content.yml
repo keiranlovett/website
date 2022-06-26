@@ -226,7 +226,7 @@ contacts_info:
   list:
     - label: "Email"
       icon:  "email"
-      value: "<a href='mailto:{{ site.email | encode_email }}' title='Contact me'>Contact me</a>"
+      value: "Recruiter reaching out about roles? Student looking for advice or a free protfolio review? Or you simply want to chat? Feel free to <a href='mailto:{{ site.email | encode_email }}' title='Email'>email me!</a>"
 
 #    - label: "Address"
 #      icon: "ios-location"
