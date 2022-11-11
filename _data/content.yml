@@ -53,11 +53,11 @@ resume:
     items:
       - year: "02/2022 - present"
         name: "Production Manager, Ubisoft Winnipeg"
-        text: "Managing the design and development for ongoing Ubisoft developments."
+        text: "Building teams for announced and unannounced Ubisoft projects. Point person for Ubisoft studios partnerships."
         
       - year: "12/2018 - 12/2021"
         name: "Senior Product Manager, Shadow Factory"
-        text: "Managing the design and development of all studio projects to meet client vision."
+        text: "Managing the design and development of industry-leading clients (Facebook, Apple, PGM, and more...)."
 
       - year: "11/2017 - 12/2018"
         name: "Technical Director, Shadow Factory"
@@ -69,11 +69,11 @@ resume:
 
       - year: "06/2014 - 03/2016"
         name: "User Interface Designer, Insight Robotics"
-        text: "Designing and developing tools for robotics powered early-warning fire detection system and software."
+        text: "Designing and developing tools for robotics powered, early-warning fire detection system and software."
         
       - year: "11/2012 - 05/2014"
         name: "Game Designer, Frenzoo Limited"
-        text: "Developer of popular “MeGirl” IOS / Android mobile games series."
+        text: "Developer of 'MeGirl' IOS / Android mobile games series."
 
   education:
     title: "Highlights"
