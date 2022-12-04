@@ -80,19 +80,19 @@ resume:
     items:
       - year: "2020"
         name: "Today At Apple"
-        text: "A brief talk on the history and technology of AR, and where its heading."
+        text: "I gave a 1hr talk on the history and technology behind augmented reality. Included [interactive coding session on iPad ](https://github.com/ShadowFactory/TodayAtApple-SwiftPlaygroundsAR) "
 
       - year: "2019"
         name: "Big Indie Pitch - Judge"
-        text: "Judging indie developers new games and concepts for Pocket Game Connects"
+        text: "I was a judicator for the finalist of [Big Indie Pitch](https://www.bigindiepitch.com) for Pocket Game Connects."
 
       - year: "2019"
         name: "Game Developers Conference"
-        text: "Participating in GDC show floor to showcase the VR game Stupid Cupid"
+        text: "Participating in GDC show floor to showcase the VR game Stupid Cupid."
 
       - year: "2018"
         name: "Roundtable F8"
-        text: "Participating in roundtables with Facebook leadership on the future of Augmented Reality."
+        text: "I joined a closed-door roundtable with Facebook Leadership to share my thoughts the future of Augmented Reality with Mark Zuckerberg 1:1"
 
 
 ### Skills [ skills ]
