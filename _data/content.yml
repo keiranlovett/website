@@ -224,7 +224,7 @@ clients:
 contacts_info:
   title: "Get in Touch"
   list:
-    - label: "Email"
+    - label: "Email kvclovett@gmail.com"
       icon:  "email"
       value: "Recruiter reaching out about roles? Student looking for advice or a free protfolio review? Or you simply want to chat? Feel free to email me!</a>"
 
