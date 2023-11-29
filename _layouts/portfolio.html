@@ -6,25 +6,14 @@ layout: default
 {% assign categories = site.data.settings['portfolio'] %}
 
 <!-- Started -->
-<div class="section started">
-	<div class="centrize full-width">
-		<div class="vertical-center">
-			<div class="started-content">
-				<div class="h-title glitch-effect" data-text="{{ page.title }}">{{ page.title }}</div>
-				<div class="h-subtitle typing-bread">
-					<p><a href="{{ site.url }}">{{ ui_text.home }}</a> / <a href="{{ page.url }}">{{ page.title }}</a></p>
-				</div>
-				<span class="typed-bread"></span>
-			</div>
-		</div>
-	</div>
-	<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
-</div>
+<div class="section "></div>
 
 <!-- Works -->
 <div class="section works">
 	<div class="content">
-
+		<div class="title">
+			<div class="title_inner"><a href="{{ site.url }}">{{ ui_text.home }}</a> / <a href="{{ page.url }}">{{ page.title }}</a></div>
+		</div>
 		<div class="filter-menu">
 			<div class="filters">
 				{% for category in categories.filters %}

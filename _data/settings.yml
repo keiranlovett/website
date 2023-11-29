@@ -11,7 +11,6 @@ settings:
   preloader: "loading..." # preloader loading text
   dynamic_background: "background.jpg"
 
-
 ### Portfolio Filters Settings
 portfolio:
   filters:

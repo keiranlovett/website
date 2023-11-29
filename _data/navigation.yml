@@ -7,9 +7,9 @@
 
 main:
   # Home
-  - title: "Home"
-    url: "/"
-    button: 0
+#  - title: "Home"
+#    url: "/"
+#    button: 0
     
   # Resume
 #  - title: "Resume"
@@ -22,11 +22,6 @@ main:
 #    button: 0
   
   # Blog
-#  - title: "Blog"
-#    url: "blog/"
+#  - title: "Writing"
+#    url: "writings/"
 #    button: 0
-  
-  # Contacts
-#  - title: "Contacts"
-#    url: "contacts/"
-#    button: 1

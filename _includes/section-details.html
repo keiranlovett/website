@@ -18,7 +18,7 @@
 		{{ endif }}
 
 		<div class="desc">
-			{{ about.text }}
+			{{ about.text | markdownify }}
 
 			<div class="info-list">
 				<ul>
@@ -78,7 +78,7 @@
 						<div class="date">{{ item.year }}</div>
 						<div class="name">{{ item.name }}</div>
 						<p>
-							{{ item.text }}
+  							{{ item.text | markdownify }}
 						</p>
 					</div>
 					{% endfor %}
@@ -86,15 +86,15 @@
 			</div>
 			<div class="col col-md">
 				<div class="title">
-					<div class="title_inner">{{ body.education.title }}</div>
+					<div class="title_inner">{{ body.additional.title }}</div>
 				</div>
 				<div class="resume-items">
-					{% for item in body.education.items %}
+					{% for item in body.additional.items %}
 					<div class="resume-item">
 						<div class="date">{{ item.year }}</div>
 						<div class="name">{{ item.name }}</div>
 						<p>
-							{{ item.text }}
+  							{{ item.text | markdownify }}
 						</p>
 					</div>
 					{% endfor %}

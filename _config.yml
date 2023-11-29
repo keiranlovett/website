@@ -8,30 +8,50 @@ timezone:       America/Los_Angeles
 permalink:      /:title.html
 markdown:       kramdown
 highlighter:    rouge
+include:        ["_pages"]
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
 
 
 # basic settings
 title: "Keiran Lovett"
 email: "kvclovett@gmail.com"
-description: "I’m Keiran Lovett a passionate Game & Visual Designer with several years of experience, starting from the concept to the final result. I’m based in Hong Kong, currently working on VR & Game Production."
-author: "Admin"
+description: "AAA Game Production. Building teams and making games."
+author: "Keiran"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://keiranlovett.com" # the base hostname & protocol for your site, e.g. http://example.com
 date_format: "%d %B %Y"
 
+
+author:
+  twitter: keiranlovett
+  name: Keiran
+  url: https://keiranlovett.com/
+
 # paginations & permalinks
 paginate: 9
-paginate_path: "/blog/page:num/"
+paginate_path: "_pages/writings/page:num/"
 permalink: pretty
 
 # Used by Safari mask-icon, Chrome Web App theme color
 colors:
   theme:        "#ff00b4"
   background:   "#fff"
-
-# disqus comments
-disqus_comments: "no" # yes - show disqus comments, no - hide disqus comments
-disqus_shortname: "glitche-jekyll-theme" # read more here https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
 
 # Google Analytics tracking code
 google_analytics:
@@ -55,9 +75,6 @@ tc_large_image: true
 #
 # Default:      true
 force_utf_8:    true
-
-# formsubmit.io
-#formsubmit_email: "beshleyweb@gmail.com" # sign up on https://formsubmit.io/ and confirm your email
 
 # collections
 collections:
@@ -83,24 +100,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-email-protect
 
-include:        ["_pages"]
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/
 
 sass:
   style: compressed

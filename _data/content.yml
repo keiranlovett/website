@@ -3,28 +3,25 @@
 ### use navigation.yml file to re-order, delete or add section of each card
 ### here you can find all content in all pre-build sections
 
+
+### Started
+header:
+  title: "Keiran Lovett"
+  typed:
+    - "AAA Games Production Experience."
+    - "Decade in Hong Kong Games."
+    - "Located in Canada."
+    - "Interactive Design and Game Development."
+
+
 ### About [ about ]
 about:
   title: "About Me"
   image: "assets/images/profile.jpg"
-  text: "
-        <p>
-          <strong>G'day! I’m Keiran Lovett.</strong><br>Based in Canada, and working in Game Production at Ubisoft. Over the last decade I've shipped games and projects across various roles (producer, game designer, developer).
-        </p>
-        "
-#  list:
-#    - label: "Name"
-#      value: "24"
-#    - label: "Age"
-#      value: "22 Years"
-#    - label: "Job"
-#      value: "Web Developer"
-#    - label: "Citizenship"
-#      value: "Keiran"
-#    - label: "Residence"
-#      value: "Kiev"
-#    - label: "E-mail"
-#      value: "johndoe@domain.com"
+  text: >
+          **G'day! I’m Keiran Lovett**.  
+          
+          Based in Canada, and working in Game Production at Ubisoft. Over the last decade I've shipped games and projects across various roles (producer, game designer, developer).
 
   download:
     text: "Download CV"
@@ -51,12 +48,12 @@ resume:
   experience:
     title: "Experience"
     items:
-      - year: "02/2022 - present"
+      - year: "02/2022 - 11/2023"
         name: "Production Manager, Ubisoft Winnipeg"
         text: "Building and managing Anvil & Snowdrop game engine teams. Working on announced and unannounced Ubisoft projects."
         
       - year: "12/2018 - 12/2021"
-        name: "Senior Product Manager, Shadow Factory"
+        name: "Producer, Shadow Factory"
         text: "Managing the design and development of content for industry-leading clients (Facebook, Apple, PGM, and more...)."
 
       - year: "11/2017 - 12/2018"
@@ -75,128 +72,30 @@ resume:
         name: "Game Designer, Frenzoo Limited"
         text: "Developer on various games in the 'MeGirl' IOS / Android mobile games series."
 
-  education:
+  additional:
     title: "Highlights"
     items:
       - year: "2020"
         name: "Today At Apple"
-        text: "I gave a 1hr talk on the history and technology behind augmented reality. Included [interactive coding session on iPad ](https://github.com/ShadowFactory/TodayAtApple-SwiftPlaygroundsAR) "
+        text: >
+          I gave a 1hr talk on the history and technology behind augmented reality.
+          Included [interactive coding session on iPad](https://github.com/ShadowFactory/TodayAtApple-SwiftPlaygroundsAR)
 
       - year: "2019"
         name: "Big Indie Pitch - Judge"
-        text: "I was a judicator for the finalist of [Big Indie Pitch](https://www.bigindiepitch.com) for Pocket Game Connects."
+        text: >
+          I was a judicator for the finalist of [Big Indie Pitch](https://www.bigindiepitch.com) for Pocket Game Connects.
 
       - year: "2019"
         name: "Game Developers Conference"
-        text: "Participating in GDC show floor to showcase the VR game Stupid Cupid."
+        text: >
+          Participating in GDC show floor to showcase the VR game Stupid Cupid.
 
       - year: "2018"
         name: "Roundtable F8"
-        text: "I joined a closed-door roundtable with Facebook Leadership to share my thoughts the future of Augmented Reality with Mark Zuckerberg 1:1"
+        text: >
+          I joined a closed-door roundtable with Facebook Leadership to share my thoughts the future of Augmented Reality with Mark Zuckerberg 1:1
 
-
-### Skills [ skills ]
-skills:
-  columns:
-    - type: "default" #skills progress type - default, dotted, circles, list
-      title: "Design Skills"
-      items:
-        - label: "Web Design"
-          value: "70" #0-100 progress in %
-
-        - label: "Illustrations"
-          value: "90" #0-100 progress in %
-
-        - label: "Photoshop"
-          value: "75" #0-100 progress in %
-
-        - label: "Graphic Design"
-          value: "80" #0-100 progress in %
-
-    - type: "dotted" #skills progress type - default, dotted, circles, list
-      title: "Languages Skills"
-      items:
-        - label: "English"
-          value: "90" #0-100 progress in %
-
-        - label: "German"
-          value: "70" #0-100 progress in %
-
-        - label: "Italian"
-          value: "55" #0-100 progress in %
-
-        - label: "French"
-          value: "85" #0-100 progress in %
-
-    - type: "circles" #skills progress type - default, dotted, circles, list
-      title: "Coding Skills"
-      items:
-        - label: "WordPress"
-          value: "95" #0-100 progress in %
-
-        - label: "PHP / MYSQL"
-          value: "75" #0-100 progress in %
-
-        - label: "Angular / JavaScript"
-          value: "85" #0-100 progress in %
-
-        - label: "HTML / CSS"
-          value: "90" #0-100 progress in %
-
-    - type: "list" #skills progress type - default, dotted, circles, list
-      title: "Knowledge"
-      items:
-        - label: "Website hosting"
-          value: "" #0-100 progress in %
-
-        - label: "iOS and android apps"
-          value: "" #0-100 progress in %
-
-        - label: "Create logo design"
-          value: "" #0-100 progress in %
-
-        - label: "Design for print"
-          value: "" #0-100 progress in %
-
-        - label: "Modern and mobile-ready"
-          value: "" #0-100 progress in %
-
-        - label: "Advertising services include"
-          value: "" #0-100 progress in %
-
-        - label: "Graphics and animations"
-          value: "" #0-100 progress in %
-
-        - label: "Search engine marketing"
-          value: "" #0-100 progress in %
-
-### Services [ services ]
-services:
-  title: "My Services"
-  items:
-    - icon: "social-html5"
-      name: "Front-end"
-      text: "Front-end web development is the practice of converting data to a graphical interface, through the use of HTML, CSS, and JavaScript."
-
-    - icon: "ipad"
-      name: "Mobile Application"
-      text: "A mobile application, most commonly referred to as an app, is a type of application software designed to run on a mobile."
-
-    - icon: "ios-search-strong"
-      name: "Investigation"
-      text: "Investigation, examination, inquiry, research express the idea of an active effort to find out something."
-
-    - icon: "code"
-      name: "Programming"
-      text: "Computer programming is the process of designing and building an executable computer program to accomplish a specific."
-
-    - icon: "help-buoy"
-      name: "Awesome Supports"
-      text: "Awesome Support is the most versatile and feature-rich. Get started for free and add premium features as your business grows."
-
-    - icon: "social-chrome"
-      name: "Web Development"
-      text: "Web development is the work involved in developing a Web site for the Internet or an intranet and social network services."
 
 ### Clients [ clients ]
 clients:
@@ -230,9 +129,17 @@ contacts_info:
 
 #    - label: "Address"
 #      icon: "ios-location"
-#      value: "2621 W Pico Blvd, Los Angeles"
+#      value: "I will leave this blank for now."
 
-### Contact Form [ contacts-form ]
-contacts_form:
-  title: "Contact Form"
-
+footer:
+  social:
+    - title: "Twitter"
+      icon: "social-twitter"
+      url: "https://twitter.com/keiranlovett"
+    - title: "GitHub"
+      icon: "social-github"
+      url: "https://github.com/keiranlovett"
+    - title: "Linkedin"
+      icon: "social-linkedin"
+      url: "https://hk.linkedin.com/in/keiranlovett"
+  copy: "© 2023 Keiran Lovett. All rights reserved."
