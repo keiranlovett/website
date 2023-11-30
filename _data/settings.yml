@@ -7,6 +7,7 @@ settings:
   quick_colors: "" # select quick color schemes: "blue", "green", "orange", "pink", "purple", "red". If empty colors taken from _sass/ryancv/settings.scss
   dark_ui: 1 # activated dark ui styles
   rtl: 0 # activated rtl styles
+  navbar: 0 # for disable sidebar and sidebar button change to 0
   sidebar: 0 # for disable sidebar and sidebar button change to 0
   preloader: "loading..." # preloader loading text
   dynamic_background: "background.jpg"
