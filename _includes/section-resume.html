@@ -12,9 +12,9 @@
 					{% for item in content.experience.items %}
 					<div class="resume-item active">
 						<div class="date">{{ item.year }}</div>
-						<div class="name">{{ item.name }}</div>
+						<div class="name">{{ item.name | markdownify }}</div>
 						<p>
-							{{ item.text }}
+  							{{ item.text | markdownify }}
 						</p>
 					</div>
 					{% endfor %}
@@ -22,15 +22,15 @@
 			</div>
 			<div class="col col-md">
 				<div class="title">
-					<div class="title_inner">{{ content.education.title }}</div>
+					<div class="title_inner">{{ content.additional.title }}</div>
 				</div>
 				<div class="resume-items">
-					{% for item in content.education.items %}
+					{% for item in content.additional.items %}
 					<div class="resume-item">
 						<div class="date">{{ item.year }}</div>
-						<div class="name">{{ item.name }}</div>
+						<div class="name">{{ item.name | markdownify }}</div>
 						<p>
-							{{ item.text }}
+  							{{ item.text | markdownify }}
 						</p>
 					</div>
 					{% endfor %}

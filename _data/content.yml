@@ -22,11 +22,9 @@ about:
           **G'day! I’m Keiran Lovett**.  
           
           Based in Canada, and working in Game Production at Ubisoft. Over the last decade I've shipped games and projects across various roles (producer, game designer, developer).
-
   download:
     text: "Download CV"
     link: "assets/files/keiranlovett_cv_2024.pdf"
-
   social:
     - title: "Twitter"
       icon: "social-twitter"
@@ -53,7 +51,7 @@ resume:
         text: "Building and managing Anvil & Snowdrop game engine teams. Working on announced and unannounced Ubisoft projects."
         
       - year: "12/2018 - 12/2021"
-        name: "Producer, Shadow Factory"
+        name: "Producer, [Shadow Factory](https://www.shadowfactory.io)"
         text: "Managing the design and development of content for industry-leading clients (Facebook, Apple, PGM, and more...)."
 
       - year: "11/2017 - 12/2018"
@@ -92,10 +90,117 @@ resume:
           Participating in GDC show floor to showcase the VR game Stupid Cupid.
 
       - year: "2018"
-        name: "Roundtable F8"
+        name: "F8 2018 Conference"
         text: >
-          I joined a closed-door roundtable with Facebook Leadership to share my thoughts the future of Augmented Reality with Mark Zuckerberg 1:1
+          I spoke to Facebook Leadership to share my thoughts the future of Augmented Reality with Mark Zuckerberg 1:1.
 
+      - year: "2015-2021"
+        name: "Hong Kong Game Development Group"
+        text: >
+          I co-organise [Game Dev Happy Hour](http://gamedevhappyhour.com) to help network and share knowledge in the Hong Kong Games industry.
+
+### Skills [ skills ]
+skills:
+  columns:
+    - type: "default" #skills progress type - default, dotted, circles, list
+      title: "Design Skills"
+      items:
+        - label: "Web Design"
+          value: "70" #0-100 progress in %
+
+        - label: "Illustrations"
+          value: "90" #0-100 progress in %
+
+        - label: "Photoshop"
+          value: "75" #0-100 progress in %
+
+        - label: "Graphic Design"
+          value: "80" #0-100 progress in %
+
+    - type: "dotted" #skills progress type - default, dotted, circles, list
+      title: "Languages Skills"
+      items:
+        - label: "English"
+          value: "90" #0-100 progress in %
+
+        - label: "German"
+          value: "70" #0-100 progress in %
+
+        - label: "Italian"
+          value: "55" #0-100 progress in %
+
+        - label: "French"
+          value: "85" #0-100 progress in %
+
+    - type: "circles" #skills progress type - default, dotted, circles, list
+      title: "Coding Skills"
+      items:
+        - label: "WordPress"
+          value: "95" #0-100 progress in %
+
+        - label: "PHP / MYSQL"
+          value: "75" #0-100 progress in %
+
+        - label: "Angular / JavaScript"
+          value: "85" #0-100 progress in %
+
+        - label: "HTML / CSS"
+          value: "90" #0-100 progress in %
+
+    - type: "list" #skills progress type - default, dotted, circles, list
+      title: "Knowledge"
+      items:
+        - label: "Website hosting"
+          value: "" #0-100 progress in %
+
+        - label: "iOS and android apps"
+          value: "" #0-100 progress in %
+
+        - label: "Create logo design"
+          value: "" #0-100 progress in %
+
+        - label: "Design for print"
+          value: "" #0-100 progress in %
+
+        - label: "Modern and mobile-ready"
+          value: "" #0-100 progress in %
+
+        - label: "Advertising services include"
+          value: "" #0-100 progress in %
+
+        - label: "Graphics and animations"
+          value: "" #0-100 progress in %
+
+        - label: "Search engine marketing"
+          value: "" #0-100 progress in %
+
+### Services [ services ]
+services:
+  title: "Ask me more about..."
+  items:
+    - icon: "ios-game-controller-b"
+      name: "Games Industry"
+      text: "I have a decade worth of experience in the games industry between indie startups and AAA studios."
+
+    - icon: "leaf"
+      name: "Startup Experience"
+      text: "I love building teams, and have experience in growing startups through recruitment and production initiatives."
+
+    - icon: "iphone"
+      name: "Mobile Games"
+      text: "I started my career in mobile games and even lead a strike-team to port Assassins Creed Mirage to iOS at Ubisoft in 2019."
+
+    - icon: "star"
+      name: "Experience Driven"
+      text: "I use my background in design and development to inform my decision making process in production management. "
+
+    - icon: "help-buoy"
+      name: "Mentorship"
+      text: "I like to support graduates, students, and the local community through networking, community, and learning events."
+    
+    - icon: "chatbubbles"
+      name: "Public Speaking"
+      text: "I enjoy public speaking and workshops, especially to share knowledge about the industry and new technologies."
 
 ### Clients [ clients ]
 clients:

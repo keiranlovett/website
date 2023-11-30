@@ -16,7 +16,7 @@
 		{{ endif }}
 		
 		<div class="desc">
-			{{ content.text }}
+			{{ content.text | markdownify }}
 
 			<div class="info-list">
 				<ul>
@@ -25,7 +25,20 @@
 					{% endfor %}
 				</ul>
 			</div>
-			<div class="bts"><a target="_blank" href="{{ content.download.link | relative_url}}" class="btn fill" data-text="{{ content.download.text }}">{{ content.download.text }}</a></div>
+
+			<div class="button-list">
+				<ul>
+					<li>
+						<div class="bts"><a target="_blank" href="{{ content.download.link | relative_url }}" class="btn fill" data-text="{{ content.download.text }}">{{ content.download.text }}</a></div>
+					</li>
+					
+					{% for link in content.social %}
+						<li><a target="_blank" href="{{ link.url }}" title="{{ link.title }}" class="h-subtitle"><span class="ion ion-{{ link.icon }}"></span></a></li>
+					{% endfor %}
+			
+				</ul>
+			</div>
+			
 		</div>
 		<div class="clear"></div>
 	</div>

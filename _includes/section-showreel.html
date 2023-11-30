@@ -1,0 +1,18 @@
+{% assign content = site.data.content['showreel'] %}
+
+<!-- Showreel -->
+<div class="section about">
+	<div class="content">
+		{{ if content.title != '' }}
+		<div class="title">
+			<div class="title_inner">{{ content.title }}</div>
+		</div>
+		{{ endif }}
+		
+		{{ if content.youtube_id != '' }}
+			{% include player.html id=content.youtube_id %}
+		{{ endif }}
+
+		<div class="clear"></div>
+	</div>
+</div>

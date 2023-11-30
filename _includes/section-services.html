@@ -13,7 +13,7 @@
 			<div class="service-item">
 				<div class="icon"><span class="ion ion-{{ item.icon }}"></span></div>
 				<div class="name">{{ item.name }}</div>
-				<p>{{ item.text }}</p>
+				<p>{{ item.text | markdownify }}</p>
 			</div>
 			{% endfor %}
 		</div>
