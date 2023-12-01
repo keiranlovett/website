@@ -22,17 +22,15 @@
   <link rel="stylesheet" href="{{ 'assets/css/rtl.css' | relative_url }}" />
   {% endif %}
 
-  <!-- Template Colors -->
-  {% if settings.quick_colors != '' %}
-  <link rel="stylesheet" href="{{ 'assets/css/template-colors/' | append: settings.quick_colors | append: '.css' | relative_url }}" />
-  {% endif %}
-
   <!-- Template Dark -->
   {% if settings.dark_ui == 1 %}
-  <link rel="stylesheet" href="{{ 'assets/css/template-dark/dark.css' | relative_url }}" />
+  <link id="dark-stylesheet" rel="stylesheet" href="{{ 'assets/css/template-dark/dark.css' | relative_url }}" />
+  {% endif %}
+
+  {% if settings.dark_mode_toggle == 1 %}
+    <script src="{{ 'assets/js/dark-mode-toggle.js' | relative_url }}" defer></script>
   {% endif %}
   
-
   <!--[if lt IE 9]>
   <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

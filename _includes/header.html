@@ -1,10 +1,16 @@
 {% assign navigation = site.data.navigation['main'] %}
 {% assign settings = site.data.settings['settings'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
 {% assign page_url = page.url | absolute_url %}
 
 <!-- Header -->
 <header>
 	<div class="head-top">
+
+		{% if settings.dark_mode_toggle == 1 %}
+		<div class="bts"><a id="themeToggle" class="btn small">{{ ui_text.theme }}</a></div>
+		{% endif %}
+
 		{% if settings.sidebar == 1 %}
 		<span class="sidebar_btn"><span></span></span>
 		{% endif %}

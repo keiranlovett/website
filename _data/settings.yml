@@ -1,16 +1,16 @@
-# Theme Settings Configuration File
-##
 ### use settings.yml file for configure colors, ui, rtl, sidebar, animation options
 
 ### Main Settings
 settings:
-  quick_colors: "" # select quick color schemes: "blue", "green", "orange", "pink", "purple", "red". If empty colors taken from _sass/ryancv/settings.scss
+  quick_colors: "" # select quick color schemes: "blue", "green", "orange", "pink", "purple", "red".
   dark_ui: 1 # activated dark ui styles
+  dark_mode_toggle: 0
   rtl: 0 # activated rtl styles
   navbar: 0 # for disable sidebar and sidebar button change to 0
   sidebar: 0 # for disable sidebar and sidebar button change to 0
   preloader: "loading..." # preloader loading text
   dynamic_background: "background.jpg"
+  dynamic_background_invert: 0
 
 ### Portfolio Filters Settings
 portfolio:
@@ -19,26 +19,6 @@ portfolio:
       slug: "box-item"
       active: 1
 
-    - name: "Video"
-      slug: "f-video"
-      active: 0
-
-    - name: "Music"
-      slug: "f-music"
-      active: 0
-
-    - name: "Links"
-      slug: "f-link"
-      active: 0
-
-    - name: "Image"
-      slug: "f-image"
-      active: 0
-
-    - name: "Gallery"
-      slug: "f-gallery"
-      active: 0
-
-    - name: "Content"
+    - name: "Game"
       slug: "f-content"
       active: 0

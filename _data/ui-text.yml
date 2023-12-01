@@ -3,6 +3,7 @@
 ### use ui-text.yml file to quick change all default strings
 
 ui_text:
+  theme:          "Toggle Light Mode"
   home:           "Home"
   blog:           "Blog"
   archive:        "Archive"

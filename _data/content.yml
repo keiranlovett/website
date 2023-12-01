@@ -1,20 +1,14 @@
-# Sections content configuration file
-## 
 ### use navigation.yml file to re-order, delete or add section of each card
-### here you can find all content in all pre-build sections
 
-
-### Started
 header:
   title: "Keiran Lovett"
   typed:
     - "AAA Games Production Experience."
     - "Decade in Hong Kong Games."
+    - "Open to Work."
     - "Located in Canada."
     - "Interactive Design and Game Development."
 
-
-### About [ about ]
 about:
   title: "About Me"
   image: "assets/images/profile.jpg"
@@ -36,12 +30,10 @@ about:
       icon: "social-linkedin"
       url: "https://hk.linkedin.com/in/keiranlovett"
 
-### Showreel [ showreel ]
 showreel:
   title: "Showreel"
   youtube_id: "we9rnDoJdKM"
 
-### Resume [ resume ]
 resume:
   experience:
     title: "Experience"
@@ -87,7 +79,7 @@ resume:
       - year: "2019"
         name: "Game Developers Conference"
         text: >
-          Participating in GDC show floor to showcase the VR game Stupid Cupid.
+          Participating in GDC show floor to showcase the VR game Stupid Cupid for Shadow Factory.
 
       - year: "2018"
         name: "F8 2018 Conference"
@@ -99,7 +91,6 @@ resume:
         text: >
           I co-organise [Game Dev Happy Hour](http://gamedevhappyhour.com) to help network and share knowledge in the Hong Kong Games industry.
 
-### Skills [ skills ]
 skills:
   columns:
     - type: "default" #skills progress type - default, dotted, circles, list
@@ -174,7 +165,6 @@ skills:
         - label: "Search engine marketing"
           value: "" #0-100 progress in %
 
-### Services [ services ]
 services:
   title: "Ask me more about..."
   items:
@@ -188,7 +178,7 @@ services:
 
     - icon: "iphone"
       name: "Mobile Games"
-      text: "I started my career in mobile games and even lead a strike-team to port Assassins Creed Mirage to iOS at Ubisoft in 2019."
+      text: "I started my career in mobile games and even lead a strike-team to port Assassins Creed: Mirage to iOS at Ubisoft in 2023."
 
     - icon: "star"
       name: "Experience Driven"
@@ -202,29 +192,12 @@ services:
       name: "Public Speaking"
       text: "I enjoy public speaking and workshops, especially to share knowledge about the industry and new technologies."
 
-### Clients [ clients ]
 clients:
-  title: "Clients"
+  title: "Credits"
   items:
     - url: "https://www.google.com"
       image: "assets/img/clients/client_1.png"
 
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_2.png"
-
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_3.png"
-
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_1.png"
-
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_2.png"
-
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_3.png"
-
-### Contact Info [ contacts-info ]
 contacts_info:
   title: "Get in Touch"
   list:
@@ -247,4 +220,4 @@ footer:
     - title: "Linkedin"
       icon: "social-linkedin"
       url: "https://hk.linkedin.com/in/keiranlovett"
-  copy: "© 2023 Keiran Lovett. All rights reserved."
+  copy: "© 2023 Made by hand by Keiran Lovett. All rights reserved."

@@ -61,7 +61,6 @@ body {
 	position: relative;
 	margin: 30px;
 	overflow: hidden;
-	background: $bg;
 	@media (max-width: 840px) {
 		margin: 15px;
 	}
@@ -197,8 +196,8 @@ strong {
 
 /* 5. Links */
 a { 
-	color: $default-color;
-	text-decoration: none;
+	color: $dark-color;
+	text-decoration: bold;
 	opacity: 1;
 	outline: none;
 	&:hover {
@@ -232,6 +231,11 @@ a.btn, .btn {
 		color: $bg;
 		background: $active-color;
 		border: 1px solid $active-color;
+	}
+	.small {
+		height:28px;
+		line-height:24px;
+		padding: 0 10px;
 	}
 }
 
@@ -602,11 +606,7 @@ p {
 		top: 0;
 		left: 0;
 		width: 100%;
-		background: $white-color;
 		clip: rect(0, 0, 0, 0);
-	}
-	.glitch-effect-white:before, .glitch-effect-white:after {
-		background: $active-color;
 	}
 	.glitch-effect:after, .glitch-effect-white:after {
 		left: 2px;

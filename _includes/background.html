@@ -2,16 +2,31 @@
 
 {% if settings.dynamic_background != '' %}
 
+<canvas id="webgl"></canvas>
 
 <script>
     var imageurl = "{{ 'assets/images/' | append: settings.dynamic_background | relative_url }}";
+    var doInvertImage = 1; //{{ settings.dynamic_background_invert | default: 1 }};
+
+    // Get the WebGL rendering context
+    var canvas = document.getElementById("webgl");
+    var gl = canvas.getContext("webgl");
+
+
+    // Set the uniform variable in the fragment shader
+    var doInvertImageLocation = gl.getUniformLocation(program, "doInvertImage");
+    gl.uniform1i(doInvertImageLocation, doInvertImage);
+
 </script>
 
-<canvas id="webgl"></canvas>
+
+
 
 <script type="x-shader/x-fragment" id="fragmentShader">
 #define TWO_PI 6.2831853072
 #define PI 3.14159265359
+
+uniform int doInvertImage;
 
 precision highp float;
 
@@ -52,6 +67,10 @@ void main(void) {
                     twist * TWO_PI * nsin(len + time) * scrollModifier + time
             ) + 0.5
     );
+
+    if (doInvertImage == 1) {
+        imgColor.rgb = vec3(1.0) - imgColor.rgb;  // Invert the color if doInvertImage is true
+    }
 
     gl_FragColor = imgColor;
 }
