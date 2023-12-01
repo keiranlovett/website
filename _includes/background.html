@@ -6,21 +6,7 @@
 
 <script>
     var imageurl = "{{ 'assets/images/' | append: settings.dynamic_background | relative_url }}";
-    var doInvertImage = 1; //{{ settings.dynamic_background_invert | default: 1 }};
-
-    // Get the WebGL rendering context
-    var canvas = document.getElementById("webgl");
-    var gl = canvas.getContext("webgl");
-
-
-    // Set the uniform variable in the fragment shader
-    var doInvertImageLocation = gl.getUniformLocation(program, "doInvertImage");
-    gl.uniform1i(doInvertImageLocation, doInvertImage);
-
 </script>
-
-
-
 
 <script type="x-shader/x-fragment" id="fragmentShader">
 #define TWO_PI 6.2831853072

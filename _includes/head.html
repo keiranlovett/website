@@ -20,18 +20,17 @@
 
   {% assign settings = site.data.settings['settings'] %}
 
-  <!-- Template RTL -->
   {% if settings.rtl == 1 %}
+  <!-- Template RTL -->
   <link rel="stylesheet" href="{{ 'assets/css/rtl.css' | relative_url }}" />
   {% endif %}
 
-  <!-- Template Dark -->
   {% if settings.dark_ui == 1 %}
+  <!-- Template Dark -->
   <link id="dark-stylesheet" rel="stylesheet" href="{{ 'assets/css/template-dark/dark.css' | relative_url }}" />
-  {% endif %}
-
   {% if settings.dark_mode_toggle == 1 %}
     <script src="{{ 'assets/js/dark-mode-toggle.js' | relative_url }}" defer></script>
+  {% endif %}
   {% endif %}
   
   <!--[if lt IE 9]>
@@ -44,10 +43,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{{ 'assets/images/favicons/apple-touch-icon.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicons/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicons/favicon-16x16.png' | relative_url }}">
-  <link rel="manifest" href="{{'assets/images/favicons/site.webmanifest' | relative_url }}">
   <link rel="mask-icon" href="{{ 'assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
 
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
