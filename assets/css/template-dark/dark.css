@@ -33,6 +33,7 @@ textarea:focus:-ms-input-placeholder {
 
 body, .container .line {
 	background: #26262d;
+	background-color: #26262d;
 }
 
 .container,
