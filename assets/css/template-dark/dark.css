@@ -66,6 +66,13 @@ blockquote,
 	color: #a2a2a6;
 }
 
+
+
+*::selection {
+  background: #f26b38;
+  color: #f0f0f0;
+}
+
 input,
 textarea,
 button,
