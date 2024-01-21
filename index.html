@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Keiran Lovett | AAA Game Production. Building teams and making games.</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Keiran Lovett" />
+<meta name="author" content="Keiran" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AAA Game Production. Building teams and making games." />
+<meta property="og:description" content="AAA Game Production. Building teams and making games." />
+<link rel="canonical" href="https://keiranlovett.com/" />
+<meta property="og:url" content="https://keiranlovett.com/" />
+<meta property="og:site_name" content="Keiran Lovett" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Keiran Lovett" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@keiranlovett" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Keiran"},"description":"AAA Game Production. Building teams and making games.","url":"https://keiranlovett.com/","@type":"WebSite","headline":"Keiran Lovett","name":"Keiran Lovett","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Load Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
+
+  <!-- Load CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/ionicons.css" />
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="/assets/css/animate.css" />
+  <link rel="stylesheet" href="/assets/css/owl.carousel.css" />
+  <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+  
+
+  
+
+  
+  <!-- Template Dark -->
+  <link id="dark-stylesheet" rel="stylesheet" href="/assets/css/template-dark/dark.css" />
+  
+  
+  
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5"><link type="application/atom+xml" rel="alternate" href="https://keiranlovett.com/feed.xml" title="Keiran Lovett" /></head>
+
+
+
+
+<canvas id="webgl"></canvas>
+
+<script>
+    var imageurl = "/assets/images/background.jpg";
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentShader">
+#define TWO_PI 6.2831853072
+#define PI 3.14159265359
+
+uniform int doInvertImage;
+
+precision highp float;
+
+uniform float globaltime;
+uniform vec2 resolution;
+uniform float aspect;
+uniform float scroll;
+uniform float velocity;
+uniform sampler2D texture;
+
+const float timescale = 0.03;
+const float twist = 1.0;
+const float scrollSpeed = 0.15;
+
+vec2 rotate(vec2 v, float angle) {
+    float c = cos(angle);
+    float s = sin(angle);
+    return v * mat2(c, -s, s, c);
+}
+
+float nsin(float value) {
+    return sin(value * TWO_PI) * 0.5 + 0.5;
+}
+
+void main(void) {
+
+    float scrollModifier = scroll*scrollSpeed;
+    float time = globaltime * timescale;
+    vec2 center = vec2(sin(TWO_PI * time * 0.2), cos(TWO_PI * time * 0.2)) * nsin(time * 0.3) * 0.5;
+    vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5 - center) * vec2(aspect, 1.0);
+    float len = 1.0 - length(tx);
+    float zoom = 1.0 + scrollModifier - len * 3.0 * (1.0 - scrollModifier) + len * velocity * 2.0;
+
+    vec4 imgColor = texture2D(
+            texture,
+            rotate(
+                    (tx + center) * vec2(1.0, -1.0) * zoom,
+                    twist * TWO_PI * nsin(len + time) * scrollModifier + time
+            ) + 0.5
+    );
+
+    if (doInvertImage == 1) {
+        imgColor.rgb = vec3(1.0) - imgColor.rgb;  // Invert the color if doInvertImage is true
+    }
+
+    gl_FragColor = imgColor;
+}
+</script>
+
+<body class="">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="centrize full-width">
+    <div class="vertical-center">
+      <div class="pre-inner">
+        <div class="load typing-load"><p>loading...</p></div>
+        <span class="typed-load"></span>
+      </div>
+    </div>
+  </div>
+</div><!-- Container -->
+    <div class="container">
+
+
+
+
+<!-- Header -->
+<header>
+	<div class="head-top">
+		
+
+		
+		
+		
+	</div>
+</header><!-- Wrapper -->
+      <div class="wrapper">
+        
+
+        
+          
+
+<!-- Started -->
+<div class="section started">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="started-content">
+				
+				<div class="h-title glitch-effect" data-text="Keiran Lovett">Keiran Lovett</div>
+				
+				<div class="h-subtitle typing-subtitle">
+					
+					<p>AAA Games Production Experience.</p>
+					
+					<p>Decade in Hong Kong Games.</p>
+					
+					<p>Open to Work.</p>
+					
+					<p>Located in Canada.</p>
+					
+					<p>Interactive Design and Game Development.</p>
+					
+				</div>
+				<span class="h-subtitle typed-subtitle"></span>
+			</div>
+		</div>
+	</div>
+	<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+</div>
+        
+          
+
+<!-- About -->
+<div class="section about">
+	<div class="content">
+		
+		<div class="title">
+			<div class="title_inner">About Me</div>
+		</div>
+		
+
+		
+		<div class="image">
+			<img src="/assets/images/profile.jpg" alt="" />
+		</div>
+		
+		
+		<div class="desc">
+			<p><strong>G’day! I’m Keiran Lovett</strong>.<br />
+Based in Canada, and working in Game Production at Ubisoft. Over the last decade I’ve shipped games and projects across various roles (producer, game designer, developer).</p>
+
+
+			<div class="info-list">
+				<ul>
+					
+				</ul>
+			</div>
+
+			<div class="button-list">
+				<ul>
+					<li>
+						<div class="bts"><a target="_blank" href="/assets/files/keiranlovett_cv_2024.pdf" class="btn fill" data-text="Download CV">Download CV</a></div>
+					</li>
+					
+					
+						<li><a target="_blank" href="https://twitter.com/keiranlovett" title="Twitter" class="h-subtitle"><span class="ion ion-social-twitter"></span></a></li>
+					
+						<li><a target="_blank" href="https://github.com/keiranlovett" title="GitHub" class="h-subtitle"><span class="ion ion-social-github"></span></a></li>
+					
+						<li><a target="_blank" href="https://hk.linkedin.com/in/keiranlovett" title="Linkedin" class="h-subtitle"><span class="ion ion-social-linkedin"></span></a></li>
+					
+			
+				</ul>
+			</div>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+        
+          
+
+<!-- Showreel -->
+<div class="section about">
+	<div class="content">
+		
+		<div class="title">
+			<div class="title_inner">Showreel</div>
+		</div>
+		
+		
+		
+			<div class="embed-container">
+  <iframe
+      src="https://www.youtube.com/embed/we9rnDoJdKM" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+		
+
+		<div class="clear"></div>
+	</div>
+</div>
+        
+          
+
+<!-- Resume -->
+<div class="section resume">
+	<div class="content">
+		<div class="cols">
+			<div class="col col-md">
+				<div class="title">
+					<div class="title_inner">Experience</div>
+				</div>
+				<div class="resume-items">
+					
+					<div class="resume-item active">
+						<div class="date">02/2022 - 11/2023</div>
+						<div class="name"><p>Production Manager, Ubisoft Winnipeg</p>
+</div>
+						<p>
+  							<p>Building and managing Anvil &amp; Snowdrop game engine teams. Working on announced and unannounced Ubisoft projects.</p>
+
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">12/2018 - 12/2021</div>
+						<div class="name"><p>Producer, <a href="https://www.shadowfactory.io">Shadow Factory</a></p>
+</div>
+						<p>
+  							<p>Managing the design and development of content for industry-leading clients (Facebook, Apple, PGM, and more…).</p>
+
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">11/2017 - 12/2018</div>
+						<div class="name"><p>Technical Director, Shadow Factory</p>
+</div>
+						<p>
+  							<p>Architecting the studio development and production pipelines, allowing projects and teams to scale effortlessly.</p>
+
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">06/2016 - 10/2017</div>
+						<div class="name"><p>Game Developer, Lan Kwai Fong Group</p>
+</div>
+						<p>
+  							<p>Research / Development of new technologies in AR, VR, and mobile platforms. (Unity, Unreal Engine).</p>
+
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">06/2014 - 03/2016</div>
+						<div class="name"><p>User Interface Designer, Insight Robotics</p>
+</div>
+						<p>
+  							<p>Designing core UI and developing user tools for robotics and early-warning fire detection system and software.</p>
+
+						</p>
+					</div>
+					
+					<div class="resume-item active">
+						<div class="date">11/2012 - 05/2014</div>
+						<div class="name"><p>Game Designer, Frenzoo Limited</p>
+</div>
+						<p>
+  							<p>Developer on various games in the ‘MeGirl’ IOS / Android mobile games series.</p>
+
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col col-md">
+				<div class="title">
+					<div class="title_inner">Highlights</div>
+				</div>
+				<div class="resume-items">
+					
+					<div class="resume-item">
+						<div class="date">2020</div>
+						<div class="name"><p>Today At Apple</p>
+</div>
+						<p>
+  							<p>I gave a 1hr talk on the history and technology behind augmented reality. Included <a href="https://github.com/ShadowFactory/TodayAtApple-SwiftPlaygroundsAR">interactive coding session on iPad</a></p>
+
+						</p>
+					</div>
+					
+					<div class="resume-item">
+						<div class="date">2019</div>
+						<div class="name"><p>Big Indie Pitch - Judge</p>
+</div>
+						<p>
+  							<p>I was a judicator for the finalist of <a href="https://www.bigindiepitch.com">Big Indie Pitch</a> for Pocket Game Connects.</p>
+
+						</p>
+					</div>
+					
+					<div class="resume-item">
+						<div class="date">2019</div>
+						<div class="name"><p>Game Developers Conference</p>
+</div>
+						<p>
+  							<p>Participating in GDC show floor to showcase the VR game Stupid Cupid for Shadow Factory.</p>
+
+						</p>
+					</div>
+					
+					<div class="resume-item">
+						<div class="date">2018</div>
+						<div class="name"><p>F8 2018 Conference</p>
+</div>
+						<p>
+  							<p>I spoke to Facebook Leadership to share my thoughts the future of Augmented Reality with Mark Zuckerberg 1:1.</p>
+
+						</p>
+					</div>
+					
+					<div class="resume-item">
+						<div class="date">2015-2021</div>
+						<div class="name"><p>Hong Kong Game Development Group</p>
+</div>
+						<p>
+  							<p>I co-organise <a href="http://gamedevhappyhour.com">Game Dev Happy Hour</a> to help network and share knowledge in the Hong Kong Games industry.</p>
+
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+        
+          
+
+<!-- Service -->
+<div class="section service">
+	<div class="content">
+		
+		<div class="title">
+			<div class="title_inner">Ask me more about...</div>
+		</div>
+		
+		<div class="service-items">
+			
+			<div class="service-item">
+				<div class="icon"><span class="ion ion-ios-game-controller-b"></span></div>
+				<div class="name">Games Industry</div>
+				<p><p>I have a decade worth of experience in the games industry between indie startups and AAA studios.</p>
+</p>
+			</div>
+			
+			<div class="service-item">
+				<div class="icon"><span class="ion ion-leaf"></span></div>
+				<div class="name">Startup Experience</div>
+				<p><p>I love building teams, and have experience in growing startups through recruitment and production initiatives.</p>
+</p>
+			</div>
+			
+			<div class="service-item">
+				<div class="icon"><span class="ion ion-iphone"></span></div>
+				<div class="name">Mobile Games</div>
+				<p><p>I started my career in mobile games and even lead a strike-team to port Assassins Creed: Mirage to iOS at Ubisoft in 2023.</p>
+</p>
+			</div>
+			
+			<div class="service-item">
+				<div class="icon"><span class="ion ion-star"></span></div>
+				<div class="name">Experience Driven</div>
+				<p><p>I use my background in design and development to inform my decision making process in production management.</p>
+</p>
+			</div>
+			
+			<div class="service-item">
+				<div class="icon"><span class="ion ion-help-buoy"></span></div>
+				<div class="name">Mentorship</div>
+				<p><p>I like to support graduates, students, and the local community through networking, community, and learning events.</p>
+</p>
+			</div>
+			
+			<div class="service-item">
+				<div class="icon"><span class="ion ion-chatbubbles"></span></div>
+				<div class="name">Public Speaking</div>
+				<p><p>I enjoy public speaking and workshops, especially to share knowledge about the industry and new technologies.</p>
+</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+        
+          
+
+<!-- Conacts Info -->
+
+<div class="section contacts">
+	<div class="content">
+		
+		<div class="title">
+			<div class="title_inner">Get in Touch</div>
+		</div>
+		
+
+		<div class="service-items">
+			
+			<div class="service-item">
+				<div class="icon"><span class="ion ion-email"></span></div>
+				<div class="name">Email kvclovett@gmail.com</div>
+				<p>
+					Recruiter reaching out about roles? Student looking for advice or a free protfolio review? Or you simply want to chat? Feel free to email me!</a>
+				</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+        
+      </div>
+
+<!-- Footer -->
+<footer>
+	<div class="soc">
+	  
+	  <a target="_blank" href="https://twitter.com/keiranlovett" title="Twitter"><span class="ion ion-social-twitter"></span></a>
+	  
+	  <a target="_blank" href="https://github.com/keiranlovett" title="GitHub"><span class="ion ion-social-github"></span></a>
+	  
+	  <a target="_blank" href="https://hk.linkedin.com/in/keiranlovett" title="Linkedin"><span class="ion ion-social-linkedin"></span></a>
+	  
+	</div>
+	<div class="copy">© 2023 Made by hand by Keiran Lovett. All rights reserved.</div>
+	<div class="clr"></div>
+</footer><!-- Lines -->
+      <div class="line top"></div>
+      <div class="line bottom"></div>
+      <div class="line left"></div>
+      <div class="line right"></div>
+    </div><!-- Plugins -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.magnific-popup.js"></script>
+<script src="/assets/js/imagesloaded.pkgd.js"></script>
+<script src="/assets/js/isotope.pkgd.js"></script>
+<script src="/assets/js/owl.carousel.js"></script>
+<script src="/assets/js/regl.min.js"></script>
+<script src="/assets/js/typed.js"></script>
+<script src="/assets/js/rrssb.js"></script>
+<script src="/assets/js/simple-jekyll-search.js"></script>
+<script src="/assets/js/webgl.js"></script>
+
+<!-- Main -->
+<script src="/assets/js/glitche-scripts.js"></script></body>
+
+</html>
