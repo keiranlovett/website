@@ -141,6 +141,46 @@ header {
 	}
 }
 
+
+
+.img-header {
+	position: absolute;
+	padding-top: 100px;
+	z-index: -1;
+	height: 75vh;
+	width: calc(100%);
+	overflow: hidden;
+	@media (max-width: 840px) {
+		width: 150%;
+	}
+
+	img {
+	  animation: block-scroll 5s linear infinite alternate;
+	}
+}
+
+
+
+
+
+
+
+
+
+// the content animation is chrome only
+
+@keyframes block-scroll {
+ 0% {filter: contrast(0.7) grayscale(0.90) hue-rotate(118deg) saturate(1.0) sepia(0.1) brightness(0.5)}
+ 24.99% {filter: contrast(0.5) grayscale(0.95) hue-rotate(118deg) saturate(1.3) sepia(0.08) brightness(0.5)}
+ 25% {filter: contrast(0.6) grayscale(0.80) hue-rotate(118deg) saturate(1.8) sepia(0.15) brightness(0.5)}
+ 49.99% {filter: contrast(0.7) grayscale(0.93) hue-rotate(118deg) saturate(1.6) sepia(0.08) brightness(0.5)}
+ 50% {filter: contrast(0.8) grayscale(0.95) hue-rotate(118deg) saturate(1.3) sepia(0.08) brightness(0.5)}
+ 100% {filter: contrast(0.7) grayscale(0.97) hue-rotate(118deg) saturate(1.6) sepia(0.08) brightness(0.5)}
+} 
+
+
+
+
 /* 2. Section */
 .section {
 	position: relative;

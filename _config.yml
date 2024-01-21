@@ -37,6 +37,11 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://keiranlovett.com" # the base hostname & protocol for your site, e.g. http://example.com
 date_format: "%d %B %Y"
 
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
 
 author:
   twitter: keiranlovett
@@ -44,7 +49,7 @@ author:
   url: https://keiranlovett.com/
 
 # paginations & permalinks
-paginate: 9
+paginate: 20
 paginate_path: "_pages/writings/page:num/"
 permalink: pretty
 
@@ -99,7 +104,24 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-email-protect
+  - jekyll-picture-tag-ng
 
+picture_tag_ng:
+  backend: imagemagick
+  parallel: false
+  threads: 16
+  background_color: FFFFFF
+picture_versions:
+    s:
+      out_size: 400
+    m:
+      out_size: 700
+      media: 1200
+    l:
+      out_size: 1200
+    xl:
+      out_size: 2000
+      default: true
 
 sass:
   style: compressed

@@ -91,6 +91,7 @@ resume:
         text: >
           I co-organise [Game Dev Happy Hour](http://gamedevhappyhour.com) to help network and share knowledge in the Hong Kong Games industry.
 
+
 skills:
   columns:
     - type: "default" #skills progress type - default, dotted, circles, list
