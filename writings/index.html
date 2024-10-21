@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Writing | Keiran Lovett</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Writing" />
+<meta name="author" content="Keiran" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AAA Game Production. Building teams and making games." />
+<meta property="og:description" content="AAA Game Production. Building teams and making games." />
+<link rel="canonical" href="https://keiranlovett.com/writings/" />
+<meta property="og:url" content="https://keiranlovett.com/writings/" />
+<meta property="og:site_name" content="Keiran Lovett" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Writing" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@keiranlovett" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Keiran"},"description":"AAA Game Production. Building teams and making games.","url":"https://keiranlovett.com/writings/","@type":"WebPage","headline":"Writing","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Load Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
+
+  <!-- Load CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/ionicons.css" />
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="/assets/css/animate.css" />
+  <link rel="stylesheet" href="/assets/css/owl.carousel.css" />
+  <link rel="stylesheet" href="/assets/css/syntax.css" />
+
+  
+
+  
+
+  
+  <!-- Template Dark -->
+  <link id="dark-stylesheet" rel="stylesheet" href="/assets/css/template-dark/dark.css" />
+  
+  
+  
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5"><link type="application/atom+xml" rel="alternate" href="https://keiranlovett.com/feed.xml" title="Keiran Lovett" /></head>
+
+
+
+
+<canvas id="webgl"></canvas>
+
+<script>
+    var imageurl = "/assets/images/background.jpg";
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentShader">
+#define TWO_PI 6.2831853072
+#define PI 3.14159265359
+
+uniform int doInvertImage;
+
+precision highp float;
+
+uniform float globaltime;
+uniform vec2 resolution;
+uniform float aspect;
+uniform float scroll;
+uniform float velocity;
+uniform sampler2D texture;
+
+const float timescale = 0.03;
+const float twist = 1.0;
+const float scrollSpeed = 0.15;
+
+vec2 rotate(vec2 v, float angle) {
+    float c = cos(angle);
+    float s = sin(angle);
+    return v * mat2(c, -s, s, c);
+}
+
+float nsin(float value) {
+    return sin(value * TWO_PI) * 0.5 + 0.5;
+}
+
+void main(void) {
+
+    float scrollModifier = scroll*scrollSpeed;
+    float time = globaltime * timescale;
+    vec2 center = vec2(sin(TWO_PI * time * 0.2), cos(TWO_PI * time * 0.2)) * nsin(time * 0.3) * 0.5;
+    vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5 - center) * vec2(aspect, 1.0);
+    float len = 1.0 - length(tx);
+    float zoom = 1.0 + scrollModifier - len * 3.0 * (1.0 - scrollModifier) + len * velocity * 2.0;
+
+    vec4 imgColor = texture2D(
+            texture,
+            rotate(
+                    (tx + center) * vec2(1.0, -1.0) * zoom,
+                    twist * TWO_PI * nsin(len + time) * scrollModifier + time
+            ) + 0.5
+    );
+
+    if (doInvertImage == 1) {
+        imgColor.rgb = vec3(1.0) - imgColor.rgb;  // Invert the color if doInvertImage is true
+    }
+
+    gl_FragColor = imgColor;
+}
+</script>
+
+<body class="">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="centrize full-width">
+    <div class="vertical-center">
+      <div class="pre-inner">
+        <div class="load typing-load"><p>loading...</p></div>
+        <span class="typed-load"></span>
+      </div>
+    </div>
+  </div>
+</div><!-- Container -->
+    <div class="container">
+
+
+
+
+<!-- Header -->
+<header>
+	<div class="head-top">
+		
+
+		
+		
+		
+	</div>
+</header><!-- Wrapper -->
+      <div class="wrapper">
+        
+
+<!-- Started -->
+<div class="section ">
+</div>
+
+<!-- Blog -->
+<div class="section blog">
+	<div class="content">
+		<div class="title">
+			<div class="title_inner"><a href="https://keiranlovett.com">Home</a> / <a href="/writings/">Writing</a></div>
+		</div>
+		<div class="box-items post-items">
+			
+		</div>
+		
+		
+
+		<div class="clear"></div>
+	</div>
+</div>
+      </div>
+
+<!-- Footer -->
+<footer>
+	<div class="soc">
+	  
+	  <a target="_blank" href="https://twitter.com/keiranlovett" title="Twitter"><span class="ion ion-social-twitter"></span></a>
+	  
+	  <a target="_blank" href="https://github.com/keiranlovett" title="GitHub"><span class="ion ion-social-github"></span></a>
+	  
+	  <a target="_blank" href="https://hk.linkedin.com/in/keiranlovett" title="Linkedin"><span class="ion ion-social-linkedin"></span></a>
+	  
+	</div>
+	<div class="copy">© 2023 Made by hand by Keiran Lovett. All rights reserved.</div>
+	<div class="clr"></div>
+</footer><!-- Lines -->
+      <div class="line top"></div>
+      <div class="line bottom"></div>
+      <div class="line left"></div>
+      <div class="line right"></div>
+    </div><!-- Plugins -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.magnific-popup.js"></script>
+<script src="/assets/js/imagesloaded.pkgd.js"></script>
+<script src="/assets/js/isotope.pkgd.js"></script>
+<script src="/assets/js/owl.carousel.js"></script>
+<script src="/assets/js/regl.min.js"></script>
+<script src="/assets/js/typed.js"></script>
+<script src="/assets/js/rrssb.js"></script>
+<script src="/assets/js/simple-jekyll-search.js"></script>
+<script src="/assets/js/webgl.js"></script>
+
+<!-- Main -->
+<script src="/assets/js/glitche-scripts.js"></script></body>
+
+</html>
