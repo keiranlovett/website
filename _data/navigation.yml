@@ -17,11 +17,11 @@ main:
 #    button: 0
   
   # Portfolio
-#  - title: "Portfolio"
-#    url: "portfolio/"
-#    button: 0
+  - title: "Portfolio"
+    url: "portfolio/"
+    button: 1
   
   # Blog
-#  - title: "Writing"
-#    url: "writings/"
-#    button: 0
+  - title: "Writing"
+    url: "writings/"
+    button: 1

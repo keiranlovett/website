@@ -13,9 +13,9 @@ about:
   title: "About Me"
   image: "assets/images/profile.jpg"
   text: >
-          **G'day! I’m Keiran Lovett**.  
+          **G'day! I'm Keiran Lovett**.  
           
-          Based in Canada, and working in Game Production at Ubisoft. Over the last decade I've shipped games and projects across various roles (producer, game designer, developer).
+          I am an organized game producer with strong skills in leadership, communication, project management, and process design. With over a decade of experience in the Games Industry, I've led both indie and commercial game projects, managing development pipelines, coordinating cross-functional teams, and overseeing all phases from concept to launch. My background spans software development, game design, and user experience, making me a versatile producer who can drive projects to completion while balancing creative and technical goals.
   download:
     text: "Download CV"
     link: "assets/files/keiranlovett_cv_2024.pdf"
@@ -38,9 +38,13 @@ resume:
   experience:
     title: "Experience"
     items:
+      - year: "01/2024 - present"
+        name: "Producer, Gameloft Brisbane"
+        text: "Building and managing Anvil & Snowdrop game engine teams. Working on announced and unannounced Ubisoft projects."
+
       - year: "02/2022 - 11/2023"
         name: "Production Manager, Ubisoft Winnipeg"
-        text: "Building and managing Anvil & Snowdrop game engine teams. Working on announced and unannounced Ubisoft projects."
+        text: "Building Snowdrop game engine features for Star Wars: Outlaws & Avatar: Frontiers of Pandora. Porting Anvil Engine to iOS for Assassins Creed: Mirage & Assassins Creed: Shadows"
         
       - year: "12/2018 - 12/2021"
         name: "Producer, [Shadow Factory](https://www.shadowfactory.io)"
@@ -91,7 +95,8 @@ resume:
         text: >
           I co-organise [Game Dev Happy Hour](http://gamedevhappyhour.com) to help network and share knowledge in the Hong Kong Games industry.
 
-skills:
+
+skills-old:
   columns:
     - type: "default" #skills progress type - default, dotted, circles, list
       title: "Design Skills"
@@ -138,65 +143,182 @@ skills:
         - label: "HTML / CSS"
           value: "90" #0-100 progress in %
 
+skills:
+  columns:
     - type: "list" #skills progress type - default, dotted, circles, list
       title: "Knowledge"
+      enabled: 1
       items:
-        - label: "Website hosting"
+        - label: "Methodologies: Scrum, Kanban, Waterfall"
           value: "" #0-100 progress in %
-
-        - label: "iOS and android apps"
+        - label: "High-Level Planning & Dependency Management"
           value: "" #0-100 progress in %
-
-        - label: "Create logo design"
+        - label: "Product Backlog Management & Grooming"
           value: "" #0-100 progress in %
-
-        - label: "Design for print"
+        - label: "Roadmap Planning & Milestones"
           value: "" #0-100 progress in %
-
-        - label: "Modern and mobile-ready"
+        - label: "Scope & Budget Breakdowns"
           value: "" #0-100 progress in %
-
-        - label: "Advertising services include"
+        - label: "Risk Identification, Analysis, & Management"
           value: "" #0-100 progress in %
-
-        - label: "Graphics and animations"
+        - label: "KPIs, goal setting, & tracking progress"
           value: "" #0-100 progress in %
-
-        - label: "Search engine marketing"
+        - label: "Sprint Planning, Reviews, & Retrospectives"
           value: "" #0-100 progress in %
+        - label: "Tracking Project & Team Velocity"
+          value: "" #0-100 progress in %
+        - label: "Creating & Presenting Project Presentations"
+          value: "" #0-100 progress in %
+        - label: "Outsource Management"
+          value: "" #0-100 progress in %
+        - label: "Individual Contributor / People Management"
+          value: "" #0-100 progress in %
+        - label: "Internal & External Feedback Gathering"
+          value: "" #0-100 progress in %
+        - label: "Onboarding & Documentation"
+          value: "" #0-100 progress in %
+        - label: "Cross-country & Timezone Collaboration"
+          value: "" #0-100 progress in %
+        - label: "Stakeholder Management"
+          value: "" #0-100 progress in %
+        - label: "Process & Pipeline Development/Implementation/Iteration"
+          value: "" #0-100 progress in %
+        - label: "Quality Validation"
+          value: "" #0-100 progress in %
+    - type: "list" #skills progress type - default, dotted, circles, list
+      title: "Tools"
+      enabled: 0
+      items:
+      - label: "JIRA (Project Management)"
+        value: "" #0-100 progress in %
+      - label: "Confluence (Knowledge Management)"
+        value: "" #0-100 progress in %
+      - label: "Trello (Project Management)"
+        value: "" #0-100 progress in %
+      - label: "Miro (Design and Planning)"
+        value: "" #0-100 progress in %
+      - label: "Microsoft Suite (Project Management)"
+        value: "" #0-100 progress in %
+      - label: "Unity (Game Development)"
+        value: "" #0-100 progress in %
+      - label: "Unreal Engine (Game Development)"
+        value: "" #0-100 progress in %
+      - label: "Steamworks (Release Management)"
+        value: "" #0-100 progress in %
+      - label: "Maya (3D Modeling & Animation)"
+        value: "" #0-100 progress in %
+      - label: "Substance Painter (Texturing)"
+        value: "" #0-100 progress in %
+      - label: "SketchUp (3D Design & Modeling)"
+        value: "" #0-100 progress in %
+      - label: "Adobe After Effects (Visual Effects & Motion Graphics)"
+        value: "" #0-100 progress in %
+      - label: "Adobe Premiere Pro (Video Editing)"
+        value: "" #0-100 progress in %
+      - label: "Adobe Illustrator (Vector Art & UI Design)"
+        value: "" #0-100 progress in %
+      - label: "Adobe Animate (2D Animation)"
+        value: "" #0-100 progress in %
+      - label: "Adobe InDesign (Layout & Publishing)"
+        value: "" #0-100 progress in %
+      - label: "Perforce (Version Control)"
+        value: "" #0-100 progress in %
+      - label: "Git (Version Control)"
+        value: "" #0-100 progress in %
+    - type: "list" #skills progress type - default, dotted, circles, list
+      title: "Volunteer Work"
+      enabled: 0
+      items:
+      - label: "RRC Polytech University Winnipeg Games Dev Tutoring (2022)"
+        value: "" #0-100 progress in %
+      - label: "Big Indie Pitch Indie Game Judge"
+        value: "" #0-100 progress in %
+      - label: "Meta Spark APAC Hackathon"
+        value: "" #0-100 progress in %
+      - label: "Sheridan Mentorship"
+        value: "" #0-100 progress in %
+      - label: "21st Century Learning (2011)"
+        value: "" #0-100 progress in %
+      - label: "HKU STEM Teli (2017)"
+        value: "" #0-100 progress in %
+      - label: "User Experience Hong Kong (2013)"
+        value: "" #0-100 progress in %
+      - label: "Siggraph Asia (2013)"
+        value: "" #0-100 progress in %
+      - label: "MIT Enterprise Forum (2013)"
+        value: "" #0-100 progress in %
 
 services:
   title: "Ask me more about..."
   items:
     - icon: "ios-game-controller-b"
       name: "Games Industry"
-      text: "I have a decade worth of experience in the games industry between indie startups and AAA studios."
+      text: "I've evolved from Designer to Producer, successfully fostering collaboration among design, engineering, and production teams to deliver complex game projects."
 
     - icon: "leaf"
       name: "Startup Experience"
-      text: "I love building teams, and have experience in growing startups through recruitment and production initiatives."
+      text: "I love building teams, with plenty experience in building and recruiting diverse talents across art, design, and engineering roles to create high-performing, multi-disciplinary teams."
 
     - icon: "iphone"
       name: "Mobile Games"
-      text: "I started my career in mobile games and even lead a strike-team to port Assassins Creed: Mirage to iOS at Ubisoft in 2023."
+      text: "I started my career in mobile games and even lead a strike-team to port Assassins Creed: Mirage to iOS while at Ubisoft in 2023."
 
     - icon: "star"
       name: "Experience Driven"
-      text: "I use my background in design and development to inform my decision making process in production management. "
+      text: "Educated in game development and project management, along with hands-on experience in user experience and software development, I provide a valuable perspective for creating games and teams effectively."
 
     - icon: "help-buoy"
       name: "Mentorship"
-      text: "I like to support graduates, students, and the local community through networking, community, and learning events."
+      text: "I am passionate about the industry. I like to support graduates, students, and the local community through networking, community, and learning events."
     
     - icon: "chatbubbles"
       name: "Public Speaking"
-      text: "I enjoy public speaking and workshops, especially to share knowledge about the industry and new technologies."
+      text: "I'm an avid community volunteer and strive to contribute to the industry in any way I can. I enjoy public speaking and workshops, especially to share knowledge about the industry and new technologies."
 
-clients:
-  title: "Credits"
+work:
+  columns:
+    - type: "main"
+      title: "Work"
+      text: >
+          Some of the latest and favourite projects I've worked on...
+      items:
+        - label: "Star Wars: Outlaws (2024)"
+          url: "https://www.ubisoft.com/en-au/game/star-wars/outlaws"
+          image: "assets/credits/star-wars-outlaws-logo.png"
+        - label: Assassins Creed Mirage iOS (2023)
+          url: "https://www.ubisoft.com/en-us/game/assassins-creed/news/6hRBheSWDoKUdnKxzy5YOg/assassins-creed-mirage-is-coming-to-ios"
+          image: "assets/credits/assassins-creed-mirage-logo.png"
+        - label: "Avatar: Frontiers of Pandora (2023)"
+          url: "https://www.ubisoft.com/en-au/game/avatar/frontiers-of-pandora"
+          image: "assets/credits/avatar-frontiers-pandora-logo.png"
+    #- type: "secondary"
+    #  title: "Other"
+    #  items:
+    #    - label: Tom Clancy's Rainbow Six Siege Y6 (2022)
+    #    - label: "Stupid Cupid (2018)"
+    #    - label: "Grab Bag (2017)"
+    #    - label: "Hang Up (2018)"
+    #    - label: "LKF Play (2016)"
+    #    - label: "Island Resort (2014)"
+    #    - label: "Me Girl Celebs (2012)"
+    #    - label: "Me Girl Dress Up (2012)"
+
+speaking:
+  title: "Speaking"
   items:
-    - url: "https://www.google.com"
-      image: "assets/img/clients/client_1.png"
+    - label: "Today At Apple"
+    - label: "GDC 2018"
+    - label: "Hong Kong????"
+
+articles:
+  title: "Articles / Speaking"
+  items:
+    - label: ""
+      link: "https://mixmeetings.com/ideas/technology/going-live-with-5g/"
+    - label: "Releasing Games in China"
+      link: "https://mixmeetings.com/ideas/technology/going-live-with-5g/"
+
+
 
 contacts_info:
   title: "Get in Touch"

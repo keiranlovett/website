@@ -14,8 +14,25 @@ layout: default
 		<div class="title">
 			<div class="title_inner"><a href="{{ site.url }}">{{ ui_text.home }}</a> / <a href="{{ page.url }}">{{ page.title }}</a></div>
 		</div>
-		<div class="box-items post-items">
 			{% for post in paginator.posts %}
+
+
+			<div class='row'>
+				<div class='column title'>
+	      			{{ if post.title != '' }}
+							<div class="title_inner">{{ post.title }}</div>
+					{{ endif }}
+    			</div>
+			    <div class='double-column desc'>
+			        {{ post.content | markdownify }}
+			    </div>
+    				<div class="clear"></div>
+
+  			</div>
+
+		
+
+<!--
 			<div class="box-item post-item">
 				<div class="image">
 					<a href="{{ post.url }}">
@@ -33,12 +50,20 @@ layout: default
 				</div>
 				<div class="desc">
 					<div class="date">{{ post.date | date: site.date_format }}</div>
-					<!--<div class="categories">{{ post.categories | join: ", " }}</div>-->
+					<div class="categories">{{ post.categories | join: ", " }}</div>
 					<a href="{{ post.url }}" class="name">{{ post.title }}</a>
 				</div>
 			</div>
+
+
+
+
+
+
+
+-->
+
 			{% endfor %}
-		</div>
 		
 		{% if paginator.total_pages > 1 %}
 		<div class="pagination">

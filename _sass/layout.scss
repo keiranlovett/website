@@ -141,11 +141,40 @@ header {
 	}
 }
 
+
+
+.img-header {
+	width: calc(100%);
+	overflow: hidden;
+	@media (max-width: 840px) {
+		width: 150%;
+	}
+    position: absolute;
+    top: 10%;
+    left: 0;
+  	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+ 	mask-image: linear-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+
+// the content animation is chrome only
+
+@keyframes block-scroll {
+ 0% {filter: contrast(0.7) grayscale(0.90) hue-rotate(118deg) saturate(1.0) sepia(0.1) brightness(0.5)}
+ 24.99% {filter: contrast(0.5) grayscale(0.95) hue-rotate(118deg) saturate(1.3) sepia(0.08) brightness(0.5)}
+ 25% {filter: contrast(0.6) grayscale(0.80) hue-rotate(118deg) saturate(1.8) sepia(0.15) brightness(0.5)}
+ 49.99% {filter: contrast(0.7) grayscale(0.93) hue-rotate(118deg) saturate(1.6) sepia(0.08) brightness(0.5)}
+ 50% {filter: contrast(0.8) grayscale(0.95) hue-rotate(118deg) saturate(1.3) sepia(0.08) brightness(0.5)}
+ 100% {filter: contrast(0.7) grayscale(0.97) hue-rotate(118deg) saturate(1.6) sepia(0.08) brightness(0.5)}
+} 
+
+
+
+
 /* 2. Section */
 .section {
 	position: relative;
 	padding: 0 80px 150px 80px;
-	z-index: 97;
 	opacity: 1;
 	visibility: visible;
 	@include transition(all 0.6s ease 0s);
@@ -220,12 +249,21 @@ header {
 
 }
 
+.blog .started {
+	height: 80vh !important;
+}
+
 /* 3. Started */
 .section.started {
 	text-align: center;
 	padding: 0;
 	margin: 0;
 	position: relative;
+	height: 95vh;
+
+	@media (max-width: 400px) {
+		height: 65vh;
+	}
 
 	.started-content {
 		display: inline-block;
@@ -706,8 +744,7 @@ header {
 }
 
 .single-post-text {
-	font-size: $default-size;
-    line-height: 23px;
+
     
 	&:after {
 		content: '';
@@ -722,6 +759,8 @@ header {
 	}
 
 	p {
+		font-size: $large-size;
+    	line-height: 32px;
 		a {
 			color: $active-color;
 
@@ -753,6 +792,7 @@ header {
 
 	ul, ol {
 		li {
+			font-size: $large-size;
 			margin: 5px 0;
 			padding: 0 0 0 18px;
 			position: relative;

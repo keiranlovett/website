@@ -1,0 +1,66 @@
+{% assign content = site.data.content['work'] %}
+
+<!-- Work -->
+<div class="section clients">
+	<div class="content">
+	{% for column in content.columns %}
+		{% if column.type == 'main' %}
+
+		{{ if column.title != '' }}
+		<div class="title">
+			<div class="title_inner">{{ column.title }}</div>
+		</div>
+		{{ endif }}
+		{{ if column.text != '' }}
+			<p>{{ column.text }}</p>
+		{{ endif }}
+		<div class="box-items">
+			{% for item in column.items %}
+			<div class="box-item">
+				<div class="image">
+					<a target="_blank" href="{{ item.url }}">
+						<img src="{{ item.image | relative_url }}" alt="" />
+						<span class="info">
+							<span class="centrize full-width">
+								<span class="vertical-center resume-items">
+									<span class="resume-item"> 
+										<p class="name glitch-effect-white" data-text="{{ item.label }}">{{ item.label }}</p>
+									</span>
+								</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		{% endif %}
+
+		{% if column.type == 'secondary' %}
+		{{ if column.title != '' }}
+		<div class="title">
+			<div class="title_inner">{{ column.title }}</div>
+		</div>
+		{{ endif }}
+		{{ if column.text != '' }}
+			<p>{{ column.text }}</p>
+		{{ endif }}
+		<div class="box-items">
+			{% for item in column.items %}
+			<div class="box-item">
+				<span class="info">
+					<span class="resume-items">
+						<span class="resume-item"> 
+							<p class="name">{{ item.label }}</p>
+						</span>
+					</span>
+				</span>
+			</div>
+			{% endfor %}
+		</div>
+		{% endif %}
+	{% endfor %}
+	</div>
+</div>
+<div class="clear"></div>
+
