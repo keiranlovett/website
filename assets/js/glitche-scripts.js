@@ -6,7 +6,7 @@ $(function () {
 	/* Set full height in blocks */
 	var width = $(window).width();
 	var height = $(window).height();
-	$('.section.started').css({'height': height-60});
+	//$('.section.started').css({'height': height-60});
 	
 	if ($('.preloader').length > 0) {
 		/* Typed preload text */
@@ -247,7 +247,7 @@ $(function () {
 		var width = $(window).width();
 		var height = $(window).height();
 		
-		$('.section.started').css({'height': height-60});
+		//$('.section.started').css({'height': height-60});
 
 		/* Dotted Skills Line On Resize Window */
 		var skills_dotted = $('.skills-list.dotted .progress');
@@ -258,7 +258,7 @@ $(function () {
 	});
 	
 	if(width < 840) {
-		$('.section.started').css({'height': height-30});
+		//$('.section.started').css({'height': height-30});
 	}
 
 	/*

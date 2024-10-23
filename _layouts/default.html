@@ -15,7 +15,7 @@
       {%- include header.html -%}
       
       <!-- Wrapper -->
-      <div class="wrapper">
+      <div class="wrapper {% if page.layout == 'home' %} home{% endif %}{% if page.layout == 'post' %} blog{% endif %}">
         {{ content }}
       </div>
       

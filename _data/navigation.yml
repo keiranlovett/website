@@ -19,9 +19,9 @@ main:
   # Portfolio
   - title: "Portfolio"
     url: "portfolio/"
-    button: 0
+    button: 1
   
   # Blog
   - title: "Writing"
     url: "writings/"
-    button: 0
+    button: 1

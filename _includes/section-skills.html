@@ -1,6 +1,7 @@
 {% assign content = site.data.content['skills'] %}
 
 {% for column in content.columns %}
+{% if column.enabled == 1 %}
 <!-- Skills -->
 <div class="section skills">
 	<div class="content">
@@ -60,4 +61,5 @@
 		</div>
 	</div>
 </div>
+{% endif %}
 {% endfor %}

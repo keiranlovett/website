@@ -12,15 +12,15 @@ layout: default
 
 {% assign blog_url = 'blog/' %}
 
-<div class="img-header">
-  <img id="img" src="{{ page.image | relative_url }}" style="width: 100%;">
-</div>
 
 <!-- Started -->
 <div class="section started">
 	<div class="centrize full-width">
 
 		<div class="vertical-center">
+
+			<img class="img-header" src="{{ page.image | relative_url }}">
+
 			<div class="started-content">
 				<div class="date">{{ page.date | date: site.date_format }}</div>
 				<div class="h-title blog_title">{{ page.title }}</div>
