@@ -17,11 +17,19 @@ Welcome to my `/uses` page! This isn't meant to be a complete list of everything
 | Chair      | Herman Miller Aeron                   |
 | Light      | Mr. Wattson                           |
 
+I play a lot of Apple Music through my first-get HomePod. It's terrible at everything except being a speaker for Apple Music. Many complaints but none for office 'radio'.
+
+
 # Development
 
 Taking autocompletion and other IDE features out of the picture, Sublime Text is still my favorite editor. 
 
+
+
 # Productivity
+
+I'm a day one upgrader of MacOS, so I'm always using the latest version. I also sometimes dare to use beta versions of MacOS when people are saying it's stable enough. In my [dotfiles repo]() you'll find my custom MacOS settings.
+
 My main browser is Safari. I value its low footprint and sync with my other devices, despite being the weakest of the bunch when it comes to devtools. When I occasionally need more advanced tooling, I switch to Chrome.
 
 # Apps
