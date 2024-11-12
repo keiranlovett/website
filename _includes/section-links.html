@@ -1,0 +1,24 @@
+{% assign content = site.data.content['links'] %}
+
+<!-- Showreel -->
+<div class="section about">
+	<div class="content">
+		{{ if content.title != '' }}
+		<div class="title">
+			<div class="title_inner">{{ content.title }}</div>
+		</div>
+		{{ endif }}
+		<p>Some additional areas of my website for you to explore</p>
+		<div class="button-list">
+			<ul>
+				{% for page in content.page %}
+				{% assign nav_url = page.url | absolute_url %}
+				<li>
+					<div class="bts"><a target="_blank" href="{{ nav_url}}" class="btn" data-text="{{ page.title }}">{{ page.title }}</a></div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>

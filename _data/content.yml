@@ -34,6 +34,14 @@ showreel:
   title: "Showreel"
   youtube_id: "we9rnDoJdKM"
 
+links:
+  title: Pages
+  page:
+    #- title: Now
+    #  url: now
+    - title: Uses
+      url: uses
+
 resume:
   experience:
     title: "Experience"

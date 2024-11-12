@@ -7,66 +7,53 @@ title: What I Use
 
 Welcome to my `/uses` page! This isn't meant to be a complete list of everything I touch on a daily basis, but a spotlight of the tools I enjoy using most.
 
-# Workspace
+## Workspace
 
 | Workstation| Mac Mini M1 2020                      |
-| Stand      | Rain Design mStand                    |
 | Speakers   | Bose Companion 2 Series II            |
 | Monitor    | LG 34WN780-B 34" WQHD  Ultrawide      |
-| Keyboard   | Keychron Q1 w/ Phantom Red switches   |
+| Keyboard   | Apple Keyboard with TouchID		     |
 | Mouse      | Logitech MX Master 3                  |
 | Dongle     | Satechi Multi Port USB-C V2           |
 | Mic        | Shure MV7                             |
-| Studio arm | Elgato Wave Mic Arm (not displayed)   |
-| Headphones | AIAIAI TMA-2                          |
+| NAS        | Synology DS420                        |
+| Headphones | Corsair HSBD                          |
 |            | AirPods Pro                           |
-| Desk       | Fully Jarvis w/ custom rubberwood top |
+| Desk       | Fully Jarvis w/ custom Bamboo top 	 |
 | Chair      | Herman Miller Aeron                   |
-| Light      | Mr. Wattson                           |
 
-I play a lot of Apple Music through my first-get HomePod. .
+> *I play a lot of Apple Music through my first-get HomePod. It was gifted to me after giving a presentation for Apple and I've made sure to keep it in pristine condition.*
 
-
-# Development
-
-Taking autocompletion and other IDE features out of the picture, Sublime Text is still my favorite editor. 
+<br/>
 
 
-
-# Productivity
-
-I'm a day one upgrader of MacOS, so I'm always using the latest version. I also sometimes dare to use beta versions of MacOS when people are saying it's stable enough. In my [dotfiles repo]() you'll find my custom MacOS settings.
-
-My main browser is Safari. I value its low footprint and sync with my other devices, despite being the weakest of the bunch when it comes to devtools. When I occasionally need more advanced tooling, I switch to Chrome.
-
-# Apps
+## Apps
 
 | Browser       | Safari                  |
-| ------------- | ----------------------- |
 | Mail          | Mimestream (macOS)      |
-|               | Gmail (iOS)             |
+|               | Mail (iOS)              |
 | Notes         | Obsidian                |
 |               | Apple Notes             |
 | Writing       | iA Writer               |
-| Tasks         | Things                  |
-| Calendar      | Google Calendar (macOS) |
-|               | Fantastical (iOS)       |
-| Code          | PhpStorm                |
+| Code          | VSCode                  |
 |               | Sublime Text            |
 | Git           | Tower                   |
 | Terminal      | iTerm                   |
-| MySQL         | TablePlus               |
-| Debugging     | Ray                     |
+| Game Dev      | Unity                   |
 | Command Bar   | Raycast                 |
 | Communication | WhatsApp                |
 |               | Slack                   |
 |               | Telegram                |
-| RSS           | Reeder                  |
-| Read Later    | Reeder                  |
-| Bookmarks     | Pinboard                |
-| Presentations | Keynote                 |
 | Finance       | Google Sheets           |
 | Music         | Spotify                 |
 | Photography   | Lightroom               |
-| Podcasts      | Overcast                |
-| News          | FM radio                |
+
+> *Taking autocompletion and other IDE features out of the picture, Sublime Text is still my favorite editor.*
+
+<br/>
+
+### Productivity
+
+I'm a day one upgrader of MacOS, so I'm always using the latest version. I also sometimes dare to use beta versions of MacOS when people are saying it's stable enough. In my [dotfiles repo]() you'll find my custom MacOS settings.
+
+My main browser is Safari. I value its low footprint and sync with my other devices, despite being the weakest of the bunch when it comes to devtools. When I occasionally need more advanced tooling, I switch to Chrome.
