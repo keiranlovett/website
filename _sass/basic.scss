@@ -486,19 +486,16 @@ figure {
 
 /*
 table {
-    margin-top: 1.5rem;
     width: 100%;
-    font-family: Berkeley Mono, monospace;
-    font-variant-numeric: tabular-nums;
-    border-collapse: collapse;
+    
 }
 .markup th {
     font-weight: 400;
 }
 .markup th,
 .markup td {
-    font-size: 0.875rem;
-    padding: 0.25rem 0.5rem;
+    
+    
     border-bottom: 1px solid #d4d4d8;
 }
 */
@@ -508,12 +505,16 @@ table {
 table {
 	width: 100%;
 	margin: 30px 0;
+  margin-top: 1.5rem;
 	padding: 0;
-	border-collapse: collapse;
+	font-family: Berkeley Mono, monospace;
+  font-variant-numeric: tabular-nums;
+  border-collapse: collapse;
 }
 
 th {
 	font-weight: 500;
+	font-size: 0.875rem;
 	border: none;
 	border-bottom: 1px solid $light-color;
 	color: $dark-color;
@@ -522,6 +523,7 @@ th {
 }
 
 td {
+  font-size: 0.875rem;
 	border: none;
 	border-bottom: 1px solid $light-color;
 	padding: 12px 15px; 

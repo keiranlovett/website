@@ -1,13 +1,20 @@
+--- 
+layout: page 
+permalink: uses/ 
+title: What I Use 
+---
+
+
 Welcome to my `/uses` page! This isn't meant to be a complete list of everything I touch on a daily basis, but a spotlight of the tools I enjoy using most.
 
 # Workspace
 
-| Laptop     | MacBook Pro M1 2020                   |
+| Workstation| Mac Mini M1 2020                      |
 | Stand      | Rain Design mStand                    |
 | Speakers   | Bose Companion 2 Series II            |
-| Monitor    | LG 27MU67                             |
+| Monitor    | LG 34WN780-B 34" WQHD  Ultrawide      |
 | Keyboard   | Keychron Q1 w/ Phantom Red switches   |
-| Mouse      | Logitech MX Master                    |
+| Mouse      | Logitech MX Master 3                  |
 | Dongle     | Satechi Multi Port USB-C V2           |
 | Mic        | Shure MV7                             |
 | Studio arm | Elgato Wave Mic Arm (not displayed)   |
@@ -17,7 +24,7 @@ Welcome to my `/uses` page! This isn't meant to be a complete list of everything
 | Chair      | Herman Miller Aeron                   |
 | Light      | Mr. Wattson                           |
 
-I play a lot of Apple Music through my first-get HomePod. It's terrible at everything except being a speaker for Apple Music. Many complaints but none for office 'radio'.
+I play a lot of Apple Music through my first-get HomePod. .
 
 
 # Development
