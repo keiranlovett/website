@@ -13,34 +13,35 @@ layout: default
 {% assign blog_url = 'blog/' %}
 
 
-<!-- Started -->
-<div class="section started">
-	<div class="centrize full-width">
-
-		<div class="vertical-center">
-
-			<img class="img-header" src="{{ page.image | relative_url }}">
-
-			<div class="started-content">
-				<div class="date">{{ page.date | date: site.date_format }}</div>
-				<div class="h-title blog_title">{{ page.title }}</div>
-				<div class="h-subtitle typing-bread">
-					<p><a href="{{ site.url }}">{{ ui_text.home }}</a> / <a href="{{ blog_url | relative_url }}">{{ ui_text.blog }}</a></p>
-				</div>
-				<span class="typed-bread"></span>
-			</div>
-		</div>
-	</div>
-	<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
-</div>
-
 <!-- Blog -->
 <div class="section blog">
 	<div class="content">
+
+		<div class="vertical-center">
+			<div class="content">
+				<p><a href="{{ blog_url | relative_url }}">{{ ui_text.blog }}</a></p>
+
+				<div class="h-title stroke-text">{{ page.title }}</div>
+				<div class="date">{{ page.date | date: site.date_format }}</div>
+			</div>
+		</div>
 		
 		<div class="single-post-text">
 			{{ page.content }}
 		</div>
+		
+		{% if site.related_posts.size %}
+		<section class="widget widget_recent_entries">
+			<h2 class="widget-title">{{ ui_text.related_posts }}</h2>
+			<ul>
+				{% for post in site.related_posts limit: 4 %}
+				<li>
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+		{% endif %}
 		
 		<div class="post-text-bottom">
 			<div class="social-share" data-title="{{ page.title }}" data-url="{{ page.url | absolute_url }}">

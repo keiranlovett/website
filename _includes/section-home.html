@@ -1,12 +1,12 @@
 {% assign content = site.data.content['header'] %}
 
 <!-- Started -->
-<div class="section started">
+<div class="section started align-center">
 	<div class="centrize full-width">
 		<div class="vertical-center">
 			<div class="started-content">
 				{{ if content.title != '' }}
-				<div class="h-title glitch-effect" data-text="{{ content.title }}">{{ content.title }}</div>
+				<div class="h-title glitch-effect " data-text="{{ content.title }}">{{ content.title }}</div>
 				{{ endif }}
 				<div class="h-subtitle typing-subtitle">
 					{% for item in content.typed %}

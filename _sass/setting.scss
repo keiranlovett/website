@@ -16,7 +16,7 @@ $default-font: 'Roboto Mono';
 $icons-font: 'Ionicons';
 
 /* Fonts Size */
-$large-size: 17px;
+$large-size: 1.125rem;
 $default-size: 13px;
 $small-size: 12px;
 $extra-small-size: 11px;
@@ -39,6 +39,52 @@ $line-height: 23px;
 /* Forms */
 $form-border: 1px solid $light-color;
 $form-border-hover: 1px solid $active-color;
+
+
+/* Light Theme */
+@mixin light-theme {
+  --focus-color: #f0f0f0;  // Focus color for light theme
+  --default-color: #f0f0f0;  // Default color for light theme
+  --bg-color: #ffffff;  // Light theme background color
+  --header-color: #333333;  // Text color for light theme
+  --text-color: #333333;  // Text color for light theme
+  --border-color: #dcdcdc;  // Border color for light theme elements
+  --highlight-color: #f26b38;  // Highlight color
+  --highlight-bg-color: #e0e0e0;  // Background color for highlighted elements in light theme
+  --link-color: #1a73e8;  // Link color for light theme
+  --bg-hover-color: #f4f4f4;  // Background color on hover
+  --bg-mid-color: #f2f2f2;  // Mid light background color
+  --bg-light-color: #fafafa;  // Light background color
+  --bg-dark-light-color: #e0e0e0;  // Slightly darker background for specific elements
+  --selection-bg-color: #f26b38;  // Selection background color
+  --text-hover-color: #444444;  // Hover text color
+  --button-color: #dddddd;  // Hover text color
+  --image-filter: invert(100%);
+  --button-default-color: #f2f2f2;
+}
+
+/* Dark Theme */
+@mixin dark-theme {
+  --focus-color: #f0f0f0;
+  --default-color: #f0f0f0;
+  --bg-color: #26262d;  // Dark theme background color
+  --header-color: #f0f0f0;  // Text color for dark theme
+  --text-color: #a2a2a6;  // Text color for dark theme
+  --border-color: #28282f;  // Border color for dark theme elements
+  --highlight-color: #f26b38;  // Highlight color
+  --highlight-bg-color: #666666;  // Background color for highlighted elements
+  --link-color: #f26b38;  // Link color
+  --bg-hover-color: #4a4b54;  // Background color on hover
+  --bg-mid-color: #31313a;  // Mid dark background color
+  --bg-light-color: #3b3b42;  // Light dark background color
+  --bg-dark-light-color: #3a3b44;  // Slightly darker background for specific elements
+  --selection-bg-color: #f26b38;  // Selection background color
+  --text-hover-color: #dddddd;  // Hover text color
+  --button-color: #dddddd;  // Hover text color
+  --image-filter: none;
+  --button-default-color: none;
+}
+
 
 /* Params */
 @mixin border-radius($radius) {

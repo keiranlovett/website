@@ -5,7 +5,10 @@
 ui_text:
   theme:          "Toggle Light Mode"
   home:           "Home"
+  return:         "Go Back"
   blog:           "Blog"
+  work:           "Works"
+  work-sub:       "Some of the latest and favourite projects I've worked on..."
   archive:        "Archive"
   blog_post:      "Blog Post"
   by:             "by"
@@ -19,5 +22,6 @@ ui_text:
   search:         "Search ..."
   recent_posts:   "Recent Posts"
   latest_posts:   "Latest Posts"
+  related_posts:   "Related..."
   categories:     "Categories"
   

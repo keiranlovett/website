@@ -199,7 +199,6 @@ header {
 				position: relative;
 				line-height: 24px;
 				font-size: $h2-size;
-				color: $dark-color;
 				text-transform: uppercase;
 				letter-spacing: $extra-letter-spacing;
 				@include transition(all 0.3s ease 0s);
@@ -211,22 +210,25 @@ header {
 	.h-title {
 		font-size: $title-size;
 		font-family: $default-font;
-		color: $dark-color;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: $extra-letter-spacing;
 		margin: 10px 0 15px 0;
 
+		&.blog_title {
+			font-size: 40px;
+		}
+
 		@media (max-width: 1060px) {
 			&.blog_title {
-				font-size: 48px;
+				font-size: 40px;
 			}
 		}
 		@media (max-width: 840px) {
 			font-size: 52px;
 			padding: 0 20px;
 			&.blog_title {
-				font-size: 40px;
+				font-size: 26px;
 			}
 		}
 		@media (max-width: 580px) {
@@ -249,13 +251,10 @@ header {
 
 }
 
-.blog .started {
-	height: 80vh !important;
-}
+
 
 /* 3. Started */
 .section.started {
-	text-align: center;
 	padding: 0;
 	margin: 0;
 	position: relative;
@@ -465,7 +464,6 @@ header {
 			padding: 5px 0 30px 0;
 			.name {
 				font-size: $default-size;
-				color: $default-color;
 				font-weight: 400;
 				position: relative;
 				margin: 0 0 9px 0;
@@ -541,7 +539,6 @@ header {
 			width: 36px;
 			text-align: center;
 			font-size: 30px;
-			color: $active-color;
 			@media (max-width: 400px) {
 				float: none;
 				display: inline-block;
@@ -596,6 +593,43 @@ header {
 		}
 	}
 }
+
+
+.post-items {
+	position: relative;
+	@media (max-width: 580px) {
+		margin-left: 0;
+	}
+	.post-item {
+		margin-top: 100px;
+		position: relative;
+		p {
+			text-size: $small-size;
+			margin-top: -15px !important;
+		}
+		@media (max-width: 1000px) {
+			padding: 15px 15px 5px 15px;
+		}
+		.title {
+			.title_inner {
+				text-decoration: none;
+				font-weight: 700;
+				text-transform: uppercase;
+				@include transition(all 0.3s ease 0s);
+			}
+		}
+		&:hover {
+			.title {
+				.title_inner {
+					color: $active-color;
+					box-shadow: inset 0 -6px 0px transparent;
+				}
+			}
+		}
+
+	}
+}
+
 
 /* 9. Box Items */
 .box-items {
@@ -733,6 +767,13 @@ header {
 }
 
 /* 11. Blog */
+
+.blog .content {
+	margin-top: 10vh !important;
+}
+
+
+
 .post-image {
 	margin: 0 0 25px 0;
 	font-size: 0;
@@ -745,7 +786,6 @@ header {
 
 .single-post-text {
 
-    
 	&:after {
 		content: '';
 		position: relative;
@@ -760,10 +800,8 @@ header {
 
 	p {
 		font-size: $large-size;
-    	line-height: 32px;
+    	line-height: 1.77;
 		a {
-			color: $active-color;
-
 			&:hover {
 				text-decoration: underline;
 			}
@@ -775,10 +813,8 @@ header {
 		padding: 0 0 0 20px;
 		font-size: $large-size;
 		line-height: 24px;
-		color: $extra-color;
 		font-style: italic;
 		font-weight: 300;
-		border-left: 2px solid $active-color;
 
 		code {
 			padding: 2px;
@@ -1257,7 +1293,6 @@ a.btn, .btn {
   top: 3px;
   display: inline-block;
   font-family: $icons-font;
-  color: $active-color;
   speak: none;
   font-style: normal;
   font-weight: normal;

@@ -25,3 +25,8 @@ main:
   - title: "Writing"
     url: "writings/"
     button: 1
+
+  # Blog
+  - title: "Uses"
+    url: "uses/"
+    button: 1

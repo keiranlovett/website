@@ -18,6 +18,7 @@ group :jekyll_plugins do
   gem "jekyll-archives"
   gem "jekyll-paginate"
   gem "jekyll-seo-tag"
+  gem 'jekyll-postfiles'
   gem 'jekyll-email-protect'
 end
 
@@ -33,5 +34,4 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 
 gem "webrick", "~> 1.8"
-
 gem "jekyll-picture-tag-ng", "~> 0.1.0"

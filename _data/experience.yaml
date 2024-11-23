@@ -1,0 +1,29 @@
+title: "Experience"
+items:
+  - year: "01/2024 - present"
+    name: "Producer, Gameloft Brisbane"
+    text: "Building and managing Anvil & Snowdrop game engine teams. Working on announced and unannounced Ubisoft projects."
+
+  - year: "02/2022 - 11/2023"
+    name: "Production Manager, Ubisoft Winnipeg"
+    text: "Building Snowdrop game engine features for Star Wars: Outlaws & Avatar: Frontiers of Pandora. Porting Anvil Engine to iOS for Assassins Creed: Mirage & Assassins Creed: Shadows"
+    
+  - year: "12/2018 - 12/2021"
+    name: "Producer, [Shadow Factory](https://www.shadowfactory.io)"
+    text: "Managing the design and development of content for industry-leading clients (Facebook, Apple, PGM, and more...)."
+
+  - year: "11/2017 - 12/2018"
+    name: "Technical Director, Shadow Factory"
+    text: "Architecting the studio development and production pipelines, allowing projects and teams to scale effortlessly."
+
+  - year: "06/2016 - 10/2017"
+    name: "Game Developer, Lan Kwai Fong Group"
+    text: "Research / Development of new technologies in AR, VR, and mobile platforms. (Unity, Unreal Engine)."
+
+  - year: "06/2014 - 03/2016"
+    name: "User Interface Designer, Insight Robotics"
+    text: "Designing core UI and developing user tools for robotics and early-warning fire detection system and software."
+    
+  - year: "11/2012 - 05/2014"
+    name: "Game Designer, Frenzoo Limited"
+    text: "Developer on various games in the 'MeGirl' IOS / Android mobile games series."

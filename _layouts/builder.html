@@ -1,3 +1,5 @@
+{% assign settings = site.data.settings['settings'] %}
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   
@@ -5,7 +7,7 @@
 
   {%- include background.html -%}
   
-  <body class="{% if page.layout == 'home' %} home{% endif %}{% if page.layout == 'post' %} blog{% endif %}">
+  <body class="{% if settings.dark_ui == 1 %} dark{% endif %}{% if page.layout == 'home' %} home{% endif %}{% if page.layout == 'post' %} blog{% endif %}">
     
     {%- include preloader.html -%}
 

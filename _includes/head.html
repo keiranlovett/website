@@ -26,12 +26,8 @@
   <link rel="stylesheet" href="{{ 'assets/css/rtl.css' | relative_url }}" />
   {% endif %}
 
-  {% if settings.dark_ui == 1 %}
-  <!-- Template Dark -->
-  <link id="dark-stylesheet" rel="stylesheet" href="{{ 'assets/css/template-dark/dark.css' | relative_url }}" />
   {% if settings.dark_mode_toggle == 1 %}
     <script src="{{ 'assets/js/dark-mode-toggle.js' | relative_url }}" defer></script>
-  {% endif %}
   {% endif %}
   
   <!--[if lt IE 9]>

@@ -48,6 +48,8 @@ GEM
     jekyll-picture-tag-ng (0.1.0)
       jekyll
       kramdown
+    jekyll-postfiles (3.1.0)
+      jekyll (>= 3.8.6, < 5)
     jekyll-sass-converter (2.2.0)
       sassc (> 2.0.1, < 3.0)
     jekyll-seo-tag (2.8.0)
@@ -99,6 +101,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-paginate
   jekyll-picture-tag-ng (~> 0.1.0)
+  jekyll-postfiles
   jekyll-seo-tag
   tzinfo (~> 1.2)
   tzinfo-data

@@ -5,65 +5,86 @@ layout: default
 {% assign ui_text = site.data.ui-text['ui_text'] %}
 
 <!-- Started -->
-<div class="section ">
-</div>
+<div class="section "></div>
 
-<!-- Blog -->
 <div class="section blog">
+
 	<div class="content">
+		<p><a href="{{ '/' | relative_url }}">{{ ui_text.return }}</a></p>
 		<div class="title">
-			<div class="title_inner"><a href="{{ site.url }}">{{ ui_text.home }}</a> / <a href="{{ page.url }}">{{ page.title }}</a></div>
+			<div class="h-title stroke-text">{{ page.title }}</div>
 		</div>
-			{% for post in paginator.posts %}
+		{% if page.date and page.date != "" %}
+		 <div class="date">{{ page.date | date: site.date_format }}</div>
+		{% endif %}
+	</div>
 
+	<div class="content">
+		{% if site.categories.size %}
+			<section class="widget widget_categories">
+				<h2 class="widget-title">{{ ui_text.categories }}</h2>
+				<ul>
+				{% assign categories_list = site.categories %}
+				  {% if categories_list.first[0] == null %}
+				    {% for category in categories_list %}
+				      <li><a href="{{ '/categories' | relative_url }}/{{ category | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }}</a> <small>({{ site.tags[category].size }})</small></li>
+				    {% endfor %}
+				  {% else %}
+				    {% for category in categories_list %}
+				      <li><a href="{{ '/categories' | relative_url }}/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }}</a> <small>({{ category[1].size }})</small></li>
+				    {% endfor %}
+				  {% endif %}
+				{% assign categories_list = nil %}
+				</ul>
+			</section>
+			{% endif %}
 
-			<div class='row'>
-				<div class='column title'>
-	      			{{ if post.title != '' }}
-							<div class="title_inner">{{ post.title }}</div>
-					{{ endif }}
-    			</div>
-			    <div class='double-column desc'>
-			        {{ post.content | markdownify }}
-			    </div>
-    				<div class="clear"></div>
+			{% if site.tags.size %}
+			<section class="widget widget_tags">
+				<h2 class="widget-title">{{ ui_text.tags }}</h2>
+				<ul>
+				{% assign tags_list = site.tags %}
+				  {% if tags_list.first[0] == null %}
+				    {% for category in tags_list %}
+				      <li><a href="{{ '/tags' | relative_url }}/{{ category | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }}</a> <small>({{ site.tags[category].size }})</small></li>
+				    {% endfor %}
+				  {% else %}
+				    {% for category in tags_list %}
+				      <li><a href="{{ '/tags' | relative_url }}/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }}</a> <small>({{ category[1].size }})</small></li>
+				    {% endfor %}
+				  {% endif %}
+				{% assign tags_list = nil %}
+				</ul>
+			</section>
+			{% endif %}
 
-  			</div>
-
-		
-
-<!--
-			<div class="box-item post-item">
-				<div class="image">
-					<a href="{{ post.url }}">
-						{% if post.image != nil %}
-						<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
-						{% endif %}
-						<span class="info">
-							<span class="centrize full-width">
-								<span class="vertical-center">
-									<span class="ion ion-ios-book-outline"></span>
-								</span>
-							</span>
-						</span>
-					</a>
-				</div>
-				<div class="desc">
-					<div class="date">{{ post.date | date: site.date_format }}</div>
-					<div class="categories">{{ post.categories | join: ", " }}</div>
-					<a href="{{ post.url }}" class="name">{{ post.title }}</a>
-				</div>
+		<div class="single-post-text">
+			<div id="search" class="widget widget_search">
+				<form class="search-form" method="GET" action="{{ '/search.html' | relative_url }}">
+					<label>
+						<input type="search" id="search-input" class="search-field" placeholder="{{ ui_text.search }}" value="">
+					</label>
+					<input type="submit" class="search-submit" value="">
+					<ul id="results-container"></ul>
+				</form>
 			</div>
+		</div>
 
-
-
-
-
-
-
--->
-
+		<div class="post-items">
+			{% for post in paginator.posts %}
+			<div class="post-item">
+				<div class="date">{{ post.date | date: site.date_format }}</div>
+				<!--<div class="categories">{{ post.categories | join: ", " }}</div>-->
+				<div class="title">
+					<a href="{{ post.url }}" class="title_inner">{{ post.title }}</a>
+				</div>
+				<!-- Display the first sentence -->
+				<p class="excerpt">
+				{{ post.content | strip_html | split: "." | first }}.
+				</p>
+			</div>
 			{% endfor %}
+		</div>
 		
 		{% if paginator.total_pages > 1 %}
 		<div class="pagination">

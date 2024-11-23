@@ -9,7 +9,7 @@ author: Keiran Lovett
 
 I'm happy to showcase my small contribution to Brand HK's latest campaign "Creative Hong Kong", in their latest video "Wall to Wall Creativity" I showcase a small game I designed while a student at Savannah College of Art and Design Hong Kong.
 
-[plugin:embed](https://www.youtube.com/watch?v=mMmR6RixxH8)
+{% include player.html id='mMmR6RixxH8' %}
 
 You can check out the [article here](http://www.brandhk.gov.hk/html/en/OurHongKong/creativehkgameon.html), or read the excerpt below.
 
@@ -23,3 +23,4 @@ When looking for a suitable young "star" in the fast-developing on-line game sec
  
 Keiran came to Hong Kong when he was 12, is now a permanent resident, and has a B.F.A in Design and Game Management from SCADHK. Thanks guys!
 
+![](1.jpg)

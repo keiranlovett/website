@@ -1,54 +1,81 @@
 $(function () {
 	'use strict';
 	
-	window.onpageshow = function(event) {if (event.persisted) {window.location.reload() }};
+	/*This code ensures that a web page is refreshed when it is restored from the browser's back/forward cache (known as the bfcache)*/
+	/*window.onpageshow = function(event) {if (event.persisted) {window.location.reload() }};*/
 
 	/* Set full height in blocks */
 	var width = $(window).width();
 	var height = $(window).height();
 	//$('.section.started').css({'height': height-60});
 	
-	if ($('.preloader').length > 0) {
-		/* Typed preload text */
-		$('.typed-load').typed({
-			stringsElement: $('.typing-load'),
-			loop: true
-		});
-	}
-	
-	/* Preloader */
-	$(window).on('load', function() {
-		if ($('.preloader').length > 0) {
-			$(".preloader .pre-inner").fadeOut(800, function(){
-				/* Preload hide */
-				$('.preloader').fadeOut();
-				$('body').addClass('loaded');
-				
-				
-			});
-		} else {
-			$('body').addClass('loaded');
-		}
-
-		/* Typed subtitle */
-		$('.typed-subtitle').typed({
-			stringsElement: $('.typing-subtitle'),
-			loop: true
-		});
-		
-		/* Typed breadcrumbs */
-		$('.typed-bread').typed({
-			stringsElement: $('.typing-bread'),
-			showCursor: false
-		});
-
-		/* One Page Nav */
-		var url_hash = location.hash;
-		var sectionElem = $(url_hash);
-		if(url_hash.indexOf('#section-') == 0 && sectionElem.length){
-			$('body, html').animate({scrollTop: $(url_hash).offset().top - 70}, 400);
-		}
+	/* Typed preload text */
+	$('.typed-load').typed({
+		stringsElement: $('.typing-load'),
+		loop: true
 	});
+	
+	
+	function initPreloader() {
+	    // Check if preloader exists
+	    const preloader = $('.preloader');
+	    const body = $('body');
+
+	    if (preloader.length > 0) {
+	      $(".preloader .pre-inner").fadeOut(800, function () {
+	        // Ensure body gets "loaded" class
+	        preloader.fadeOut(500, function () {
+	          body.addClass('loaded');
+	        });
+	      });
+	    } else {
+	      // If no preloader, directly mark body as loaded
+	      body.addClass('loaded');
+	    }
+	  }
+
+	   function initTyped() {
+    // Initialize Typed.js for subtitle
+    const subtitle = $('.typed-subtitle');
+    if (subtitle.length > 0) {
+      subtitle.typed({
+        stringsElement: $('.typing-subtitle'),
+        loop: true,
+      });
+    }
+
+    // Initialize Typed.js for breadcrumbs
+    const breadcrumbs = $('.typed-bread');
+    if (breadcrumbs.length > 0) {
+      breadcrumbs.typed({
+        stringsElement: $('.typing-bread'),
+        showCursor: false,
+      });
+    }
+  }
+
+  function handleHashScroll() {
+    // Smooth scroll for URL hash
+    const urlHash = location.hash;
+    const sectionElem = $(urlHash);
+
+    if (urlHash.indexOf('#section-') === 0 && sectionElem.length) {
+      $('body, html').animate(
+        { scrollTop: sectionElem.offset().top - 70 },
+        400
+      );
+    }
+  }
+
+    // Fallback to ensure "loaded" is applied after max 5s
+  setTimeout(() => $('body').addClass('loaded'), 500);
+
+  // Wait for window load
+  $(window).on('load', function () {
+    initPreloader();
+    initTyped();
+    handleHashScroll();
+  });
 	
 	/*Fade-out animation between load pages*/
 	$('header .top-menu, .typed-bread').on('click', 'a', function(){
@@ -210,18 +237,6 @@ $(function () {
 	});
 	
 	/*
-		Music popup
-	*/
-	$('.has-popup-music').magnificPopup({
-		disableOn: 700,
-		type: 'iframe',
-		removalDelay: 160,
-		preloader: false,
-		fixedContentPos: false,
-		mainClass: 'mfp-fade'
-	});
-
-	/*
 		Gallery popup
 	*/
 	$('.has-popup-gallery').on('click', function() {
@@ -293,22 +308,6 @@ $(function () {
 		url: $('.social-share').data('url'),
 	});
 	
-	/*
-		Sidebar Show/Hide
-	*/
-	$('header').on('click', '.sidebar_btn', function(){
-		$('.s_overlay').fadeIn();
-		$('.content-sidebar').addClass('active');
-		$('body').addClass('scroll_hidden');
-		
-		return false;
-	});
-	$('.content-sidebar, .container').on('click', '.close, .s_overlay', function(){
-		$('.s_overlay').fadeOut();
-		$('.content-sidebar').removeClass('active');
-		$('body').removeClass('scroll_hidden');
-	});
-
 	/*
 		Widget Title
 	*/

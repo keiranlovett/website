@@ -13,7 +13,8 @@ This summer, the Hong Kong Museum of Art and The Friends of the Hong Kong Museum
 
 ===
 
-https://www.youtube.com/embed/M1bw-QBqCDA
+{% include player.html id='M1bw-QBqCDA' %}
+
 
 Learn More:
 [http://hk.art.museum/en_US/web/ma/whatsnew05.html](http://hk.art.museum/en_US/web/ma/whatsnew05.html)

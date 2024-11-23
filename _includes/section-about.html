@@ -32,7 +32,7 @@
 						<div class="bts"><a target="_blank" href="{{ content.download.link | relative_url }}" class="btn fill" data-text="{{ content.download.text }}">{{ content.download.text }}</a></div>
 					</li>
 					
-					{% for link in content.social %}
+					{% for link in site.data.social %}
 						<li><a target="_blank" href="{{ link.url }}" title="{{ link.title }}" class="h-subtitle"><span class="ion ion-{{ link.icon }}"></span></a></li>
 					{% endfor %}
 			
