@@ -4,7 +4,7 @@
 #
 source:         
 destination:    _site
-timezone:       America/Los_Angeles
+timezone:       Australia/Brisbane
 permalink:      /:title.html
 markdown:       kramdown
 highlighter:    rouge
