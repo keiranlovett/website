@@ -4,10 +4,7 @@ header:
   title: "Keiran Lovett"
   typed:
     - "AAA Games Producer."
-    - "Decade in Hong Kong Games."
-    - "Open to Work."
-    - "Located in Australia."
-    - "Interactive Design and Game Development."
+    - "Decade of Experience."
 
 about:
   title: "About Me"
@@ -15,7 +12,7 @@ about:
   text: >
           **G'day! I'm Keiran Lovett**.  
           
-          I am an organized game producer with strong skills in leadership, communication, project management, and process design. With over a decade of experience in the Games Industry, I've led both indie and commercial game projects, managing development pipelines, coordinating cross-functional teams, and overseeing all phases from concept to launch. My background spans software development, game design, and user experience, making me a versatile producer who can drive projects to completion while balancing creative and technical goals.
+          I am an experienced game producer, working across both indie and AAA over the last decade. With over a decade of experience in the Games Industry I've managed development pipelines, coordinating cross-functional teams, and overseeing all phases from preproduction to post launch on titles. My background spans software development, game design, and user experience, making me a versatile producer who can drive projects to completion while balancing creative and technical goals.
   download:
     text: "Download CV"
     link: "assets/files/keiranlovett_cv_2024.pdf"
@@ -32,110 +29,6 @@ links:
     - title: Uses
       url: uses
 
-skills:
-  columns:
-    - type: "list" #skills progress type - default, dotted, circles, list
-      title: "Knowledge"
-      enabled: 1
-      items:
-        - label: "Methodologies: Scrum, Kanban, Waterfall"
-          value: "" #0-100 progress in %
-        - label: "High-Level Planning & Dependency Management"
-          value: "" #0-100 progress in %
-        - label: "Product Backlog Management & Grooming"
-          value: "" #0-100 progress in %
-        - label: "Roadmap Planning & Milestones"
-          value: "" #0-100 progress in %
-        - label: "Scope & Budget Breakdowns"
-          value: "" #0-100 progress in %
-        - label: "Risk Identification, Analysis, & Management"
-          value: "" #0-100 progress in %
-        - label: "KPIs, goal setting, & tracking progress"
-          value: "" #0-100 progress in %
-        - label: "Sprint Planning, Reviews, & Retrospectives"
-          value: "" #0-100 progress in %
-        - label: "Tracking Project & Team Velocity"
-          value: "" #0-100 progress in %
-        - label: "Creating & Presenting Project Presentations"
-          value: "" #0-100 progress in %
-        - label: "Outsource Management"
-          value: "" #0-100 progress in %
-        - label: "Individual Contributor / People Management"
-          value: "" #0-100 progress in %
-        - label: "Internal & External Feedback Gathering"
-          value: "" #0-100 progress in %
-        - label: "Onboarding & Documentation"
-          value: "" #0-100 progress in %
-        - label: "Cross-country & Timezone Collaboration"
-          value: "" #0-100 progress in %
-        - label: "Stakeholder Management"
-          value: "" #0-100 progress in %
-        - label: "Process & Pipeline Development/Implementation/Iteration"
-          value: "" #0-100 progress in %
-        - label: "Quality Validation"
-          value: "" #0-100 progress in %
-    - type: "list" #skills progress type - default, dotted, circles, list
-      title: "Tools"
-      enabled: 0
-      items:
-      - label: "JIRA (Project Management)"
-        value: "" #0-100 progress in %
-      - label: "Confluence (Knowledge Management)"
-        value: "" #0-100 progress in %
-      - label: "Trello (Project Management)"
-        value: "" #0-100 progress in %
-      - label: "Miro (Design and Planning)"
-        value: "" #0-100 progress in %
-      - label: "Microsoft Suite (Project Management)"
-        value: "" #0-100 progress in %
-      - label: "Unity (Game Development)"
-        value: "" #0-100 progress in %
-      - label: "Unreal Engine (Game Development)"
-        value: "" #0-100 progress in %
-      - label: "Steamworks (Release Management)"
-        value: "" #0-100 progress in %
-      - label: "Maya (3D Modeling & Animation)"
-        value: "" #0-100 progress in %
-      - label: "Substance Painter (Texturing)"
-        value: "" #0-100 progress in %
-      - label: "SketchUp (3D Design & Modeling)"
-        value: "" #0-100 progress in %
-      - label: "Adobe After Effects (Visual Effects & Motion Graphics)"
-        value: "" #0-100 progress in %
-      - label: "Adobe Premiere Pro (Video Editing)"
-        value: "" #0-100 progress in %
-      - label: "Adobe Illustrator (Vector Art & UI Design)"
-        value: "" #0-100 progress in %
-      - label: "Adobe Animate (2D Animation)"
-        value: "" #0-100 progress in %
-      - label: "Adobe InDesign (Layout & Publishing)"
-        value: "" #0-100 progress in %
-      - label: "Perforce (Version Control)"
-        value: "" #0-100 progress in %
-      - label: "Git (Version Control)"
-        value: "" #0-100 progress in %
-    - type: "list" #skills progress type - default, dotted, circles, list
-      title: "Volunteer Work"
-      enabled: 0
-      items:
-      - label: "RRC Polytech University Winnipeg Games Dev Tutoring (2022)"
-        value: "" #0-100 progress in %
-      - label: "Big Indie Pitch Indie Game Judge"
-        value: "" #0-100 progress in %
-      - label: "Meta Spark APAC Hackathon"
-        value: "" #0-100 progress in %
-      - label: "Sheridan Mentorship"
-        value: "" #0-100 progress in %
-      - label: "21st Century Learning (2011)"
-        value: "" #0-100 progress in %
-      - label: "HKU STEM Teli (2017)"
-        value: "" #0-100 progress in %
-      - label: "User Experience Hong Kong (2013)"
-        value: "" #0-100 progress in %
-      - label: "Siggraph Asia (2013)"
-        value: "" #0-100 progress in %
-      - label: "MIT Enterprise Forum (2013)"
-        value: "" #0-100 progress in %
 
 services:
   title: "Ask me more about..."
@@ -171,10 +64,7 @@ contacts_info:
     - label: "Email kvclovett@gmail.com"
       icon:  "email"
       value: "Recruiter reaching out about roles? Student looking for advice or a free protfolio review? Or you simply want to chat? Feel free to email me!</a>"
-#   - label: "Address"
-#     icon: "ios-location"
-#     value: "I will leave this blank for now."
 
 footer:
   social:
-  copy: "© 2024 Made by hand by Keiran Lovett. All rights reserved."
+  copy: "© 2025 Made by hand by Keiran Lovett. All rights reserved."

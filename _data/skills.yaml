@@ -1,0 +1,81 @@
+columns:
+  - type: "list" #skills progress type - default, dotted, circles, list
+    title: "Knowledge"
+    enabled: 1
+    items:
+      - label: "Methodologies: Scrum, Kanban, Waterfall"
+        value: "" #0-100 progress in %
+      - label: "High-Level Planning & Dependency Management"
+        value: "" #0-100 progress in %
+      - label: "Product Backlog Management & Grooming"
+        value: "" #0-100 progress in %
+      - label: "Roadmap Planning & Milestones"
+        value: "" #0-100 progress in %
+      - label: "Scope & Budget Breakdowns"
+        value: "" #0-100 progress in %
+      - label: "Risk Identification, Analysis, & Management"
+        value: "" #0-100 progress in %
+      - label: "KPIs, goal setting, & tracking progress"
+        value: "" #0-100 progress in %
+      - label: "Sprint Planning, Reviews, & Retrospectives"
+        value: "" #0-100 progress in %
+      - label: "Tracking Project & Team Velocity"
+        value: "" #0-100 progress in %
+      - label: "Creating & Presenting Project Presentations"
+        value: "" #0-100 progress in %
+      - label: "Outsource Management"
+        value: "" #0-100 progress in %
+      - label: "Individual Contributor / People Management"
+        value: "" #0-100 progress in %
+      - label: "Internal & External Feedback Gathering"
+        value: "" #0-100 progress in %
+      - label: "Onboarding & Documentation"
+        value: "" #0-100 progress in %
+      - label: "Cross-country & Timezone Collaboration"
+        value: "" #0-100 progress in %
+      - label: "Stakeholder Management"
+        value: "" #0-100 progress in %
+      - label: "Process & Pipeline Development/Implementation/Iteration"
+        value: "" #0-100 progress in %
+      - label: "Quality Validation"
+        value: "" #0-100 progress in %
+  - type: "list" #skills progress type - default, dotted, circles, list
+    title: "Tools"
+    enabled: 0
+    items:
+    - label: "JIRA (Project Management)"
+      value: "" #0-100 progress in %
+    - label: "Confluence (Knowledge Management)"
+      value: "" #0-100 progress in %
+    - label: "Trello (Project Management)"
+      value: "" #0-100 progress in %
+    - label: "Miro (Design and Planning)"
+      value: "" #0-100 progress in %
+    - label: "Microsoft Suite (Project Management)"
+      value: "" #0-100 progress in %
+    - label: "Unity (Game Development)"
+      value: "" #0-100 progress in %
+    - label: "Unreal Engine (Game Development)"
+      value: "" #0-100 progress in %
+    - label: "Steamworks (Release Management)"
+      value: "" #0-100 progress in %
+    - label: "Maya (3D Modeling & Animation)"
+      value: "" #0-100 progress in %
+    - label: "Substance Painter (Texturing)"
+      value: "" #0-100 progress in %
+    - label: "SketchUp (3D Design & Modeling)"
+      value: "" #0-100 progress in %
+    - label: "Adobe After Effects (Visual Effects & Motion Graphics)"
+      value: "" #0-100 progress in %
+    - label: "Adobe Premiere Pro (Video Editing)"
+      value: "" #0-100 progress in %
+    - label: "Adobe Illustrator (Vector Art & UI Design)"
+      value: "" #0-100 progress in %
+    - label: "Adobe Animate (2D Animation)"
+      value: "" #0-100 progress in %
+    - label: "Adobe InDesign (Layout & Publishing)"
+      value: "" #0-100 progress in %
+    - label: "Perforce (Version Control)"
+      value: "" #0-100 progress in %
+    - label: "Git (Version Control)"
+      value: "" #0-100 progress in %
