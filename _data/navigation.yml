@@ -30,3 +30,7 @@ main:
   - title: "Uses"
     url: "uses/"
     button: 1
+
+  - title: "Mentor"
+    url: "mentor/"
+    button: 1
