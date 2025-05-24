@@ -26,7 +26,6 @@ Welcome to my `/uses` page! This isn't meant to be a complete list of everything
 
 <br/>
 
-
 ## Apps
 
 | Browser       | Safari                  |
