@@ -4,7 +4,7 @@ title: "Spark AR"
 date: 01-01-2020
 type: main
 external_url: ""
-image: assets/credits/...
+image: assets/credits/meta-spark-logo.png
 ---
 
 > Spark AR is an augmented reality (AR) creation tool from Meta (Facebook). It allowed users to create AR effects, filters, games, and immersive experiences that can be shared on platforms like Facebook, Instagram, and Messenger. It was depreciated in later 2024.
