@@ -6,5 +6,5 @@ category: app
 category_slug: app
 role: designer
 external_url: 
-image: assets/credits/insight-robotics.png
+image: assets/credits/insight-robotics-logo.png
 ---
