@@ -1,4 +1,6 @@
 {% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign ui_show_all_work = site.data.settings['work_all'] %}
+{% assign ui_show_main_limit = site.data.settings['work_main'] %}
 
 {% if site.works.size > 0 %}
 {% assign sorted_works = site.works | sort: "date" | reverse %}
@@ -19,7 +21,7 @@
       <!-- Main Style for First Three Non-Draft Items -->
       <div class="box-items main-style">
         {% assign non_draft_works = sorted_works | where: "draft", false %}
-        {% for item in non_draft_works limit: 3 %}
+        {% for item in non_draft_works limit: ui_show_main_limit %}
         <div class="box-item">
           <div class="image">
             <a target="_blank" href="{{ item.external_url | default: '#' }}">
@@ -43,9 +45,10 @@
         {% endfor %}
       </div>
 
+      {{ if ui_show_all_work == '1' }}
       <!-- Secondary Style for Remaining Non-Draft Items -->
       <div class="box-items secondary-style">
-        {% for item in non_draft_works offset: 3 %}
+        {% for item in non_draft_works offset: ui_show_main_limit %}
         <div class="box-item">
           <span class="info">
             <span class="resume-items">
@@ -59,6 +62,7 @@
         </div>
         {% endfor %}
       </div>
+      {{ endif }}
     </div>
   </div>
   <div class="clear"></div>
