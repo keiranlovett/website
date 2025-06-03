@@ -4,6 +4,7 @@ date: 06-06-2024
 type: main
 category: game
 category_slug: game
+role: producer
 external_url: https://www.ubisoft.com/en-us/game/assassins-creed/news/6hRBheSWDoKUdnKxzy5YOg/assassins-creed-mirage-is-coming-to-ios
 image: assets/credits/assassins-creed-mirage-logo.png
 ---
