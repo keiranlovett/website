@@ -4,7 +4,7 @@ layout: default
 
 {% assign ui_text = site.data.ui-text['ui_text'] %}
 {% assign categories = site.data.settings['portfolio'] %}
-
+{% assign sorted_works = site.works | sort: "date" | reverse %}
 
 <!-- Started -->
 <div class="section "></div>
@@ -36,7 +36,7 @@ layout: default
 		</div>
 
 		<div class="box-items portfolio-items">	
-			{% assign non_draft_works = site.works | where: "draft", false %}
+			{% assign non_draft_works = sorted_works | where: "draft", false %}
 			{% for work in non_draft_works%}
 			<div class="box-item {{ work.category_slug }}">
 				<div class="image">

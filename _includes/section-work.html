@@ -30,8 +30,8 @@
                   <span class="vertical-center resume-items">
                     <span class="resume-item">
 					
-{% assign year = item.date | date: "%Y" %}
-{% assign formatted_title = item.title | append: " (" | append: year | append: ")" %}
+                      {% assign year = item.date | date: "%Y" %}
+                      {% assign formatted_title = item.title | append: " (" | append: year | append: ")" %}
 
                       <p class="name glitch-effect-white" data-text="{{ formatted_title }}">{{ formatted_title }}</p>
                     </span>
