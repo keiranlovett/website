@@ -12,8 +12,6 @@ projects:
   - Wildfire Detection
   - Robotics 
   - Internal Tooling & Monitoring Dashboards
-description: >
-  Designed and implemented user interfaces for critical infrastructure tools and robotics monitoring systems. Focused on usability and data visualization for real-time remote control.
 skills:
   - UI/UX Design
   - Human-Machine Interface
@@ -25,3 +23,4 @@ tools:
   - C#
   - WPF
 ---
+Designed and implemented user interfaces for critical infrastructure tools and robotics monitoring systems. Focused on usability and data visualization for real-time remote control.

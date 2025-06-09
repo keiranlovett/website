@@ -86,6 +86,7 @@ collections:
   - works
   - resume
   - talks
+  - highlights
 
 # archives
 jekyll-archives:

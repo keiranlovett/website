@@ -10,8 +10,6 @@ external_url: "https://www.gameloft.com/gameloft-studios/brisbane"
 image: assets/experience/gameloft-logo.png
 projects:
   - Unannounced Project
-description: >
-  Leading cross-disciplinary development on an unannounced project focused on family-friendly gameplay and creativity. Managing internal and external teams across disciplines, timelines, and milestones.
 skills:
   - Production Planning
   - Creative Ideation
@@ -23,3 +21,5 @@ tools:
   - Confluence
   - Unity
 ---
+
+Leading cross-disciplinary development on an unannounced project focused on family-friendly gameplay and creativity. Managing internal and external teams across disciplines, timelines, and milestones.

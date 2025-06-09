@@ -13,8 +13,6 @@ projects:
   - Avatar: Frontiers of Pandora (Snowdrop Engine)
   - Assassin's Creed: Mirage (Anvil iOS port)
   - Assassin's Creed: Shadows (Anvil iOS port)
-description: >
-  Oversaw development and delivery of proprietary engine features for AAA titles. Directed porting efforts of Anvil Engine to iOS and managed cross-studio collaboration between internal tech and IP teams.
 skills:
   - Engine Production
   - Mobile Platform Adaptation
@@ -28,3 +26,4 @@ tools:
   - Jira
   - Confluence
 ---
+Oversaw development and delivery of proprietary engine features for AAA titles. Directed porting efforts of Anvil Engine to iOS and managed cross-studio collaboration between internal tech and IP teams.

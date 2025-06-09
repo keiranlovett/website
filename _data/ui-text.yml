@@ -11,6 +11,8 @@ ui_text:
   work-sub:       "Some of the latest and favourite projects I've worked on..."
   resume:         "Experience"
   resume-sub:     ""
+  highlights:     "Highlights"
+  highlights-sub: ""
   archive:        "Archive"
   blog_post:      "Blog Post"
   by:             "by"
@@ -24,6 +26,6 @@ ui_text:
   search:         "Search ..."
   recent_posts:   "Recent Posts"
   latest_posts:   "Latest Posts"
-  related_posts:   "Related..."
+  related_posts:  "Related..."
   categories:     "Categories"
   

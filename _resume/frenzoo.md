@@ -9,9 +9,7 @@ location: "Hong Kong SAR"
 external_url: "https://www.frenzoo.com"
 image: assets/experience/frenzoo-logo.png
 projects:
-  - MeGirl Series (Mobile Games)
-description: >
-  Character-Driven Fashion RPGs. Designed and developed mobile games for tween/teen audiences. Balanced monetization, progression, and UX in casual free-to-play games. Contributed to feature design, content systems, and live ops.
+  - MeGirl Series (Mobile Games) 
 skills:
   - Mobile Game Design
   - F2P Monetization
@@ -23,3 +21,5 @@ tools:
   - Spine
   - Google Analytics
 ---
+
+Character-Driven Fashion RPGs. Designed and developed mobile games for tween/teen audiences. Balanced monetization, progression, and UX in casual free-to-play games. Contributed to feature design, content systems, and live ops.
