@@ -1,7 +1,8 @@
 ---
 title: "Producer"
 company: "Gameloft Brisbane"
-date: "2024-01 - Present"
+date_start: "2024-01"
+date_end: "Present"
 type: main
 role: producer
 location: "Brisbane, Australia"

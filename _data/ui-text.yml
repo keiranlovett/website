@@ -9,6 +9,8 @@ ui_text:
   blog:           "Blog"
   work:           "Works"
   work-sub:       "Some of the latest and favourite projects I've worked on..."
+  resume:         "Experience"
+  resume-sub:     ""
   archive:        "Archive"
   blog_post:      "Blog Post"
   by:             "by"

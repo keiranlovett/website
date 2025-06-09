@@ -17,7 +17,7 @@
 		<p>{{ ui_text.work-sub }}</p>
 		{{ endif }}
 
-      <!-- Main Style for First Three Non-Draft Items -->
+      <!-- Main Style for First N Non-Draft Items -->
       <div class="box-items main-style">
         {% assign non_draft_works = sorted_works | where: "draft", false %}
         {% for item in non_draft_works limit: settings.work_highlight_limit %}

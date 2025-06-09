@@ -1,7 +1,8 @@
 ---
 title: "Producer"
 company: "Shadow Factory"
-date: "2018-12 - 2021-12"
+date_start: "2018-12"
+date_end: "2021-12"
 type: main
 role: producer
 location: "Hong Kong SAR"

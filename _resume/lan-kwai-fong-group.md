@@ -1,7 +1,8 @@
 ---
 title: "Game Developer"
 company: "Lan Kwai Fong Group"
-date: "2016-06 - 2017-10"
+date_start: "2016-06"
+date_end: "2017-10"
 type: main
 role: game developer
 location: "Hong Kong SAR"

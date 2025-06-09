@@ -1,7 +1,8 @@
 ---
 title: "User Interface Designer"
 company: "Insight Robotics"
-date: "2014-06 - 2016-03"
+date_start: "2014-06"
+date_end: "2016-03"
 type: main
 role: ui designer
 location: "Hong Kong SAR"

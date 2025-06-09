@@ -1,20 +1,32 @@
-{% assign content = site.data.content['resume'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign settings = site.data.settings['settings'] %}
+
+{% if site.resume.size > 0 %}
+{% assign sorted_resume = site.resume | sort: "date" | reverse %}
+{% assign content = sorted_resume | where: "draft", false %}
 
 <!-- Resume -->
 <div class="section resume">
 	<div class="content">
 		<div class="cols">
 			<div class="col col-md">
-				<div class="title">
-					<div class="title_inner">{{ site.data.experience.title }}</div>
-				</div>
+				{{ if ui_text.resume != '' }}
+					<div class="title">
+						<div class="title_inner">{{ ui_text.resume }}</div>
+					</div>
+				{{ endif }}
+				{{ if ui_text.resume-sub != '' }}
+					<p>{{ ui_text.resume-sub }}</p>
+				{{ endif }}
 				<div class="resume-items">
-					{% for item in site.data.experience.items %}
+					{% for item in content %}
 					<div class="resume-item active">
-						<div class="date">{{ item.year }}</div>
-						<div class="name">{{ item.name | markdownify }}</div>
+						{% if page.date and page.date != "" %}
+						<div class="date">{{ item.date_start | date: site.date_format }} - {{ item.date_end | date: site.date_format}}</div>
+						{% endif %}
+						<div class="name">{{ item.title}}, [{{ item.company}}]({{ item.external_url}})</div>
 						<p>
-  							{{ item.text | markdownify }}
+  							{{ item.description | markdownify }}
 						</p>
 					</div>
 					{% endfor %}
@@ -39,3 +51,4 @@
 		</div>
 	</div>
 </div>
+{% endif %}

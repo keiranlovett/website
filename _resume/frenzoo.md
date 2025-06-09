@@ -1,7 +1,8 @@
 ---
 title: "Game Designer"
 company: "Frenzoo Limited"
-date: "2012-11 - 2014-05"
+date_start: "2012-11"
+date_end: "2014-05"
 type: main
 role: game designer
 location: "Hong Kong SAR"

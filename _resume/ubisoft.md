@@ -1,7 +1,8 @@
 ---
 title: "Production Manager"
 company: "Ubisoft Winnipeg"
-date: "2022-02 - 2023-11"
+date_start: "2022-02"
+date_end: "2023-11"
 type: main
 role: production manager
 location: "Winnipeg, Canada"

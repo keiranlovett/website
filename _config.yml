@@ -84,6 +84,7 @@ force_utf_8:    true
 # collections
 collections:
   - works
+  - resume
   - talks
 
 # archives
