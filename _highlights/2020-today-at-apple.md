@@ -1,6 +1,6 @@
 ---
 title: "Today At Apple"
-date: "2020"
+date: "2020-04"
 ---
 
 I gave a 1hr talk on the history and technology behind augmented reality.  
