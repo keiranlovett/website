@@ -21,7 +21,7 @@
 				<div class="resume-items">
 					{% for item in content %}
 					<div class="resume-item active">
-						{% if page.date_start and page.date_start != "" %}
+						{% if item.date_start and item.date_start != "" %}
 						<div class="date">{{ item.date_start | date: site.date_format }} - {{ item.date_end | date: site.date_format | default: 'Present'}}</div>
 						{% endif %}
 						<div class="name">{{ item.title}}, <a target="_blank" href="{{ item.external_url | default: '#' }}">{{ item.company}}</a></div>
