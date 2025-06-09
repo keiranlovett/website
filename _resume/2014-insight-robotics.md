@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "User Interface Designer"
 company: "Insight Robotics"
 date_start: "2014-06"

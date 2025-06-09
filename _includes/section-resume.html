@@ -1,75 +1,18 @@
-{% assign ui_text = site.data.ui-text['ui_text'] %}
-{% assign settings = site.data.settings['settings'] %}
-
-{% if site.resume.size > 0 and site.highlights.size > 0  %}
-
+{% assign columns = site.data.content.columns %}
 
 <!-- Resume -->
 <div class="section resume">
-	<div class="content">
-		<div class="cols">
-			<div class="col col-md">
-				{{ if ui_text.resume != '' }}
-					<div class="title">
-						<div class="title_inner">{{ ui_text.resume }}</div>
-					</div>
-				{{ endif }}
-				{{ if ui_text.resume-sub != '' }}
-					<p>{{ ui_text.resume-sub }}</p>
-				{{ endif }}
-				<div class="resume-items">
-					{% assign sorted_resume = site.resume | sort: "date_start" | reverse %}
-					{% assign content = sorted_resume | where: "draft", false %}
-					{% for item in content %}
-					<div class="resume-item active">
-						{% if item.date_start and item.date_start != "" %}
-						<div class="date">{{ item.date_start | date: site.date_format }} - {{ item.date_end | date: site.date_format | default: 'Present'}}</div>
-						{% endif %}
-						<div class="name">
-							{{ item.title}}
-							{% if item.external_url %}
-							, <a target="_blank" href="{{ item.external_url | default: '#' }}">{{ item.company }}</a>
-							{% endif %}
-						</div>
-						<p>
-  							{{ item.content | markdownify }}
-						</p>
-					</div>
-					{% endfor %}
-				</div>
-			</div>
-			<div class="col col-md">
-				{{ if ui_text.highlights != '' }}
-					<div class="title">
-						<div class="title_inner">{{ ui_text.highlights }}</div>
-					</div>
-				{{ endif }}
-				{{ if ui_text.highlights-sub != '' }}
-					<p>{{ ui_text.highlights-sub }}</p>
-				{{ endif }}
-				<div class="resume-items">
-					{% assign sorted_higlights = site.higlights | sort: "date" | reverse %}
-					{% assign content = sorted_higlights | where: "draft", false %}
-					{% for item in content %}
-					<div class="resume-item active">
-						{% if item.date and item.date != "" %}
-						<div class="date">{{ item.date | date: site.date_format }}</div>
-						{% endif %}
-						<div class="name">
-							{% if item.external_url %}
-								<a target="_blank" href="{{ item.external_url | default: '#'}}">{{ item.title }}</a>
-							{% else %}
-								{{ item.title }}
-							{% endif %}
-						</div>
-						<p>
-  							{{ item.content | markdownify }}
-						</p>
-					</div>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="content">
+        <div class="cols">
+            {% for column in columns %}
+                {% include resume-column.html
+                    title_key=column.title_key
+                    subtitle_key=column.subtitle_key
+                    collection_name=column.collection_name
+                    sort_field=column.sort_field
+                    end_date_field=column.end_date_field
+                    sort_order=column.sort_order %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
-{% endif %}

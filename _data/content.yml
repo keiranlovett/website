@@ -14,7 +14,7 @@ about:
   text: >
           **G'day! I'm Keiran Lovett**.  
           
-          I am an experienced game producer, working across both indie and AAA over the last decade. With over a decade of experience in the Games Industry I've managed development pipelines, coordinating cross-functional teams, and overseeing all phases from preproduction to post launch on titles. My background spans software development, game design, and user experience, making me a versatile producer who can drive projects to completion while balancing creative and technical goals.
+          I am an experienced game producer with over a decade in the games industry, spanning both indie and AAA titles. I have led development pipelines and coordinated cross-functional teams through all stages of production—from pre-production to post-launch. With a background in software development, game design, and user experience, I bring a versatile skill set that bridges creative vision and technical execution to drive projects to successful completion.
   download:
     text: "Download CV"
     link: "assets/files/keiranlovett_cv_2024.pdf"
@@ -61,6 +61,21 @@ services:
       name: "Public Speaking"
       text: "I'm an avid community volunteer and strive to contribute to the industry in any way I can. I enjoy public speaking and workshops, especially to share knowledge about the industry and new technologies."
 
+columns:
+  - key: resume
+    title_key: "resume"
+    subtitle_key: "resume-sub"
+    collection_name: "resume"
+    sort_field: "date_start"
+    end_date_field: "date_end"
+    sort_order: "desc" # optional, can be "asc"
+  - key: highlights
+    title_key: "highlights"
+    subtitle_key: "highlights-sub"
+    collection_name: "highlights"
+    sort_field: "date"
+    end_date_field: ""
+    sort_order: "desc"
 
 contacts_info:
   title: "Get in Touch"

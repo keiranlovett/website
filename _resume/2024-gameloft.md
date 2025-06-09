@@ -1,8 +1,9 @@
 ---
+draft: false
 title: "Producer"
 company: "Gameloft Brisbane"
 date_start: "2024-01"
-date_end: "Present"
+date_end: ""
 type: main
 role: producer
 location: "Brisbane, Australia"
@@ -22,4 +23,4 @@ tools:
   - Unity
 ---
 
-Leading cross-disciplinary development on an unannounced project focused on family-friendly gameplay and creativity. Managing internal and external teams across disciplines, timelines, and milestones.
+Leading cross-disciplinary development on an unannounced project. Managing internal and external teams.

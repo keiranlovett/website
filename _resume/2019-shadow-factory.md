@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Producer"
 company: "Shadow Factory"
 date_start: "2019-12"
@@ -22,4 +23,4 @@ tools:
   - Trello
   - Slack
 ---
-Delivered projects for high-profile clients across AR/VR platforms. Managed project lifecycle from concept to delivery. Led cross-functional teams across time zones, delivering consistent results in a fast-paced environment.
+Delivered 50+ digital projects for high-profile clients. Managed project lifecycle from concept to launch delivering consistent results in a fast-paced environment.

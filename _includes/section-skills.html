@@ -1,13 +1,58 @@
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign settings = site.data.settings['settings'] %}
 {% assign content = site.data.skills %}
+
+{% assign qualifications_collection = site.collections | where: "label", "qualifications" | first %}
+{% if qualifications_collection %}
+    {% assign qualifications = qualifications_collection.docs | sort: "date"  %}
+    {% assign qualifications = qualifications | where_exp: "item", "item.draft != true" %}
+{% else %}
+    {% assign qualifications = empty %}
+{% endif %}
+
 
 {% for column in content.columns %}
 {% if column.enabled == 1 %}
+
 <!-- Skills -->
-<div class="section skills">
-	<div class="content">
+<div class="section">
+    <div class="content">
+    	{{ if ui_text.skills != '' }}
 		<div class="title">
-			<div class="title_inner">{{ column.title }}</div>
+			<div class="title_inner">{{ ui_text.skills }}</div>
 		</div>
+		{{ endif }}
+		{{ if ui_text.skills-sub != '' }}
+		<p>{{ ui_text.skills-sub }}</p>
+		{{ endif }}
+
+		<!-- Qualifications -->
+		<div class="qualifications">
+			<ul class="qualification-items">
+                {% for item in qualifications %}
+                <li class="qualification-item">
+                    <div class="name">
+                        {% if item.title %}
+                            {{ item.title }}
+                        {% endif %}
+                        {% if item.date %}
+                        <div class="date">{{ item.date | date: site.date_format }}</div>
+                        {% endif %}
+                    </div>
+                    {% if item.issuer %}
+                        <div class="qualification-issuer">{{ item.issuer }}</div>
+                    {% endif %}
+                    {% if item.content %}
+                        <p class="qualification-description">
+                            {{ item.content | markdownify }}
+                        </p>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+		</div>
+
+		<!-- Skills -->
 		<div class="skills{% if column.type %} {{ column.type }}{% endif %}">
 			<ul>
 				{% if column.type == 'default' %}
@@ -15,8 +60,8 @@
 				<li> 
 					<div class="name">{{ item.label }}</div>
 					<div class="progress">
-						<div class="percentage" style="width:{{ item.value  }}%;">
-							<span class="percent">{{ item.value  }}%</span>
+						<div class="percentage" style="width:{{ item.value }}%;">
+							<span class="percent">{{ item.value }}%</span>
 						</div>
 					</div>
 				</li>
@@ -28,8 +73,8 @@
 				<li> 
 					<div class="name">{{ item.label }}</div>
 					<div class="progress">
-						<div class="percentage" style="width: {{ item.value  }}%;">
-							<span class="percent">{{ item.value  }}%</span>
+						<div class="percentage" style="width:{{ item.value }}%;">
+							<span class="percent">{{ item.value }}%</span>
 						</div>
 					</div>
 				</li>
@@ -40,11 +85,11 @@
 				{% for item in column.items %}
 				<li> 
 					<div class="name">{{ item.label }}</div>
-					<div class="progress p{{ item.value  }}">
-						<div class="percentage" style="width: {{ item.value  }}%;">
-							<span class="percent">{{ item.value  }}%</span>
+					<div class="progress p{{ item.value }}">
+						<div class="percentage" style="width:{{ item.value }}%;">
+							<span class="percent">{{ item.value }}%</span>
 						</div>
-						<span>{{ item.value  }}%</span>
+						<span>{{ item.value }}%</span>
 					</div>
 				</li>
 				{% endfor %}

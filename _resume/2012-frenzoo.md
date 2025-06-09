@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Game Designer"
 company: "Frenzoo Limited"
 date_start: "2012-11"

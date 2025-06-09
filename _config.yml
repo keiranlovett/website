@@ -87,6 +87,8 @@ collections:
   - resume
   - talks
   - highlights
+  - qualifications
+
 
 # archives
 jekyll-archives:

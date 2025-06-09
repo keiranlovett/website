@@ -7,7 +7,6 @@
   <!-- Work -->
   <div class="section clients">
     <div class="content">
-
     	{{ if ui_text.work != '' }}
 		<div class="title">
 			<div class="title_inner">{{ ui_text.work }}</div>
@@ -44,7 +43,7 @@
         {% endfor %}
       </div>
 
-      {{ if settings.work_show_all == '1' }}
+      {% if settings.work_show_all == 1 %}
       <!-- Secondary Style for Remaining Non-Draft Items -->
       <div class="box-items secondary-style">
         {% for item in non_draft_works offset: settings.work_highlight_limit %}
@@ -61,7 +60,8 @@
         </div>
         {% endfor %}
       </div>
-      {{ endif }}
+    {% endif %}
+
     </div>
   </div>
   <div class="clear"></div>

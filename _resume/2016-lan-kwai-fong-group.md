@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Game Developer"
 company: "Lan Kwai Fong Group"
 date_start: "2016-06"

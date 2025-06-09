@@ -1,20 +1,17 @@
 # UI default string configuration file
-## 
-### use ui-text.yml file to quick change all default strings
-
 ui_text:
   theme:          "Toggle Light Mode"
   home:           "Home"
   return:         "Go Back"
   blog:           "Blog"
-  work:           "Works"
+  work:           "Works & Game Credits"
   work-sub:       "Some of the latest and favourite projects I've worked on..."
   resume:         "Experience"
   resume-sub:     ""
-  highlights:     "Highlights"
+  highlights:     "Highlights & Speaking"
   highlights-sub: ""
-  qualifications:     "Qualifications"
-  qualificationss-sub: ""
+  skills:         "Skills & Qualifications"
+  skills-sub:     ""
   archive:        "Archive"
   blog_post:      "Blog Post"
   by:             "by"

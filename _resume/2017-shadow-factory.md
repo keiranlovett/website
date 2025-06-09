@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Technical Director"
 company: "Shadow Factory"
 date_start: "2017-11"
@@ -32,4 +33,4 @@ tools:
   - "Slack"
 ---
 
-Architected the studio’s AR/VR production pipelines and scaled technical operations to support rapid company growth. Led cross-functional engineering and creative teams in delivering award-winning immersive experiences for clients including Facebook, Apple, and Michael Kors. 
+Architected the studio’s production pipelines and scaled technical operations to support rapid company growth. Led cross-functional teams in delivering award-winning immersive experiences for projects for Facebook, Apple, and Michael Kors. 

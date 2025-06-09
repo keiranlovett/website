@@ -1203,6 +1203,47 @@ a.btn, .btn {
 }
 
 /* 6. Skills */
+
+.qualifications {
+
+	margin-bottom: 40px;
+
+    .qualification-items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .qualification-item {
+        background: var(--color-bg-light);
+        border-radius: 10px;
+        padding: 20px 0px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease;
+
+        .name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+
+        }
+
+        .qualification-issuer {
+            font-style: italic;
+            color: var(--color-text-secondary);
+            margin-bottom: 8px;
+        }
+
+        p {
+            line-height: 1.5;
+            margin: 0px;
+        }
+    }
+}
+
 .skills ul {
   margin: 0;
   padding: 0;
@@ -2390,3 +2431,7 @@ a.btn, .btn {
     position: relative;
     padding-bottom: 56.25%;
 }
+
+
+
+

@@ -1,0 +1,59 @@
+{% assign title = site.data.ui-text.ui_text[include.title_key] %}
+{% assign subtitle = site.data.ui-text.ui_text[include.subtitle_key] %}
+
+<div class="col col-md">
+    {% if title != '' %}
+        <div class="title">
+            <div class="title_inner">{{ title }}</div>
+        </div>
+    {% endif %}
+    {% if subtitle != '' %}
+        <p>{{ subtitle }}</p>
+    {% endif %}
+
+    <div class="resume-items">
+
+        {% assign collection_name_clean = include.collection_name | strip %}
+        {% assign collection = site.collections | where: "label", collection_name_clean | first %}
+        {% if collection %}
+            {% assign content = collection.docs | where_exp: "item", "item.draft != true" %}
+
+            {% if include.sort_field %}
+                {% assign content = content | sort: include.sort_field %}
+                {% if include.sort_order == "desc" %}
+                    {% assign content = content | reverse %}
+                {% endif %}
+            {% endif %}
+        {% else %}
+            {% assign content = empty %}
+        {% endif %}
+
+        {% for item in content %}
+            <div class="resume-item active">
+
+                {% if item.date_start %}
+                    <div class="date">
+                        {{ item.date_start | date: site.date_format }}
+                        {% if item.date_end %}
+                            - {{ item.date_end | date: site.date_format | default: 'Present' }}
+                        {% endif %}
+                    </div>
+                {% elsif item.date %}
+                    <div class="date">
+                        {{ item.date | date: site.date_format }}
+                    </div>
+                {% endif %}
+
+                <div class="name">
+                    {% if item.external_url %}
+                        {{ item.title }}, <a target="_blank" href="{{ item.external_url | default: '#' }}">{{ item.company }}</a>
+                    {% else %}
+                        {{ item.title }}
+                    {% endif %}
+                </div>
+
+                <p>{{ item.content | markdownify }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>

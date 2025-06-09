@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Production Manager"
 company: "Ubisoft Winnipeg"
 date_start: "2022-02"
