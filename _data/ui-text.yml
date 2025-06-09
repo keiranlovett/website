@@ -13,6 +13,8 @@ ui_text:
   resume-sub:     ""
   highlights:     "Highlights"
   highlights-sub: ""
+  qualifications:     "Qualifications"
+  qualificationss-sub: ""
   archive:        "Archive"
   blog_post:      "Blog Post"
   by:             "by"

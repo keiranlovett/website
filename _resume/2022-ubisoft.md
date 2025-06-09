@@ -26,4 +26,4 @@ tools:
   - Jira
   - Confluence
 ---
-Oversaw development and delivery of proprietary engine features for AAA titles. Directed porting efforts of Anvil Engine to iOS and managed cross-studio collaboration between internal tech and IP teams.
+Oversaw development and delivery of proprietary engine features for AAA titles. Directed porting efforts of Anvil Engine to iOS and managed cross-studio collaboration between internal tech and game development teams.

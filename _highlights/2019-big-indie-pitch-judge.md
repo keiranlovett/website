@@ -1,6 +1,6 @@
 ---
 title: "Big Indie Pitch - Judge"
-date: "2019"
+date: "2019-05"
 external_url: https://www.bigindiepitch.com
 ---
 
