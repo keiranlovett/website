@@ -1,6 +1,6 @@
 ---
 title: "Hong Kong Game Development Group"
-date: "2015-2021"
+date: "2015"
 external_url: http://gamedevhappyhour.com
 ---
 
