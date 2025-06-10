@@ -1205,30 +1205,57 @@ a.btn, .btn {
 /* 6. Skills */
 
 .qualifications {
-
+	position: relative;
 	margin-bottom: 40px;
 
+        &:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1px;
+			height: 100%;
+			background: #f26b38;
+		}
+
     .qualification-items {
+    	position: relative;
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
         flex-direction: column;
+
+		&:before{
+		    content: '';
+		    width: 29px;
+		    height: 1px;
+		    position: absolute;
+		    top: 0px;
+		    background: #f26b38;
+		}
+		&:after {
+		    content: '';
+		    width: 29px;
+		    height: 1px;
+		    position: absolute;
+		    bottom: 0px;
+		    background: #f26b38;
+		}
     }
 
     .qualification-item {
+    	position: relative;
+    	padding: 30px;
         background: var(--color-bg-light);
-        border-radius: 10px;
-        padding: 20px 0px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         transition: transform 0.2s ease;
 
         .name {
             display: flex;
+            font-weight: 500;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 8px;
-
         }
 
         .qualification-issuer {

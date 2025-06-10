@@ -1,12 +1,13 @@
 ---
+layout: page
 title: "Assassins Creed Mirage iOS"
 date: 06-06-2024
 type: main
-category: game
-category_slug: game
-role: producer
+categories: ["Game", "Console"]
+roles: ["Production Manager"]
 external_url: https://www.ubisoft.com/en-us/game/assassins-creed/news/6hRBheSWDoKUdnKxzy5YOg/assassins-creed-mirage-is-coming-to-ios
 image: assets/credits/assassins-creed-mirage-logo.png
+excerpt_separator: <!--more-->
 ---
 
 
@@ -18,6 +19,7 @@ When I first joined Ubisoft, I was handed the **Anvil Mobile Team** — a small,
 
 There was no goal. No project. Very little support (the updates I provided on my team to the other Engine teams was often just a footnote in the bigger scheme of updates). Just a handful of us staring down an unknown future and a graphics stack designed entirely around **DirectX**. Apple doesn’t support DirectX or Vulkan at all — everything would have to run through **Metal**. That meant reworking the entire rendering pipeline, reimagining asset loading, and eventually rewriting parts of the engine itself.
 
+<!--more-->
 
 The first year of the team’s life was pure R&D. Our own roadmap. No shipping goal. Just raw engine adaptation. We worked in complete ambiguity, grinding just to get the **basics rendering correctly on iOS and macOS**. Rendering was the beast of the problem.
 

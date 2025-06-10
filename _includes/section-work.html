@@ -33,6 +33,8 @@
                       {% assign formatted_title = item.title | append: " (" | append: year | append: ")" %}
 
                       <p class="name glitch-effect-white" data-text="{{ formatted_title }}">{{ formatted_title }}</p>
+                      <p class="name glitch-effect-white" data-text="{{ item.role }}">{{ item.role }}</p>
+
                     </span>
                   </span>
                 </span>
@@ -61,6 +63,14 @@
         {% endfor %}
       </div>
     {% endif %}
+
+    <div class="button-list">
+      <ul class="align-right">
+        <li>
+          <div class="bts"><a href="/works" class="btn" data-text="{{ ui_text.view_all_projects }}">{{ ui_text.view_all_projects }}</a></div>
+        </li>
+      </ul>
+    </div>
 
     </div>
   </div>

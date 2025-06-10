@@ -10,7 +10,7 @@ layout: default
 		
 		<div class="vertical-center">
 			<div class="content">
-				<p><a href="{{ '/' | relative_url }}">{{ ui_text.return }}</a></p>
+				<p><a href="javascript:window.history.back()">{{ ui_text.return }}</a></p>
 				<div class="h-title stroke-text">{{ page.title }}</div>
 				{% if page.date and page.date != "" %}
 				 <div class="date">{{ page.date | date: site.date_format }}</div>

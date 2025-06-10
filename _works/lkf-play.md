@@ -1,11 +1,12 @@
 ---
-draft: true
+draft: false
+layout: page
 title: "LKF Play (2016)"
 date: 01-01-2017
 type: main
-category: game
-category_slug: game
-role: designer
+categories: ["Game", "Mobile"]
+roles: ["Game Designer", "Developer"]
 external_url: ""
-image: assets/credits/...
+image: assets/credits/lkf-group-logo.png
+excerpt_separator: <!--more-->
 ---

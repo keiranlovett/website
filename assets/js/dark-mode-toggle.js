@@ -1,31 +1,69 @@
 $(function () {
   'use strict';
-  
-  window.onpageshow = function(event) {if (event.persisted) {window.location.reload() }};
-  /*
-    Dark Theme (Dynamic)
-  */
 
-  // Variable to track user's preferred color scheme
-  let userPrefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const darkStylesheet = document.getElementById('dark-stylesheet');
-
-
-  // Function to toggle and set the theme based on user's preferred color scheme
-  const toggleAndSetTheme = () => {
-      const darkStylesheet = document.getElementById('dark-stylesheet');
-      // Toggle the 'disabled' attribute on the dark mode stylesheet
-      darkStylesheet.disabled = !darkStylesheet.disabled;
-
-      // Update the user's preference based on the current state
-      userPrefersDarkMode = darkStylesheet.disabled;
+  window.onpageshow = function(event) {
+    if (event.persisted) {
+      window.location.reload();
+    }
   };
 
-  // Event listener for a theme toggle button or any trigger you prefer
-  document.getElementById('themeToggle').addEventListener('click', toggleAndSetTheme);
+  const body = document.body;
+  const toggleButton = document.querySelector('.bts button');
+  const lightIcon = toggleButton.querySelector('.lightToggle');
+  const darkIcon = toggleButton.querySelector('.darkToggle');
 
-  // Call the function to set the theme based on user's preference when the page loads
-  darkStylesheet.disabled = !userPrefersDarkMode;
+  const updateToggleButton = (currentTheme) => {
+    let labelText = '';
 
+    if (currentTheme === 'dark') {
+      body.classList.add('dark');
+      lightIcon.style.display = 'none';
+      darkIcon.style.display = 'inline';
+      labelText = 'Switch to light mode (currently dark mode)';
+      setShaderDoInvert(0); // dark → invert
+    } else {
+      body.classList.remove('dark');
+      lightIcon.style.display = 'inline';
+      darkIcon.style.display = 'none';
+      labelText = 'Switch to dark mode (currently light mode)';
+      setShaderDoInvert(1); // light → normal
+    }
+
+
+    toggleButton.title = labelText;
+    toggleButton.setAttribute('aria-label', labelText);
+  };
+
+  // Initial setup — check localStorage first, else use system preference
+  const storedTheme = localStorage.getItem('theme');
+  if (storedTheme === 'dark' || storedTheme === 'light') {
+    updateToggleButton(storedTheme);
+  } else {
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    updateToggleButton(systemPrefersDark ? 'dark' : 'light');
+  }
+
+  // User click → toggle between light and dark
+  toggleButton.addEventListener('click', () => {
+    const isDark = body.classList.contains('dark');
+
+    if (isDark) {
+      body.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      updateToggleButton('light');
+    } else {
+      body.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      updateToggleButton('dark');
+    }
+  });
+
+  // Optional: Listen to system preference change IF no user preference set
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    const userSetTheme = localStorage.getItem('theme');
+    if (userSetTheme !== 'dark' && userSetTheme !== 'light') {
+      updateToggleButton(e.matches ? 'dark' : 'light');
+    }
+  });
 
 });

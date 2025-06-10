@@ -1,0 +1,162 @@
+---
+layout: default
+---
+
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign sorted_works = site.works | sort: "date" | reverse %}
+{% assign non_draft_works = sorted_works | where: "draft", false %}
+
+<!-- Build unique categories list -->
+{% assign categories_array = "" %}
+{% for work in non_draft_works %}
+    {% if work.categories %}
+        {% for category in work.categories %}
+            {% unless categories_array contains category %}
+                {% assign categories_array = categories_array | append: category | append: "|" %}
+            {% endunless %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+{% assign categories_list = categories_array | split: "|" %}
+
+<!-- Build unique roles list -->
+{% assign roles_array = "" %}
+{% for work in non_draft_works %}
+    {% if work.roles %}
+        {% for role in work.roles %}
+            {% unless roles_array contains role %}
+                {% assign roles_array = roles_array | append: role | append: "|" %}
+            {% endunless %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+{% assign roles_list = roles_array | split: "|" %}
+
+<!-- Started -->
+<div class="section "></div>
+
+<!-- Works -->
+<div class="section works">
+
+	<div class="content">
+		<p><a href="{{ '/' | relative_url }}">{{ ui_text.return }}</a></p>
+		<div class="title">
+			<div class="h-title stroke-text">{{ page.title }}</div>
+		</div>
+		{% if page.date and page.date != "" %}
+		 <div class="date">{{ page.date | date: site.date_format }}</div>
+		{% endif %}
+	</div>
+
+	<div class="content">    
+
+		<!-- Filter menu -->
+		<div class="filter-menu">
+
+			<!-- Categories Filter -->
+			<div class="filters">
+				<div class="title">
+					<div class="title_inner">Categories</div>
+				</div>
+
+				<!-- All filter -->
+				<div class="btn-group">
+					<label data-text="All" class="glitch-effect">
+						<input type="radio" name="fl_radio" value=".box-item" checked />All
+					</label>
+				</div>
+
+				<!-- Dynamic category filters -->
+				{% for category in categories_list %}
+					{% if category != "" %}
+					<div class="btn-group">
+						<label data-text="{{ category }}"{% if forloop.first %} class="glitch-effect"{% endif %}>
+							<input type="radio" name="fl_radio" value=".{{ category | slugify }}" />{{ category }}
+						</label>
+					</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+
+			<!-- Roles Filter -->
+			<div class="filters">
+				<div class="title">
+					<div class="title_inner">Roles</div>
+				</div>
+
+				<!-- All roles filter -->
+				<div class="btn-group">
+					<label data-text="All Roles" class="glitch-effect">
+						<input type="radio" name="fl_radio_role" value=".box-item" checked />All Roles
+					</label>
+				</div>
+
+				<!-- Dynamic role filters -->
+				{% for role in roles_list %}
+					{% if role != "" %}
+					<div class="btn-group">
+						<label data-text="{{ role }}"{% if forloop.first %} class="glitch-effect"{% endif %}>
+							<input type="radio" name="fl_radio_role" value=".{{ role | slugify }}" />{{ role }}
+						</label>
+					</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+
+		</div>
+
+<!-- Started -->
+<div class="section "></div>
+		<!-- Works items -->
+		<div class="box-items portfolio-items">	
+			{% for work in non_draft_works %}
+			<div class="box-item 
+			{% for category in work.categories %} {{ category | slugify }}{% endfor %}
+			{% for role in work.roles %} {{ role | slugify }}{% endfor %}">
+
+				<div class="image theme-img">
+					<a href="#popup-{{ work.id | replace: '/', '-' }}" class="has-popup-media">
+						<img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+						<span class="info">
+							<span class="centrize full-width">
+								<span class="vertical-center">
+									<span class="ion ion-ios-plus-empty"></span>
+								</span>
+							</span>
+						</span>
+					</a>
+				</div>
+
+				<div class="desc">
+					<div class="category">{{ work.categories | join: ", " }}</div>
+					<div class="role">{{ work.roles | join: ", " }}</div>
+					<a href="#popup-{{ work.id | replace: '/', '-' }}" class="name has-popup-media">{{ work.title }}</a>
+				</div>
+
+				<div id="popup-{{ work.id | replace: '/', '-' }}" class="popup-box mfp-fade mfp-hide">
+					<div class="content">
+						<div class="image theme-img">
+							<img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+						</div>
+						<div class="desc">
+							<div class="category">{{ work.categories | join: ", " }}</div>
+							<div class="role">{{ work.roles | join: ", " }}</div>
+							<h4>{{ work.title }}</h4>
+							<div class="single-post-text">
+								{{ work.excerpt }}
+							</div>
+							{% if work.content != work.excerpt %}
+							<a href="{{ work.url | relative_url }}" class="btn" data-text="{{ ui_text.view_project }}">{{ ui_text.view_project }}</a>
+							{% endif %}
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+			{% endfor %}
+		</div>
+
+		<div class="clear"></div>
+	</div>
+</div>

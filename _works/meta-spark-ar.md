@@ -1,18 +1,21 @@
 ---
 draft: false
+layout: page
 title: "Meta AR"
 date: 01-01-2020
 type: main
-category: AR
-category_slug: ar
-role: producer
+categories: ["AR", "Mobile"]
+roles: ["Producer", "Developer", "Technical Director"]
 external_url: ""
 image: assets/credits/meta-spark-logo.png
+excerpt_separator: <!--more-->
 ---
 
 > Spark AR is an augmented reality (AR) creation tool from Meta (Facebook). It allowed users to create AR effects, filters, games, and immersive experiences that can be shared on platforms like Facebook, Instagram, and Messenger. It was depreciated in later 2024.
 
 When Spark AR was still in its early days, I led the charge at then studio Shadow Factory to adopt the platform, seeing its potential beyond just a novelty, but as a powerful new channel for creative, technically-driven marketing that clients would be interested in exploring. In 2017 I applied to be one of the initial 300 beta testers for Meta Spark AR, and went on to play a significant role in shaping the platform’s development for the next four years while at Shadow Factory.
+
+<!--more-->
 
 During that time my work was featured by Meta in the top 10 AR filters of the year and showcased at Meta Connect (formely F8), Meta’s annual developer conference.
 

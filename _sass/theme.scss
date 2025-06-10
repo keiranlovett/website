@@ -4,9 +4,6 @@ button:focus {
   color: var(--focus-color);
 }
 
-
-
-
 a.btn, .btn {
   border: 1px solid var(--button-color);
   background: var(--button-default-color);
@@ -22,13 +19,16 @@ a.btn, .btn {
   }
 }
 
-body:not(.dark) #webgl {
-  display: none !important;
+
+.theme-toggle {
+  width: 45px;
+  height: 45px;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-.box-item {
+.box-item, .theme-img {
   img {
     filter: var(--image-filter);
   }
@@ -89,16 +89,6 @@ input.error::-webkit-input-placeholder,
 textarea.error::-webkit-input-placeholder {
   color: $error-color;
 }
-
-
-
-
-
-
-
-
-
-
 
 :-moz-placeholder { 
   color: var(--focus-color);

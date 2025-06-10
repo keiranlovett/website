@@ -2,25 +2,12 @@
 
 ### Main Settings
 settings:
-  quick_colors: "" # select quick color schemes: "blue", "green", "orange", "pink", "purple", "red".
   dark_ui: 1 # activated dark ui styles
-  dark_mode_toggle: 0
+  dark_mode_toggle: 1
   rtl: 0 # activated rtl styles
   navbar: 0 # for disable sidebar and sidebar button change to 0
   preload: 0
   preloader: "loading..." # preloader loading text
   dynamic_background: "background.jpg"
-  dynamic_background_invert: 1
   work_show_all: 0
-  work_highlight_limit: 3
-
-### Portfolio Filters Settings
-portfolio:
-  filters:
-    - name: "All"
-      slug: "box-item"
-      active: 1
-
-    - name: "Game"
-      slug: "f-content"
-      active: 0
+  work_highlight_limit: 6

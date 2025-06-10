@@ -8,7 +8,7 @@ timezone:       Australia/Brisbane
 permalink:      /:title.html
 markdown:       kramdown
 highlighter:    rouge
-include:        ["_pages"]
+include:        ["_pages", "_works"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -83,11 +83,18 @@ force_utf_8:    true
 
 # collections
 collections:
-  - works
-  - resume
-  - talks
-  - highlights
-  - qualifications
+  works:
+    output: true
+    permalink: /works/:title/
+  resume:
+    output: true
+  talks:
+    output: true
+  highlights:
+    output: true
+  qualifications:
+    output: true
+
 
 
 # archives
