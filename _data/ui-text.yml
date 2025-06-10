@@ -20,6 +20,7 @@ ui_text:
   tags:           "Tags"
   prev:           "Prev"
   next:           "Next"
+  view_all_projects:   "View All"
   view_project:   "View Project"
   new:            "new"
   search:         "Search ..."

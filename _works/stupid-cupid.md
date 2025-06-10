@@ -3,9 +3,8 @@ draft: true
 title: "Stupid Cupid (2018)"
 date: 01-01-2018
 type: main
-category: game
-category_slug: game
-role: gamedesigner
+categories: ["Game", "VR"]
+roles: ["Technical Director", "Game Designer"]
 external_url: ""
 image: assets/credits/...
 ---

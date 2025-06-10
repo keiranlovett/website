@@ -3,9 +3,8 @@ draft: true
 title: "Island Resort (2014)"
 date: 01-01-2014
 type: main
-category: game
-category_slug: game
-role: uidesigner
+categories: ["Game", "Mobile"]
+roles: ["User Interface Designer"]
 external_url: ""
 image: assets/credits/...
 ---

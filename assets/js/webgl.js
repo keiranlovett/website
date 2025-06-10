@@ -1,4 +1,3 @@
-
 !function() {
 	'use strict';
 
@@ -6,6 +5,14 @@
 
 	// Scroll variables
 	var scroll = 0.0, velocity = 0.0, lastScroll = 0.0;
+
+	// Current invert value (0 = normal, 1 = inverted)
+	var currentInvertValue = 0;
+
+	// Expose setter globally (so toggle button can call it)
+	window.setShaderDoInvert = function(value) {
+		currentInvertValue = value;
+	};
 
 	// Initialize REGL from a canvas element
 	var regl = createREGL({
@@ -32,7 +39,8 @@
 				aspect: regl.prop('aspect'),
 				scroll: regl.prop('scroll'),
 				velocity: regl.prop('velocity'),
-				texture: regl.texture(img)
+				texture: regl.texture(img),
+				doInvertImage: regl.prop('doInvertImage') // ADD THIS
 			}
 		});
 
@@ -49,7 +57,7 @@
 			
 			// Scroll Velocity
 			// Inertia example:
-			 velocity = velocity * 0.99 + (scroll - lastScroll);
+			velocity = velocity * 0.99 + (scroll - lastScroll);
 			//velocity = 0;
 			lastScroll = scroll;
 
@@ -62,7 +70,8 @@
 				resolution: [ctx.viewportWidth, ctx.viewportHeight],
 				aspect: aspect,
 				scroll: scroll,
-				velocity: velocity
+				velocity: velocity,
+				doInvertImage: currentInvertValue // Pass current value
 			});
 		});
 	};

@@ -3,9 +3,8 @@ draft: true
 title: "CryptoCars"
 date: 01-01-2020
 type: main
-category: game
-category_slug: game
-role: techdirector
+categories: ["Game"]
+roles: ["Technical Director"]
 external_url: ""
 image: assets/credits/...
 ---

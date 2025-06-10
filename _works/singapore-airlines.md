@@ -3,9 +3,8 @@ draft: false
 title: "Singapore Airline AR"
 date: 01-01-2020
 type: main
-category: ar
-category_slug: ar
-role: producer
+categories: ["App", "Mobile", "AR"]
+roles: ["Producer"]
 external_url: ""
 image: assets/credits/singapore-airlines-logo.png
 ---

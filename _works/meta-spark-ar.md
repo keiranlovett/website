@@ -3,9 +3,8 @@ draft: false
 title: "Meta AR"
 date: 01-01-2020
 type: main
-category: AR
-category_slug: ar
-role: producer
+categories: ["AR", "Mobile"]
+roles: ["Producer", "Developer", "Technical Director"]
 external_url: ""
 image: assets/credits/meta-spark-logo.png
 ---
