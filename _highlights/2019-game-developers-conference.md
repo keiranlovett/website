@@ -1,6 +1,6 @@
 ---
 title: "Game Developers Conference"
-date: "03-2019"
+date: "2019-03"
 ---
 
 Participating in GDC show floor to showcase the VR game *Stupid Cupid* for Shadow Factory.
