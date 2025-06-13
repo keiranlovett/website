@@ -82,8 +82,8 @@ contacts_info:
   list:
     - label: "Email kvclovett@gmail.com"
       icon:  "email"
-      value: "Recruiter reaching out about roles? Student looking for advice or a free protfolio review? Or you simply want to chat? Feel free to email me!</a>"
+      value: "Recruiter reaching out about roles? Student looking for advice or a free protfolio review? Or you simply want to chat? Feel free to email me!"
 
 footer:
   social:
-  copy: "© 2025 Made by hand by Keiran Lovett. All rights reserved."
+  copy: "© 2025 Made [personally](https://github.com/keiranlovett/website) by Keiran Lovett. All are my own unless otherwise stated."
