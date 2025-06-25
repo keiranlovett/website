@@ -7,8 +7,9 @@ title: Whats New With Me
 
 Welcome to my `/now` page! 
 
-1. The (https://nownownow.com/about)[/now page] movement was started by Derek Sivers as a page to describe "What I'm doing now"
+> The [/now page](https://nownownow.com/about) movement was started by Derek Sivers as a page to describe "What I'm doing now".
 
+<br/>
 
 ## Travel
 
