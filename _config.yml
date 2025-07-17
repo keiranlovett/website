@@ -118,6 +118,8 @@ plugins:
   - jekyll-email-protect
   - jekyll-picture-tag-ng
   - jekyll-postfiles
+  - jekyll-sitemap
+  - jekyll-redirect-from
 
 picture_tag_ng:
   backend: imagemagick
