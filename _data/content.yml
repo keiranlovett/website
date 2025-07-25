@@ -50,8 +50,8 @@ services:
       text: "I started my career in mobile games and even lead a strike-team to port Assassins Creed: Mirage to iOS while at Ubisoft in 2023."
 
     - icon: "star"
-      name: "Experience Driven"
-      text: "Educated in game development and project management, along with hands-on experience in user experience and software development, I provide a valuable perspective for creating games and teams effectively."
+      name: "Consultation"
+      text: "I offer practical advice on production planning and cross-team collaboration, tailored to fit your teams’s size and development phase. Whether you're shipping your first title or scaling up a live game, I help you turn creative goals into achievable roadmaps with focused, production-ready solutions."
 
     - icon: "help-buoy"
       name: "Mentorship"
