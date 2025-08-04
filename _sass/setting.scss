@@ -11,6 +11,14 @@ $active-color: #f26b38;
 $extra-active-color: #d7d7d7;
 $error-color: red;
 
+$progress-size:     90px;
+$progress-bg:       #dddddd;
+$inner-offset:      0.09em;
+$inner-size:        0.82em;
+$bar-clip:          rect(0 1em 1em 0.5em);
+$max-percent:       100;
+$inner-bg:          $white-color;   // assume this is defined elsewhere
+
 /* Fonts */
 $default-font: 'Roboto Mono';
 $icons-font: 'Ionicons';

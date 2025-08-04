@@ -1,0 +1,27 @@
+
+//–––– MIXINS ––––
+// Vendor-prefix transform
+@mixin transform-rotate($angle) {
+  -webkit-transform: rotate($angle);
+  -moz-transform:    rotate($angle);
+  -ms-transform:     rotate($angle);
+  transform:         rotate($angle);
+}
+
+// Box-sizing helper
+@mixin box-content {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing:    content-box;
+  box-sizing:         content-box;
+}
+
+// shared styling for .bar and for .fill when it appears
+@mixin bar-fill-base {
+  position: absolute;
+  width:  $inner-size;
+  height: $inner-size;
+  clip:   rect(0em, 0.5em, 1em, 0em);
+  border: $inner-offset solid $active-color;
+  border-radius: 50%;
+  @include transform-rotate(0deg);
+}

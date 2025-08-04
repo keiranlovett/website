@@ -1,0 +1,326 @@
+/* Alignment */
+.align-center  { text-align: center !important; }
+.align-right   { text-align: right !important; }
+.align-left    { text-align: left !important; }
+
+.pull-right    { float: right !important; }
+.pull-left     { float: left !important; }
+.pull-none     { float: none !important; }
+
+.full-width     { width: 100% !important; max-width: 100% !important; }
+.full-max-width { width: auto !important; max-width: 100% !important; }
+
+.centrize {
+  display: table !important;
+  table-layout: fixed !important;
+  height: 100% !important;
+  position: relative !important;
+}
+
+.vertical-center {
+  display: table-cell !important;
+  vertical-align: middle !important;
+}
+
+/* 13. Text Formatting */
+.text-uppercase   { text-transform: uppercase !important; }
+.text-lowercase   { text-transform: lowercase !important; }
+.text-capitalize  { text-transform: capitalize !important; }
+
+.text-regular     { font-weight: 400 !important; }
+.text-bold        { font-weight: 700 !important; }
+.text-italic      { font-style: italic !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  font-family: $default-font;
+  margin: 0 0 30px;
+}
+
+h1 { font-size: $h1-size; }
+h2 { font-size: $h2-size; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h4-size; }
+h5 { font-size: $h5-size; }
+h6 { font-size: $h6-size; }
+
+p {
+  font-size: $default-size;
+  line-height: $line-height;
+  margin: 30px 0;
+  padding: 0;
+
+  iframe {
+    margin: 0;
+  }
+}
+
+strong {
+  font-weight: 500;
+}
+
+
+
+
+/* Blockquote */
+blockquote {
+  margin: 25px 0;
+  padding: 0 20px;
+  font-style: italic;
+  font-weight: 300;
+  border-left: 2px solid #78cc6d;
+
+  code {
+    padding: 2px;
+    display: inline;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  cite {
+    font-size: $small-size;
+  }
+}
+
+a {
+  text-decoration: bold;
+  opacity: 1;
+  outline: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a.btn,
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  height: 42px;
+  line-height: 40px;
+  text-align: center;
+  font-size: $default-size;
+  background: none;
+  position: relative;
+  overflow: hidden;
+  padding: 0 30px;
+  cursor: pointer;
+  @include transition(all 0.3s ease 0s);
+
+  &.fill { }
+  &:hover { }
+
+  .small {
+    height: 28px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+}
+
+/* Lists */
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+li {
+  margin-bottom: 0;
+}
+
+/* Code */
+code {
+  padding: 0 4px;
+  font-style: italic;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: auto;
+  max-width: 100%;
+
+  table {
+    margin: 0;
+  }
+}
+
+code:not(pre *) {
+  border-radius: 0.375rem;
+  background-color: rgba(100, 100, 100, 0.4);
+  padding: 0.125rem 0.25rem;
+}
+
+pre {
+  margin: 25px 0;
+  padding: 25px;
+  max-width: 100%;
+  overflow: auto;
+  white-space: pre;
+
+  > code {
+    display: block;
+    padding: 0;
+    font-style: normal;
+    line-height: 1.8em;
+  }
+}
+
+mark,
+ins {
+  background: #eee;
+  text-decoration: none;
+}
+
+figure {
+  margin: 25px 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 0;
+  font-family: Berkeley Mono, monospace;
+  font-variant-numeric: tabular-nums;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+td {
+  font-weight: normal;
+}
+
+
+/* Pagination */
+.pagination {
+  clear: both;
+  padding: 20px 0 60px;
+  text-align: center;
+
+  .page-numbers {
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: top;
+
+    &.current {
+      color: $extra-color;
+    }
+  }
+}
+
+/* Section Titles & Subtitles */
+.section {
+  .content {
+    .title {
+      position: relative;
+      margin-bottom: 40px;
+
+      @media (max-width: 400px) {
+        text-align: center;
+      }
+
+      .title_inner {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+        line-height: 24px;
+        font-size: $h2-size;
+        text-transform: uppercase;
+        letter-spacing: $extra-letter-spacing;
+        @include transition(all 0.3s ease 0s);
+        @include box-shadow(inset 0 -6px 0 $extra-active-color);
+      }
+    }
+  }
+}
+
+.h-title {
+  font-size: $title-size;
+  font-family: $default-font;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: $extra-letter-spacing;
+  margin: 10px 0 15px;
+
+  &.blog_title {
+    font-size: 40px;
+  }
+
+  @media (max-width: 1060px) {
+    &.blog_title {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 840px) {
+    font-size: 52px;
+    padding: 0 20px;
+
+    &.blog_title {
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 580px) {
+    span {
+      display: block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 42px;
+
+    &.blog_title {
+      font-size: 26px;
+    }
+  }
+}
+
+.h-subtitle {
+  font-size: $subtitle-size;
+  padding: 0 0 20px;
+}
+
+/* Date & Category Badges */
+.date,
+.category {
+  display: inline-block;
+  font-size: $extra-small-size;
+  margin-bottom: 10px;
+}
+
+.date {
+  padding: 0 5px;
+  height: 20px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $active-color;
+  border: 1px solid $active-color;
+}
+
+.category {
+  color: $default-color;
+  text-transform: uppercase;
+  letter-spacing: $extra-letter-spacing;
+  @include box-shadow(inset 0 -6px 0 $extra-active-color);
+}

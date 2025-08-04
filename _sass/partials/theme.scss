@@ -1,0 +1,602 @@
+/* 1. Header */
+header {
+  position: fixed;
+  left: 0;
+  top: 30px;
+  width: 100%;
+  z-index: 100;
+  text-align: right;
+  opacity: 1;
+  visibility: visible;
+  @include transition(all 0.6s ease 0s);
+  
+  &.active {
+    opacity: 1!important;
+    visibility: visible!important;
+    .menu-btn {
+      &:before {
+        opacity: 0;
+      }
+      &:after {
+        bottom: 9px!important;
+        @include transform(rotate(-45deg));
+      }
+      span {
+        @include transform(rotate(45deg));
+      }
+    }
+    .head-top {
+      .top-menu {
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        margin-left: -100px;
+        width: 200px;
+        height: auto;
+        text-align: center;
+        opacity: 1!important;
+        visibility: visible!important;
+        ul {
+          li {
+            display: block;
+            margin: 30px 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 840px) {
+    top: 15px;
+  }
+  .head-top {
+    padding: 30px 65px 15px 65px;
+    .menu-btn {
+      position: relative;
+      margin: 0 auto;
+      width: 26px;
+      height: 20px;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $dark-color;
+        @include transition(all 0.3s ease 0s);
+      }
+      &:after {
+        top: auto;
+        bottom: 0;
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $dark-color;
+        margin-top: -1px;
+        @include transition(all 0.3s ease 0s);
+      }
+      &:hover {
+        &:before, &:after, span {
+          background: $active-color;
+        }
+      }
+      @media (max-width: 840px) {
+        display: block;
+      }
+    }
+    .top-menu {
+      @media (max-width: 840px) {
+        opacity: 0;
+        visibility: hidden;
+        height: 0px;
+        @include transition(opacity 0.3s ease 0.5s);
+      }
+      ul {
+        li {
+          margin-left: 50px;
+          display: inline-block;
+          vertical-align: top;
+          @include transition(color 0.3s ease 0s);
+          a {
+            display: block;
+            margin-top: 12px;
+            &.btn {
+              margin-top: 0;
+            }
+          }
+          &.active {
+            a {
+              color: $active-color;
+            }
+            .btn {
+              color: $bg;
+              background: $active-color;
+              border: 1px solid $active-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.img-header {
+  width: calc(100%);
+  overflow: hidden;
+  @media (max-width: 840px) {
+    width: 150%;
+  }
+    position: absolute;
+    top: 10%;
+    left: 0;
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+
+
+
+
+
+#webgl {
+  position: fixed;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+// 1. Focus States
+input:focus,
+textarea:focus,
+button:focus {
+  color: var(--focus-color);
+}
+
+
+a.btn, .btn {
+  transition: background 0.3s ease 0s;
+  -moz-transition: background 0.3s ease 0s;
+  -webkit-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+}
+
+body {
+  @include light-theme;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: $default-font;
+  font-size: $default-size;
+  letter-spacing: $default-letter-spacing;
+  font-weight: 400;
+  header, footer, .section {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  &.loaded {
+    header, footer, .section {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &.scroll_hidden {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+}
+  /* Apply theme based on body class */
+  body.light {
+    @include light-theme;
+  }
+
+  body.dark {
+    @include dark-theme;
+  }
+
+
+// 2. Button Styles
+a.btn,
+.btn {
+  border: 1px solid var(--button-color);
+  background: var(--button-default-color);
+
+  &.fill {
+    background: var(--highlight-color);
+    border: 1px solid var(--highlight-color);
+  }
+
+  &:hover {
+    color: var(--bg-color);
+    background: var(--highlight-color);
+    border: 1px solid var(--highlight-color);
+  }
+}
+
+
+// 3. Theme Toggle
+.theme-toggle {
+  width: 45px;
+  height: 45px;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+}
+
+
+// 4. Image Filters
+.box-item,
+.theme-img {
+  img {
+    filter: var(--image-filter);
+  }
+}
+
+
+// 5. Placeholder Styles – Default
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: $extra-color;
+}
+
+
+// 6. Placeholder Styles – On Focus
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder,
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder,
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: $dark-color;
+}
+
+
+// 7. Error Input Styles
+input.error,
+textarea.error {
+  border-bottom: 1px solid $error-color !important;
+
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: $error-color;
+  }
+}
+
+
+// 8. Placeholder Override – Focus Color
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder,
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder,
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: var(--focus-color);
+}
+
+
+// 9. Background Colors – Body & Lines
+body,
+.container .line {
+  background: var(--bg-color);
+}
+
+
+// 10. Single Post Text
+.single-post-text {
+  p {
+    a {
+      color: var(--highlight-color);
+    }
+  }
+  blockquote {
+    color: var(--text-color);
+    border-left: 2px solid var(--highlight-color);
+  }
+}
+
+
+// 11. Container/Header/Footer Background Reset
+.container,
+footer,
+header {
+  background: none;
+}
+
+
+// 12. Tables
+table,
+table th,
+table td {
+  background: none;
+  border-bottom: 1px solid var(--border-color);
+  border-width: 1;
+}
+table th {
+  color: $dark-color;
+}
+table td {
+  /* color: $default-color; */
+}
+
+
+// 13. Text Color Defaults
+body,
+td,
+blockquote,
+.skills ul li,
+.skills ul li .progress .percentage .percent,
+.category {
+  color: var(--text-color);
+}
+
+
+// 14. Text Selection
+*::selection {
+  background: var(--highlight-color);
+  color: var(--focus-color);
+}
+
+
+// 15. Header/Text Accent Color
+input,
+textarea,
+button,
+a,
+.section .content .title .title_inner,
+.resume-items .resume-item .name,
+.service-items .service-item .name,
+.qualification-items .qualification-item .name,
+.section.works .filters label,
+.single-post-text input[type="submit"],
+.post-comments .post-comment .desc .name,
+h1, h2, h3, h4, h5, h6,
+.section.started .started-content .h-title,
+.content-sidebar h2.widget-title,
+.post-comments .post-comment .desc span.comment-reply a,
+.post-comments .post-comment .desc span.comment-reply,
+table th,
+p strong,
+footer .soc a .ion,
+a.btn,
+.btn,
+.box-items .box-item .desc .name,
+.popup-box .desc h4 {
+  color: var(--header-color);
+}
+
+
+// 16. Background Mid Tones
+.section:before,
+.footer.fixed,
+.popup-box,
+.preloader,
+.skills.circles .progress:after {
+  background: var(--bg-mid-color);
+}
+
+
+// 17. Glitch Transparent Overrides
+.background-enabled .started-content .glitch-effect:before,
+.background-enabled .started-content .glitch-effect:after,
+.glitch-effect:before,
+.glitch-effect:after,
+.glitch-effect-white:before,
+.glitch-effect-white:after {
+  background: transparent;
+}
+
+
+// 18. Popup Close Button
+.mfp-close-btn-in .mfp-close {
+  background: var(--bg-mid-color) !important;
+  color: var(--highlight-color) !important;
+}
+
+
+// 19. Underline Box-Shadows
+.section .content .title .title_inner,
+.box-items .box-item .category,
+.comment-info span.comment-reply,
+.content-sidebar span.screen-reader-text span,
+.content-sidebar h2.widget-title span,
+.popup-box .category,
+.blog_title {
+  box-shadow: inset 0 -6px 0px var(--highlight-bg-color);
+}
+
+
+// 20. Progress & Highlight Backgrounds
+.skills ul li .progress,
+mark,
+ins,
+.skills.dotted ul li .progress .dg span,
+.skills.dotted ul li .progress .da span,
+.skills.circles .progress {
+  background: var(--highlight-bg-color);
+}
+
+
+// 21. Sidebar Widgets & Panels
+.content-sidebar {
+  background: var(--bg-mid-color);
+
+  .close,
+  .post-comments ul.children {
+    background: var(--bg-light-color);
+  }
+
+  .close:before,
+  .close:after,
+  .widget ul li,
+  .widget ul li:last-child,
+  .search-form input.search-field,
+  h2.widget-title {
+    border-color: var(--highlight-bg-color);
+  }
+
+  .close:before,
+  .close:after,
+  .sidebar_btn span,
+  .sidebar_btn span:before,
+  .sidebar_btn span:after,
+  .header .head-top .menu-btn span,
+  .header .head-top .menu-btn:before,
+  .header .head-top .menu-btn:after {
+    background: var(--focus-color);
+  }
+}
+
+
+// 22. Search-Submit Button
+.search-form input.search-submit {
+  filter: brightness(0) invert(1);
+}
+
+
+// 23. Borders for Inputs & Panels
+.content-sidebar .widget ul li,
+.content-sidebar .widget ul li:last-child,
+.search-form input.search-field,
+.content-sidebar h2.widget-title,
+hr,
+.post-comments .post-comment,
+input,
+textarea,
+button {
+  border-color: var(--highlight-bg-color);
+}
+
+
+// 24. Navigation Hover
+.navigation.post-navigation .nav-links a:hover {
+  color: var(--text-hover-color);
+}
+
+
+// 25. Sticky & Preformatted
+.sticky,
+pre {
+  background-color: var(--bg-dark-light-color);
+}
+
+
+// 26. Header Sub-Menu & Children
+header .head-top .top-menu-nav {
+  .sub-menu,
+  .children {
+    background: var(--bg-light-color);
+
+    &:before {
+      border-bottom-color: var(--bg-light-color);
+    }
+
+    li {
+      border-bottom-color: var(--highlight-bg-color);
+
+      .sub-menu,
+      .children {
+        background: var(--bg-hover-color);
+
+        &:before {
+          border-bottom-color: var(--bg-hover-color);
+        }
+      }
+
+      a {
+        color: var(--text-light-color);
+
+        &:hover {
+          color: var(--focus-color);
+        }
+      }
+
+      .children:before {
+        border-right-color: var(--bg-light-color);
+      }
+    }
+  }
+}
+
+
+// 27. Background-Enabled Overrides
+.background-enabled {
+  header .head-top .top-menu-nav {
+    .sub-menu li a,
+    .sub-menu li a:hover {
+      color: var(--text-light-color);
+      text-decoration: underline;
+    }
+  }
+
+  .footer.fixed .soc a .ion {
+    color: #dedede;
+  }
+}
+
+
+// 28. Header Logo
+header .logo a {
+  color: var(--header-color);
+}
+
+
+// 29. Stroke Text
+.stroke-text {
+  -webkit-text-stroke: 1px var(--header-color);
+  -webkit-text-fill-color: transparent;
+}
+
+
+// 30. Accent Icons & Markers
+.skills.list ul li .name:before,
+.service-items .service-item .icon {
+  color: var(--highlight-color);
+}
+
+
+// 31. Popup Image Close Reset
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  background: none !important;
+}
+
+
+// 32. Sidebar Button Positioning
+.sidebar_btn {
+  margin-left: 0;
+  margin-right: 20px;
+  float: right;
+
+  @media (max-width: 840px) {
+    margin-right: auto;
+    left: 0;
+    right: auto;
+  }
+}
+
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+  background: none!important;
+  top: -10px;
+}

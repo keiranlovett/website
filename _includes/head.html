@@ -21,10 +21,6 @@
 
   {% assign settings = site.data.settings['settings'] %}
 
-  {% if settings.rtl == 1 %}
-  <!-- Template RTL -->
-  <link rel="stylesheet" href="{{ 'assets/css/rtl.css' | relative_url }}" />
-  {% endif %}
 
   {% if settings.dark_mode_toggle == 1 %}
     <script src="{{ 'assets/js/dark-mode-toggle.js' | relative_url }}" defer></script>

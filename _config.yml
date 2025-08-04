@@ -116,9 +116,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-email-protect
-  - jekyll-picture-tag-ng
+ # - jekyll-picture-tag-ng
   - jekyll-postfiles
-  - jekyll-sitemap
+ # - jekyll-sitemap
   - jekyll-redirect-from
 
 picture_tag_ng:
