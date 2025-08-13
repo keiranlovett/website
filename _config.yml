@@ -120,6 +120,7 @@ plugins:
   - jekyll-postfiles
  # - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-pdf-embed
 
 picture_tag_ng:
   backend: imagemagick
