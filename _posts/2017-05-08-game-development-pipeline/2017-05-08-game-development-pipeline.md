@@ -11,9 +11,9 @@ As I help to startup the new games studio **LKF Labs** within one of Hong Kong's
 
 To do this, I designed the **Game Production Pipeline** you see below — a visual blueprint that maps the entire lifecycle of a game across **Art, Design, Development, Production, Marketing, QA, and Release**.
 
-![Pipeline](game-development-pipeline.jpg)
+{% pdf "/note/2017/05/08/game-development-pipeline/game-development-pipeline.pdf" no_link %}
 
-[Download High Def PDF](game-development-pipeline.pdf)
+[Download](game-development-pipeline.pdf)
 {: style="color:gray; font-size: 90%; text-align: center;"}
 
 
