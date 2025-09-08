@@ -9,18 +9,19 @@ Welcome to my `/uses` page! This isn't meant to be a complete list of everything
 
 ## Workspace
 
-| Workstation| Mac Mini M1 2020                      |
-| Speakers   | Bose Companion 2 Series II            |
-| Monitor    | LG 34WN780-B 34" WQHD  Ultrawide      |
-| Keyboard   | Apple Keyboard with TouchID		     |
-| Mouse      | Logitech MX Master 3                  |
-| Dongle     | Satechi Multi Port USB-C V2           |
-| Mic        | Shure MV7                             |
-| NAS        | Synology DS420                        |
-| Headphones | Corsair HSBD                          |
-|            | AirPods Pro                           |
-| Desk       | Fully Jarvis w/ custom Bamboo top 	 |
-| Chair      | Herman Miller Aeron                   |
+| Workstation| Mac Mini M1 2020                                       |
+| Speakers   | Bose Companion 2 Series II                             |
+| Monitor    | LG 34WN780-B 34" WQHD  Ultrawide                       |
+| Keyboard   | Apple Keyboard with TouchID   		                      |
+| Mouse      | Logitech MX Master 3                                   |
+| Dongle     | OWC Thunderbolt 3 Dock                                 |
+| Webcam     | Alogic Illuminate USB-C Monitor Light Bar w/ 4K Webcam |
+| Mic        | Shure MV7                                              |
+| NAS        | Synology DS420                                         |
+| Headphones | Corsair HSBD                                           |
+|            | AirPods Pro                                            |
+| Desk       | Fully Jarvis w/ custom Bamboo top  	                  |
+| Chair      | Herman Miller Aeron                                    |
 
 > *I play a lot of Apple Music through my first-get HomePod. It was gifted to me after giving a presentation for Apple and I've made sure to keep it in pristine condition.*
 
