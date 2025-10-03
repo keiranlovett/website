@@ -1484,7 +1484,9 @@ footer {
   }
 }
 
-
+.hide {
+			display: none;
+		}
 
 @media (max-width: 840px) {
   .skills.circles ul li {

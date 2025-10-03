@@ -600,3 +600,38 @@ header .logo a {
   background: none!important;
   top: -10px;
 }
+
+
+/* Apply glitch animation to the image inside the link */
+.image a:hover img {
+  animation: .3s step-start infinite noise;
+}
+
+
+
+:where(a, a:visited) {
+  text-decoration-thickness: .1em;
+  text-underline-offset: .1em;
+  transition: font-variation-settings .2s, 
+              text-decoration-thickness .2s, 
+              font-weight .2s;
+}
+
+p {
+@media (hover: hover) {
+  a:hover {
+    animation: .3s step-start infinite noise;
+  }
+
+}
+}
+a.btn:hover, .btn:hover, .theme-toggle:hover {
+    animation: .3s step-start 0.4 noise;
+  }
+
+@keyframes noise {
+  0%   { filter: url(#noise-frame-1); }
+  33%  { filter: url(#noise-frame-2); }
+  66%  { filter: url(#noise-frame-3); }
+  100% { filter: url(#noise-frame-1); }
+}
