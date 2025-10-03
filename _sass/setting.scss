@@ -89,7 +89,7 @@ $form-border-hover: 1px solid $active-color;
   --selection-bg-color: #f26b38;  // Selection background color
   --text-hover-color: #dddddd;  // Hover text color
   --button-color: #dddddd;  // Hover text color
-  --image-filter: none;
+  --image-filter: invert(0%);
   --button-default-color: none;
 }
 

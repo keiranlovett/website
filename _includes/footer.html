@@ -10,3 +10,35 @@
 	<div class="copy">{{ footer.copy | markdownify }}</div>
 	<div class="clr"></div>
 </footer>
+
+<svg class="hide" viewBox="0 0 180 100" aria-hidden="true">
+  <filter id="noise1" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0 0.2" result="NOISE" numOctaves="2"></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="30" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>  
+  </filter>
+  <filter id="noise2" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0 0.4" result="NOISE" numOctaves="2"></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="30" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>  
+  </filter>
+  <filter id="noise3" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0 0.3" result="NOISE" numOctaves="2"></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="100" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>  
+  </filter>
+  <filter id="noise4" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="5 5" result="NOISE" numOctaves="2"></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="500" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>  
+  </filter>
+  
+  <filter id="noise-frame-1" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0 0.3" result="NOISE" numOctaves="2"></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="30" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>  
+  </filter>
+  <filter id="noise-frame-2" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0 0.9" result="NOISE" numOctaves="2"></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="30" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>  
+  </filter>
+  <filter id="noise-frame-3" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0 0.4" result="NOISE" numOctaves="2"></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="30" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>  
+  </filter>
+</svg>
