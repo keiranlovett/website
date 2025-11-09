@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "shell": { "executable": "zsh", "args": ["-l", "-c"] },
+    "env": {
+      "PATH": "${env:HOME}/.rbenv/shims:${env:HOME}/.rbenv/bin:${env:PATH}"
+    }
+  },
+  "tasks": [
+    {
+      "label": "Bundle: Install",
+      "type": "shell",
+      "command": "rbenv exec bundle install --path vendor/bundle",
+      "problemMatcher": []
+    },
+    {
+      "label": "Jekyll: Serve",
+      "type": "shell",
+      "command": "(sleep 2; open -a Safari http://127.0.0.1:4000) & rbenv exec bundle exec jekyll serve --livereload --host 127.0.0.1",
+      "presentation": { "reveal": "always", "panel": "shared" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Jekyll: Build",
+      "type": "shell",
+      "command": "rbenv exec bundle exec jekyll build",
+      "dependsOn": "Bundle: Install",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Doctor: Env",
+      "type": "shell",
+      "command": "echo RUBY=$(ruby -v); echo BUNDLE=$(bundle -v); which ruby; which bundle",
+      "problemMatcher": []
+    }
+  ]
+}
