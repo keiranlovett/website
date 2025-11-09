@@ -4,9 +4,9 @@ header:
   title: "Keiran Lovett"
   typed:
     - "Experienced Production Management Mindset."
-    - "Multi-Disciplinary Experience"
+    - "Multi-Disciplinary Experience."
     - "Three AAA Games Shipped."
-    - "50+ Products Shipped"
+    - "50+ Products Shipped."
 
 about:
   title: "About Me"
@@ -86,4 +86,4 @@ contacts_info:
 
 footer:
   social:
-  copy: "© 2025 Website built [personally](https://github.com/keiranlovett/website) by me."
+  copy: "© 2025 Built [personally](https://github.com/keiranlovett/website) by me. Updated "

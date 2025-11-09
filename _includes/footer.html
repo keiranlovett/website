@@ -7,7 +7,14 @@
 	  <a target="_blank" href="{{ link.url }}" title="{{ link.title }}"><span class="ion ion-{{ link.icon }}"></span></a>
 	  {% endfor %}
 	</div>
-	<div class="copy">{{ footer.copy | markdownify }}</div>
+	<div class="copy">
+{{ footer.copy
+   | markdownify
+   | replace: '<p>', ''
+   | replace: '</p>', ''
+   | strip
+}} {{ site.time | date: "%Y-%m-%d" }}
+  </div>
 	<div class="clr"></div>
 </footer>
 
