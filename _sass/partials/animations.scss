@@ -1,3 +1,6 @@
+
+@use "setting" as v; // local use inside this module
+
 .preloader {
   width: 100%;
   height: 100%;
@@ -8,14 +11,14 @@
   text-align: center;
 
   .load {
-    color: $active-color;
-    font-size: $small-size;
+    color: v.$active-color;
+    font-size: v.$small-size;
   }
 
   .typed-load,
   .typed-cursor {
-    color: $active-color;
-    font-size: $small-size;
+    color: v.$active-color;
+    font-size: v.$small-size;
   }
 }
 
@@ -43,14 +46,14 @@
   .glitch-effect:after,
   .glitch-effect-white:after {
     left: 2px;
-    text-shadow: -1px 0 $active-color;
+    text-shadow: -1px 0 v.$active-color;
     animation: glitch-1 2s infinite linear alternate-reverse;
   }
 
   .glitch-effect:before,
   .glitch-effect-white:before {
     left: -2px;
-    text-shadow: 2px 0 $active-color;
+    text-shadow: 2px 0 v.$active-color;
     animation: glitch-2 2s infinite linear alternate-reverse;
   }
 }

@@ -1,3 +1,5 @@
+@use "setting" as v; // local use inside this module
+
 /* 1. Header */
 header {
   position: fixed;
@@ -8,7 +10,7 @@ header {
   text-align: right;
   opacity: 1;
   visibility: visible;
-  @include transition(all 0.6s ease 0s);
+  transition: all 0.6s ease 0s;
   
   &.active {
     opacity: 1!important;
@@ -19,10 +21,10 @@ header {
       }
       &:after {
         bottom: 9px!important;
-        @include transform(rotate(-45deg));
+        transform: rotate(-45deg);
       }
       span {
-        @include transform(rotate(45deg));
+        transform: rotate(45deg);
       }
     }
     .head-top {
@@ -62,8 +64,8 @@ header {
         left: 0;
         width: 100%;
         height: 2px;
-        background: $dark-color;
-        @include transition(all 0.3s ease 0s);
+        background: v.$dark-color;
+        transition: all 0.3s ease 0s;
       }
       &:after {
         top: auto;
@@ -75,13 +77,13 @@ header {
         left: 0;
         width: 100%;
         height: 2px;
-        background: $dark-color;
+        background: v.$dark-color;
         margin-top: -1px;
-        @include transition(all 0.3s ease 0s);
+        transition: all 0.3s ease 0s;
       }
       &:hover {
         &:before, &:after, span {
-          background: $active-color;
+          background: v.$active-color;
         }
       }
       @media (max-width: 840px) {
@@ -93,14 +95,14 @@ header {
         opacity: 0;
         visibility: hidden;
         height: 0px;
-        @include transition(opacity 0.3s ease 0.5s);
+        transition: all 0.3s ease 0s;
       }
       ul {
         li {
           margin-left: 50px;
           display: inline-block;
           vertical-align: top;
-          @include transition(color 0.3s ease 0s);
+          transition: color 0.3s ease 0s;
           a {
             display: block;
             margin-top: 12px;
@@ -110,12 +112,12 @@ header {
           }
           &.active {
             a {
-              color: $active-color;
+              color: v.$active-color;
             }
             .btn {
-              color: $bg;
-              background: $active-color;
-              border: 1px solid $active-color;
+              color: v.$bg;
+              background: v.$active-color;
+              border: 1px solid v.$active-color;
             }
           }
         }
@@ -170,13 +172,13 @@ a.btn, .btn {
 }
 
 body {
-  @include light-theme;
+  @include v.light-theme;
   margin: 0;
   padding: 0;
   border: none;
-  font-family: $default-font;
-  font-size: $default-size;
-  letter-spacing: $default-letter-spacing;
+  font-family: v.$default-font;
+  font-size: v.$default-size;
+  letter-spacing: v.$default-letter-spacing;
   font-weight: 400;
   header, footer, .section {
     opacity: 0;
@@ -197,11 +199,11 @@ body {
 }
   /* Apply theme based on body class */
   body.light {
-    @include light-theme;
+    @include v.light-theme;
   }
 
   body.dark {
-    @include dark-theme;
+    @include v.dark-theme;
   }
 
 
@@ -248,7 +250,7 @@ a.btn,
 :-moz-placeholder,
 ::-moz-placeholder,
 :-ms-input-placeholder {
-  color: $extra-color;
+  color: v.$extra-color;
 }
 
 
@@ -261,20 +263,20 @@ input:focus::-moz-placeholder,
 textarea:focus::-moz-placeholder,
 input:focus:-ms-input-placeholder,
 textarea:focus:-ms-input-placeholder {
-  color: $dark-color;
+  color: v.$dark-color;
 }
 
 
 // 7. Error Input Styles
 input.error,
 textarea.error {
-  border-bottom: 1px solid $error-color !important;
+  border-bottom: 1px solid v.$error-color !important;
 
   &::-webkit-input-placeholder,
   &:-moz-placeholder,
   &::-moz-placeholder,
   &:-ms-input-placeholder {
-    color: $error-color;
+    color: v.$error-color;
   }
 }
 
@@ -333,10 +335,10 @@ table td {
   border-width: 1;
 }
 table th {
-  color: $dark-color;
+  color: v.$dark-color;
 }
 table td {
-  /* color: $default-color; */
+  /* color: v.$default-color; */
 }
 
 

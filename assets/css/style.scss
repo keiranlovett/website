@@ -2,7 +2,6 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import
-  "mixins",
-  "setting",
-  "main"
+@use 'mixins';
+@use 'setting';
+@use 'main';

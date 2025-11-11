@@ -12,6 +12,14 @@ $(function () {
   const lightIcon = toggleButton.querySelector('.lightToggle');
   const darkIcon = toggleButton.querySelector('.darkToggle');
 
+  function forceThemeMeta(isDark) {
+    const light = document.getElementById('theme-color-light');
+    const dark  = document.getElementById('theme-color-dark');
+    if (!light || !dark) return;
+    dark.media  = isDark ? 'all'    : 'not all';
+    light.media = isDark ? 'not all': 'all';
+  }
+    
   const updateToggleButton = (currentTheme) => {
     let labelText = '';
 
@@ -29,7 +37,7 @@ $(function () {
       setShaderDoInvert(1); // light → normal
     }
 
-
+  forceThemeMeta(currentTheme === 'dark');
     toggleButton.title = labelText;
     toggleButton.setAttribute('aria-label', labelText);
   };

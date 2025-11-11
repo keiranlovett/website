@@ -138,5 +138,10 @@ picture_versions:
     xl:
       out_size: 2000
       default: true
+
 sass:
+  load_paths:
+    - _sass
+    - assets/css
+    - node_modules
   style: compressed

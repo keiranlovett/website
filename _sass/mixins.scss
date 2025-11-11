@@ -1,11 +1,12 @@
+@use "setting" as v; // local use inside this module
 
 //–––– MIXINS ––––
 // Vendor-prefix transform
 @mixin transform-rotate($angle) {
-  -webkit-transform: rotate($angle);
-  -moz-transform:    rotate($angle);
-  -ms-transform:     rotate($angle);
-  transform:         rotate($angle);
+  -webkit-transform: $angle;
+  -moz-transform:    $angle;
+  -ms-transform:     $angle;
+  transform:         $angle;
 }
 
 // Box-sizing helper
@@ -18,10 +19,10 @@
 // shared styling for .bar and for .fill when it appears
 @mixin bar-fill-base {
   position: absolute;
-  width:  $inner-size;
-  height: $inner-size;
+  width:  v.$inner-size;
+  height: v.$inner-size;
   clip:   rect(0em, 0.5em, 1em, 0em);
-  border: $inner-offset solid $active-color;
+  border: v.$inner-offset solid v.$active-color;
   border-radius: 50%;
-  @include transform-rotate(0deg);
+  transform-rotate: 0deg;
 }

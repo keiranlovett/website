@@ -1,3 +1,5 @@
+@use "setting" as v; // local use inside this module
+
 /* Alignment */
 .align-center  { text-align: center !important; }
 .align-right   { text-align: right !important; }
@@ -33,20 +35,20 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  font-family: $default-font;
+  font-family: v.$default-font;
   margin: 0 0 30px;
 }
 
-h1 { font-size: $h1-size; }
-h2 { font-size: $h2-size; }
-h3 { font-size: $h3-size; }
-h4 { font-size: $h4-size; }
-h5 { font-size: $h5-size; }
-h6 { font-size: $h6-size; }
+h1 { font-size: v.$h1-size; }
+h2 { font-size: v.$h2-size; }
+h3 { font-size: v.$h3-size; }
+h4 { font-size: v.$h4-size; }
+h5 { font-size: v.$h5-size; }
+h6 { font-size: v.$h6-size; }
 
 p {
-  font-size: $default-size;
-  line-height: $line-height;
+  font-size: v.$default-size;
+  line-height: v.$line-height;
   margin: 30px 0;
   padding: 0;
 
@@ -84,7 +86,7 @@ blockquote {
   }
 
   cite {
-    font-size: $small-size;
+    font-size: v.$small-size;
   }
 }
 
@@ -105,13 +107,13 @@ a.btn,
   height: 42px;
   line-height: 40px;
   text-align: center;
-  font-size: $default-size;
+  font-size: v.$default-size;
   background: none;
   position: relative;
   overflow: hidden;
   padding: 0 30px;
   cursor: pointer;
-  @include transition(all 0.3s ease 0s);
+  //transition(all 0.3s ease 0s);
 
   &.fill { }
   &:hover { }
@@ -222,7 +224,7 @@ td {
     vertical-align: top;
 
     &.current {
-      color: $extra-color;
+      color: v.$extra-color;
     }
   }
 }
@@ -244,22 +246,22 @@ td {
         text-align: center;
         position: relative;
         line-height: 24px;
-        font-size: $h2-size;
+        font-size: v.$h2-size;
         text-transform: uppercase;
-        letter-spacing: $extra-letter-spacing;
-        @include transition(all 0.3s ease 0s);
-        @include box-shadow(inset 0 -6px 0 $extra-active-color);
+        letter-spacing: v.$extra-letter-spacing;
+        transition: all 0.3s ease 0s;
+        box-shadow: inset 0 -6px 0 v.$extra-active-color;
       }
     }
   }
 }
 
 .h-title {
-  font-size: $title-size;
-  font-family: $default-font;
+  font-size: v.$title-size;
+  font-family: v.$default-font;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: $extra-letter-spacing;
+  letter-spacing: v.$extra-letter-spacing;
   margin: 10px 0 15px;
 
   &.blog_title {
@@ -297,7 +299,7 @@ td {
 }
 
 .h-subtitle {
-  font-size: $subtitle-size;
+  font-size: v.$subtitle-size;
   padding: 0 0 20px;
 }
 
@@ -305,7 +307,7 @@ td {
 .date,
 .category {
   display: inline-block;
-  font-size: $extra-small-size;
+  font-size: v.$extra-small-size;
   margin-bottom: 10px;
 }
 
@@ -314,13 +316,13 @@ td {
   height: 20px;
   line-height: 18px;
   font-weight: 500;
-  color: $active-color;
-  border: 1px solid $active-color;
+  color: v.$active-color;
+  border: 1px solid v.$active-color;
 }
 
 .category {
-  color: $default-color;
+  color: v.$default-color;
   text-transform: uppercase;
-  letter-spacing: $extra-letter-spacing;
-  @include box-shadow(inset 0 -6px 0 $extra-active-color);
+  letter-spacing: v.$extra-letter-spacing;
+  box-shadow: inset 0 -6px 0 v.$extra-active-color;
 }

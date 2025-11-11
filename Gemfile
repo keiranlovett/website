@@ -19,11 +19,15 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-seo-tag"
   gem "jekyll-pdf-embed"
+  gem "jekyll-github-metadata"
   gem "jekyll-postfiles"
 #  gem "jekyll-sitemap"
   gem "jekyll-redirect-from"
   gem "jekyll-email-protect"
 end
+
+gem "jekyll-sass-converter", ">= 3.0"   # v3+ switches Jekyll to Dart Sass
+gem "sass-embedded"                      # Dart Sass engine
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
