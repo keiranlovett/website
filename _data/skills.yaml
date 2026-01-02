@@ -5,11 +5,11 @@ columns:
     items:
       - label: "Methodologies: Scrum, Kanban, Waterfall"
         value: "" #0-100 progress in %
-      - label: "High-Level Planning & Dependency Management"
+      - label: "Sprint Planning, Reviews, & Retrospectives"
         value: "" #0-100 progress in %
-      - label: "Product Backlog Management & Grooming"
+      - label: "High-Level & Low-Level Planning"
         value: "" #0-100 progress in %
-      - label: "Roadmap Planning & Milestones"
+      - label: "Product Management"
         value: "" #0-100 progress in %
       - label: "Scope & Budget Breakdowns"
         value: "" #0-100 progress in %
@@ -17,13 +17,9 @@ columns:
         value: "" #0-100 progress in %
       - label: "KPIs, goal setting, & tracking progress"
         value: "" #0-100 progress in %
-      - label: "Sprint Planning, Reviews, & Retrospectives"
-        value: "" #0-100 progress in %
       - label: "Tracking Project & Team Velocity"
         value: "" #0-100 progress in %
-      - label: "Creating & Presenting Project Presentations"
-        value: "" #0-100 progress in %
-      - label: "Outsource Management"
+      - label: "Co-Development & Outsource Management"
         value: "" #0-100 progress in %
       - label: "Individual Contributor / People Management"
         value: "" #0-100 progress in %
@@ -31,7 +27,7 @@ columns:
         value: "" #0-100 progress in %
       - label: "Onboarding & Documentation"
         value: "" #0-100 progress in %
-      - label: "Cross-country & Timezone Collaboration"
+      - label: "Leadership & Public speaking"
         value: "" #0-100 progress in %
       - label: "Stakeholder Management"
         value: "" #0-100 progress in %
@@ -41,7 +37,7 @@ columns:
         value: "" #0-100 progress in %
   - type: "list" #skills progress type - default, dotted, circles, list
     title: "Tools"
-    enabled: 0
+    enabled: 1
     items:
     - label: "JIRA (Project Management)"
       value: "" #0-100 progress in %
@@ -58,6 +54,44 @@ columns:
     - label: "Unreal Engine (Game Development)"
       value: "" #0-100 progress in %
     - label: "Steamworks (Release Management)"
+      value: "" #0-100 progress in %
+    - label: "Maya (3D Modeling & Animation)"
+      value: "" #0-100 progress in %
+    - label: "Substance Painter (Texturing)"
+      value: "" #0-100 progress in %
+    - label: "SketchUp (3D Design & Modeling)"
+      value: "" #0-100 progress in %
+    - label: "Adobe After Effects (Visual Effects & Motion Graphics)"
+      value: "" #0-100 progress in %
+    - label: "Adobe Premiere Pro (Video Editing)"
+      value: "" #0-100 progress in %
+    - label: "Adobe Illustrator (Vector Art & UI Design)"
+      value: "" #0-100 progress in %
+    - label: "Adobe Animate (2D Animation)"
+      value: "" #0-100 progress in %
+    - label: "Adobe InDesign (Layout & Publishing)"
+      value: "" #0-100 progress in %
+    - label: "Perforce (Version Control)"
+      value: "" #0-100 progress in %
+    - label: "Git (Version Control)"
+      value: "" #0-100 progress in %
+  - type: "list" #skills progress type - default, dotted, circles, list
+    title: "Design Skills"
+    enabled: 1
+    items:
+    - label: "Player-Centric Design Philosophy"
+      value: "" #0-100 progress in %
+    - label: "Creative thinking"
+      value: "" #0-100 progress in %
+    - label: "Balancing Gameplay Mechanics"
+      value: "" #0-100 progress in %
+    - label: "Accessibility and Inclusivity Considerations."
+      value: "" #0-100 progress in %
+    - label: "Game Design Documentation"
+      value: "" #0-100 progress in %
+    - label: "Unreal Engine (Game Development)"
+      value: "" #0-100 progress in %
+    - label: "High knowledge of games and game history."
       value: "" #0-100 progress in %
     - label: "Maya (3D Modeling & Animation)"
       value: "" #0-100 progress in %

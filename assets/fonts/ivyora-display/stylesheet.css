@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-Bold.eot');
+    src: local('IvyOra Display Bold'), local('IvyOraDisplay-Bold'),
+        url('IvyOraDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-Bold.woff2') format('woff2'),
+        url('IvyOraDisplay-Bold.woff') format('woff'),
+        url('IvyOraDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-Light.eot');
+    src: local('IvyOra Display Light'), local('IvyOraDisplay-Light'),
+        url('IvyOraDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-Light.woff2') format('woff2'),
+        url('IvyOraDisplay-Light.woff') format('woff'),
+        url('IvyOraDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-BoldItalic.eot');
+    src: local('IvyOra Display Bold Italic'), local('IvyOraDisplay-BoldItalic'),
+        url('IvyOraDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-BoldItalic.woff2') format('woff2'),
+        url('IvyOraDisplay-BoldItalic.woff') format('woff'),
+        url('IvyOraDisplay-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-MediumItalic.eot');
+    src: local('IvyOra Display Medium Italic'), local('IvyOraDisplay-MediumItalic'),
+        url('IvyOraDisplay-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-MediumItalic.woff2') format('woff2'),
+        url('IvyOraDisplay-MediumItalic.woff') format('woff'),
+        url('IvyOraDisplay-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-LightItalic.eot');
+    src: local('IvyOra Display Light Italic'), local('IvyOraDisplay-LightItalic'),
+        url('IvyOraDisplay-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-LightItalic.woff2') format('woff2'),
+        url('IvyOraDisplay-LightItalic.woff') format('woff'),
+        url('IvyOraDisplay-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-Medium.eot');
+    src: local('IvyOra Display Medium'), local('IvyOraDisplay-Medium'),
+        url('IvyOraDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-Medium.woff2') format('woff2'),
+        url('IvyOraDisplay-Medium.woff') format('woff'),
+        url('IvyOraDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-Regular.eot');
+    src: local('IvyOra Display Regular'), local('IvyOraDisplay-Regular'),
+        url('IvyOraDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-Regular.woff2') format('woff2'),
+        url('IvyOraDisplay-Regular.woff') format('woff'),
+        url('IvyOraDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-Thin.eot');
+    src: local('IvyOra Display Thin'), local('IvyOraDisplay-Thin'),
+        url('IvyOraDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-Thin.woff2') format('woff2'),
+        url('IvyOraDisplay-Thin.woff') format('woff'),
+        url('IvyOraDisplay-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-RegularItalic.eot');
+    src: local('IvyOra Display Regular Italic'), local('IvyOraDisplay-RegularItalic'),
+        url('IvyOraDisplay-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-RegularItalic.woff2') format('woff2'),
+        url('IvyOraDisplay-RegularItalic.woff') format('woff'),
+        url('IvyOraDisplay-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('IvyOraDisplay-ThinItalic.eot');
+    src: local('IvyOra Display Thin Italic'), local('IvyOraDisplay-ThinItalic'),
+        url('IvyOraDisplay-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('IvyOraDisplay-ThinItalic.woff2') format('woff2'),
+        url('IvyOraDisplay-ThinItalic.woff') format('woff'),
+        url('IvyOraDisplay-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
