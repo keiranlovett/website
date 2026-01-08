@@ -1,4 +1,5 @@
 @use "setting" as v; // local use inside this module
+@use "sass:color";
 
 /* 1. Header */
 header {
@@ -326,6 +327,9 @@ header {
 }
 
 
+.typed-dud {
+  color: color-mix(in srgb, var(--header-color) 100%, var(--text-color));
+}
 // 12. Tables
 table,
 table th,

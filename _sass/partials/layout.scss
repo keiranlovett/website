@@ -293,11 +293,8 @@ label.error {
 		}
 	}
 
-	.h-subtitle {
-		font-size: v.$subtitle-size;
-		padding: 0 0 20px 0;
-	}
 }
+
 	.section.started {
 		padding: 0;
 		margin: 0;
@@ -313,15 +310,7 @@ label.error {
 			vertical-align: middle;
 			text-align: center;
 			position: relative;
-			
-			.typed-subtitle, .typed-bread {
-				font-size: v.$subtitle-size;
-			}
-
-			.typed-cursor {
-				font-size: v.$subtitle-size;
-			}
-
+	
 		}
 
 		.mouse_btn {

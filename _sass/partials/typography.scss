@@ -301,6 +301,24 @@ td {
 .h-subtitle {
   font-size: v.$subtitle-size;
   padding: 0 0 20px;
+
+  @media (max-width: 1060px) {
+      font-size: 32px;
+    
+  }
+
+  @media (max-width: 840px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 580px) {
+    font-size: 14px;
+
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 }
 
 /* Date & Category Badges */

@@ -1,0 +1,17 @@
+{% assign content = site.data.content['body'] %}
+
+<!-- Skills -->
+<div class="section">
+    <div class="content">
+    	{{ if content.title != '' }}
+		<div class="title">
+			<div class="title_inner">{{ content.title }}</div>
+		</div>
+		{{ endif }}
+		{{ if content.content != '' }}
+        <div class="desc">
+			{{ content.text | markdownify }}
+        </div>
+		{{ endif }}
+	</div>
+</div>
