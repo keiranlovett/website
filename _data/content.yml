@@ -12,12 +12,23 @@ about:
   title: "About Me"
   image: "assets/images/profile.jpg"
   text: >
-          **G'day! I'm Keiran Lovett**.  
+          #### G'day! I'm Keiran Lovett.  
           
-          I am an experienced games producer with over a decade in the games industry, spanning both indie and AAA titles. I have led development pipelines and coordinated cross-functional teams through all stages of production—from pre-production to post-launch. With a background in software development, game design, and user experience, I bring a versatile skill set that bridges creative vision and technical execution to drive projects to successful completion.
+          I am an experienced games producer with over a decade in the professional games industry, spanning both indie and AAA titles. I have led development pipelines and coordinated cross-functional teams through all stages of production—from pre-production to post-launch. With a background in software development, game design, and user experience, I bring a versatile skill set that bridges creative vision and technical execution to drive projects to successful completion.
   download:
     text: "Download CV"
     link: "assets/files/keiranlovett_cv_2025.pdf"
+
+
+body:
+  title: "My Role As A Producer..."
+  text: >
+          ##### _(Aside from pestering people about Jira tickets, obviously)_
+          
+          Everyone’s got their own definition of what a producer actually is, and I’m a fast learner who can fill that role on your team. I’ve shipped multiple games as both a leader and an individual contributor. Over the last few years I’ve been honing my craft with co-development management, making sure distributed teams are set up for success. 
+          <br><br>
+          I also work a lot with current students and recent graduates to help them get their footing in the professional space. If you need feedback on how to improve your résumé, want someone to run you through a mock interview, or have something else I can help with, I’m here for you!
+
 
 showreel:
   title: "Showreel"
@@ -32,7 +43,6 @@ links:
       url: uses
     - title: Mentoring
       url: mentor
-
 
 services:
   title: "Ask me more about..."

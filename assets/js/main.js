@@ -9,12 +9,6 @@ $(function () {
 	var height = $(window).height();
 	//$('.section.started').css({'height': height-60});
 	
-	/* Typed preload text */
-	$('.typed-load').typed({
-		stringsElement: $('.typing-load'),
-		loop: true
-	});
-	
 	
 	function initPreloader() {
 	    // Check if preloader exists
@@ -34,24 +28,18 @@ $(function () {
 	    }
 	  }
 
-	   function initTyped() {
-    // Initialize Typed.js for subtitle
-    const subtitle = $('.typed-subtitle');
-    if (subtitle.length > 0) {
-      subtitle.typed({
-        stringsElement: $('.typing-subtitle'),
-        loop: true,
-      });
-    }
+	function initTyped() {
+		// Initialize Typed.js for subtitle
+		const subtitle = $('.typed-subtitle');
+		if (subtitle.length > 0) {
+		subtitle.typed({
+			stringsElement: $('.typing-subtitle'),
+			chars: "▓▒░█▌▐▀▄■□▪▫▖▗▘▙▚▛▜▝▞▟",
+			loop: true,
+			showCursor: false
+		});
+	}
 
-    // Initialize Typed.js for breadcrumbs
-    const breadcrumbs = $('.typed-bread');
-    if (breadcrumbs.length > 0) {
-      breadcrumbs.typed({
-        stringsElement: $('.typing-bread'),
-        showCursor: false,
-      });
-    }
   }
 
   function handleHashScroll() {
@@ -73,10 +61,12 @@ $(function () {
   // Wait for window load
   $(window).on('load', function () {
     initPreloader();
-    initTyped();
     handleHashScroll();
   });
 	
+    initTyped();
+
+
 	/*Fade-out animation between load pages*/
 	$('header .top-menu, .typed-bread').on('click', 'a', function(){
 		var link = $(this).attr('href');
