@@ -1,6 +1,28 @@
 @use "setting" as v; // local use inside this module
 @use "sass:color";
 
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+	/* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+	outline: none;
+	background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+	/* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+	background: transparent;
+}
+
+a:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid red;
+	background: transparent;
+}
+
 /* 1. Header */
 header {
   position: fixed;
@@ -171,6 +193,7 @@ a.btn, .btn {
   -webkit-transition: background 0.3s ease 0s;
   -o-transition: background 0.3s ease 0s;
 }
+
 
 body {
   @include v.light-theme;

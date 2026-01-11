@@ -1,5 +1,29 @@
 @use "setting" as v; // local use inside this module
 
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('./fonts/ivyora-display/IvyOraDisplay-Light.eot');
+    src: local('./fonts/ivyora-display/IvyOra Display Light'), local('IvyOraDisplay-Light'),
+        url('./fonts/ivyora-display/IvyOraDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/ivyora-display/IvyOraDisplay-Light.woff2') format('woff2'),
+        url('./fonts/ivyora-display/IvyOraDisplay-Light.woff') format('woff'),
+        url('./fonts/ivyora-display/IvyOraDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'widescreen';
+    src:
+        url('./fonts/widescreen-ex.woff2') format('woff2'),
+        url('./fonts/widescreen-ex.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Alignment */
 .align-center  { text-align: center !important; }
 .align-right   { text-align: right !important; }
@@ -57,11 +81,26 @@ p {
   }
 }
 
+.single-post-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--page-padding-y) var(--page-padding-x) 0;
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+    
+}
+
 strong {
   font-weight: 500;
 }
 
-
+em {
+  //  font-family: "ivyora-display", serif;
+    font-weight: 300;
+    line-height: 1;
+}
 
 
 /* Blockquote */
@@ -257,12 +296,13 @@ td {
 }
 
 .h-title {
-  font-size: v.$title-size;
-  font-family: v.$default-font;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: v.$extra-letter-spacing;
-  margin: 10px 0 15px;
+		font-family: v.$title-font;
+    font-size: clamp(2rem, 7vw, 10rem);
+    font-weight:700;
+    line-height: 0.9;
+    text-transform: uppercase;
+		letter-spacing: v.$extra-letter-spacing;
+		margin: 10px 0 15px 0;
 
   &.blog_title {
     font-size: 40px;
@@ -275,9 +315,6 @@ td {
   }
 
   @media (max-width: 840px) {
-    font-size: 52px;
-    padding: 0 20px;
-
     &.blog_title {
       font-size: 26px;
     }
@@ -290,8 +327,6 @@ td {
   }
 
   @media (max-width: 480px) {
-    font-size: 42px;
-
     &.blog_title {
       font-size: 26px;
     }

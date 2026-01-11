@@ -256,43 +256,7 @@ label.error {
 		}
 	}
 
-	.h-title {
-		font-size: v.$title-size;
-		font-family: v.$default-font;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: v.$extra-letter-spacing;
-		margin: 10px 0 15px 0;
-
-		&.blog_title {
-			font-size: 40px;
-		}
-
-		@media (max-width: 1060px) {
-			&.blog_title {
-				font-size: 40px;
-			}
-		}
-		@media (max-width: 840px) {
-			font-size: 52px;
-			padding: 0 20px;
-			&.blog_title {
-				font-size: 26px;
-			}
-		}
-		@media (max-width: 580px) {
-			span {
-				display: block;
-			}
-		}
-		@media (max-width: 480px) {
-			font-size: 42px;
-			&.blog_title {
-				font-size: 26px;
-			}
-		}
-	}
-
+	
 }
 
 	.section.started {
