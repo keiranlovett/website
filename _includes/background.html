@@ -7,11 +7,8 @@
     var imageurl = "{{ 'assets/images/' | append: settings.dynamic_background | relative_url }}";
 </script>
 
-<script type="x-shader/x-fragment" id="fragmentShader">
-#define TWO_PI 6.2831853072
+<script type="x-shader/x-fragment" id="fragmentShader">#define TWO_PI 6.2831853072
 #define PI 3.14159265359
-
-uniform int doInvertImage;
 
 precision highp float;
 
@@ -22,42 +19,108 @@ uniform float scroll;
 uniform float velocity;
 uniform sampler2D texture;
 
+// Theme semantic (0=light,1=dark)
+uniform float uThemeMix;
+
+// Curtain shaping controls
+uniform float uEdge;
+uniform float uCurveAmp;
+uniform float uCurvePower;
+uniform float uCurvePhase;
+uniform float uCurveBias;
+uniform float uSkew;
+
+// Background blending
+uniform float uBgBlend;
+uniform vec3  uBgLight;
+uniform vec3  uBgDark;
+
+// Style
+uniform float uShadowStrength;
+uniform float uTintStrength;
+
 const float timescale = 0.03;
 const float twist = 1.0;
 const float scrollSpeed = 0.15;
 
 vec2 rotate(vec2 v, float angle) {
-    float c = cos(angle);
-    float s = sin(angle);
-    return v * mat2(c, -s, s, c);
+  float c = cos(angle);
+  float s = sin(angle);
+  return v * mat2(c, -s, s, c);
+}
+float nsin(float value) {
+  return sin(value * TWO_PI) * 0.5 + 0.5;
 }
 
-float nsin(float value) {
-    return sin(value * TWO_PI) * 0.5 + 0.5;
+// Tiny deterministic dither to reduce 8-bit banding
+float dither(vec2 p) {
+  return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+// Full-width bottom->top curtain mask (no noise). 
+// Padded so that at theme=0 => coverage=0 everywhere, theme=1 => coverage=1 everywhere (no slivers).
+float curtainMask(vec2 uv){
+  float t = clamp(uThemeMix, 0.0, 1.0);
+
+  // Curve + skew can move the edge up/down by up to:
+  // - curveAmp (approximately)
+  // - skew * 0.5 across the screen
+  // Add padding so the edge always starts off-screen and ends off-screen even with shaping.
+  float pad = uEdge + abs(uCurveAmp) + abs(uSkew) * 0.5 + 0.03;
+
+  // Base front position travels from below to above the screen.
+  float front = mix(-pad, 1.0 + pad, t);
+
+  // Curved edge: one side leads (deterministic)
+  float x = clamp(uv.x + uCurvePhase + uCurveBias, 0.0, 1.0);
+  float bulge = sin(PI * x);
+  bulge = pow(max(bulge, 0.0), uCurvePower) * uCurveAmp;
+
+  float tilt = (uv.x - 0.5) * uSkew;
+
+  float edgePos = front + bulge + tilt;
+
+  // Feathered step in Y
+  return smoothstep(edgePos - uEdge, edgePos + uEdge, uv.y);
 }
 
 void main(void) {
+  float scrollModifier = scroll * scrollSpeed;
+  float time = globaltime * timescale;
 
-    float scrollModifier = scroll*scrollSpeed;
-    float time = globaltime * timescale;
-    vec2 center = vec2(sin(TWO_PI * time * 0.2), cos(TWO_PI * time * 0.2)) * nsin(time * 0.3) * 0.5;
-    vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5 - center) * vec2(aspect, 1.0);
-    float len = 1.0 - length(tx);
-    float zoom = 1.0 + scrollModifier - len * 3.0 * (1.0 - scrollModifier) + len * velocity * 2.0;
+  vec2 center = vec2(sin(TWO_PI * time * 0.2), cos(TWO_PI * time * 0.2)) * nsin(time * 0.3) * 0.5;
+  vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5 - center) * vec2(aspect, 1.0);
+  float len = 1.0 - length(tx);
+  float zoom = 1.0 + scrollModifier - len * 3.0 * (1.0 - scrollModifier) + len * velocity * 2.0;
 
-    vec4 imgColor = texture2D(
-            texture,
-            rotate(
-                    (tx + center) * vec2(1.0, -1.0) * zoom,
-                    twist * TWO_PI * nsin(len + time) * scrollModifier + time
-            ) + 0.5
-    );
+  vec4 imgColor = texture2D(
+    texture,
+    rotate(
+      (tx + center) * vec2(1.0, -1.0) * zoom,
+      twist * TWO_PI * nsin(len + time) * scrollModifier + time
+    ) + 0.5
+  );
 
-    if (doInvertImage == 1) {
-        imgColor.rgb = vec3(1.0) - imgColor.rgb;  // Invert the color if doInvertImage is true
-    }
+  // Your site look: light is inverted, dark is raw
+  vec3 rawTex   = imgColor.rgb;
+  vec3 lightTex = vec3(1.0) - rawTex;
+  vec3 darkTex  = rawTex;
 
-    gl_FragColor = imgColor;
+  vec2 uv = gl_FragCoord.xy / resolution.xy;
+  float m = curtainMask(uv);
+
+  vec3 bg = mix(uBgLight, uBgDark, m);
+  vec3 texBlend = mix(lightTex, darkTex, m);
+
+  vec3 col = mix(texBlend, bg, clamp(uBgBlend, 0.0, 1.0));
+
+  col *= (1.0 - (m * uShadowStrength));
+  col = mix(col, col * vec3(0.92, 0.97, 1.05), uTintStrength * m);
+
+  float d = (dither(gl_FragCoord.xy + globaltime * 10.0) - 0.5) / 255.0;
+  col += d;
+
+  gl_FragColor = vec4(col, 1.0);
 }
 </script>
 
