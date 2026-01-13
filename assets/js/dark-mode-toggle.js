@@ -20,10 +20,12 @@ $(function () {
     light.media = isDark ? 'not all': 'all';
   }
     
-  const updateToggleButton = (currentTheme) => {
+  const updateToggleButton = (currentTheme, animateBg = false) => {
     let labelText = '';
 
-    if (currentTheme === 'dark') {
+    const isDarkTheme = (currentTheme === 'dark');
+
+    if (isDarkTheme) {
       body.classList.add('dark');
       lightIcon.style.display = 'none';
       darkIcon.style.display = 'inline';
@@ -37,7 +39,19 @@ $(function () {
       setShaderDoInvert(1); // light → normal
     }
 
-  forceThemeMeta(currentTheme === 'dark');
+    // Drive the non-uniform WebGL background transition.
+    // We intentionally keep the rest of the site's CSS theme behavior as-is
+    // (the user said they're happy triggering the CSS changes), while the WebGL
+    // background blends smoothly via the mask uniforms.
+    if (window.bgTransitionDriver) {
+      if (animateBg) {
+        window.bgTransitionDriver.transitionTo(isDarkTheme ? 1 : 0, { duration: 900 });
+      } else {
+        window.bgTransitionDriver.setProgress(isDarkTheme ? 1 : 0);
+      }
+    }
+
+    forceThemeMeta(isDarkTheme);
     toggleButton.title = labelText;
     toggleButton.setAttribute('aria-label', labelText);
   };
@@ -45,10 +59,10 @@ $(function () {
   // Initial setup — check localStorage first, else use system preference
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme === 'dark' || storedTheme === 'light') {
-    updateToggleButton(storedTheme);
+    updateToggleButton(storedTheme, false);
   } else {
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    updateToggleButton(systemPrefersDark ? 'dark' : 'light');
+    updateToggleButton(systemPrefersDark ? 'dark' : 'light', false);
   }
 
   // User click → toggle between light and dark
@@ -58,11 +72,11 @@ $(function () {
     if (isDark) {
       body.classList.remove('dark');
       localStorage.setItem('theme', 'light');
-      updateToggleButton('light');
+      updateToggleButton('light', true);
     } else {
       body.classList.add('dark');
       localStorage.setItem('theme', 'dark');
-      updateToggleButton('dark');
+      updateToggleButton('dark', true);
     }
   });
 
@@ -70,7 +84,7 @@ $(function () {
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
     const userSetTheme = localStorage.getItem('theme');
     if (userSetTheme !== 'dark' && userSetTheme !== 'light') {
-      updateToggleButton(e.matches ? 'dark' : 'light');
+      updateToggleButton(e.matches ? 'dark' : 'light', true);
     }
   });
 

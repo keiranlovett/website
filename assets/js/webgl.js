@@ -9,6 +9,18 @@
 	// Current invert value (0 = normal, 1 = inverted)
 	var currentInvertValue = 0;
 
+	// Transition uniforms (non-uniform mask) sourced from bgTransitionDriver if present.
+	// Defaults represent "light" (no dark mask).
+	var transitionUniforms = {
+		uStart0: 0.0,
+		uStart2: 1.0,
+		uStartX: 0.0,
+		uStartY: 0.1,
+		uMultiX: -0.4,
+		uMultiY: 0.45,
+		uThemeMix: 0.0
+	};
+
 	// Expose setter globally (so toggle button can call it)
 	window.setShaderDoInvert = function(value) {
 		currentInvertValue = value;
@@ -40,7 +52,16 @@
 				scroll: regl.prop('scroll'),
 				velocity: regl.prop('velocity'),
 				texture: regl.texture(img),
-				doInvertImage: regl.prop('doInvertImage') // ADD THIS
+				doInvertImage: regl.prop('doInvertImage'),
+
+				// Bg transition (non-uniform mask) uniforms
+				uStart0: regl.prop('uStart0'),
+				uStart2: regl.prop('uStart2'),
+				uStartX: regl.prop('uStartX'),
+				uStartY: regl.prop('uStartY'),
+				uMultiX: regl.prop('uMultiX'),
+				uMultiY: regl.prop('uMultiY'),
+				uThemeMix: regl.prop('uThemeMix')
 			}
 		});
 
@@ -64,6 +85,13 @@
 			// Clear the draw buffer
 			regl.clear({ color: [0, 0, 0, 0] });
 
+			// Pull latest transition uniforms (if the driver is present)
+			// This allows dark-mode-toggle (and any other controller) to animate
+			// the same non-uniform mask over the existing WebGL background.
+			if (window.bgTransitionDriver && typeof window.bgTransitionDriver.getUniforms === 'function') {
+				transitionUniforms = window.bgTransitionDriver.getUniforms();
+			}
+
 			// Execute a REGL draw command
 			draw({
 				globaltime: ctx.time,
@@ -71,7 +99,15 @@
 				aspect: aspect,
 				scroll: scroll,
 				velocity: velocity,
-				doInvertImage: currentInvertValue // Pass current value
+				doInvertImage: currentInvertValue, // Pass current value
+
+				uStart0: transitionUniforms.uStart0,
+				uStart2: transitionUniforms.uStart2,
+				uStartX: transitionUniforms.uStartX,
+				uStartY: transitionUniforms.uStartY,
+				uMultiX: transitionUniforms.uMultiX,
+				uMultiY: transitionUniforms.uMultiY,
+				uThemeMix: transitionUniforms.uThemeMix
 			});
 		});
 	};
