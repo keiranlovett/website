@@ -23,4 +23,4 @@ tools:
   - Unity
 ---
 
-Leading cross-disciplinary development on an unannounced project. Managing internal and external teams.
+Leading cross-disciplinary development on Bluey's: Happy Snaps and unannounced project. Managing internal and external teams.
