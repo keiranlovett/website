@@ -37,7 +37,7 @@ columns:
         value: "" #0-100 progress in %
   - type: "list" #skills progress type - default, dotted, circles, list
     title: "Tools"
-    enabled: 1
+    enabled: 0
     items:
     - label: "JIRA (Project Management)"
       value: "" #0-100 progress in %
@@ -77,7 +77,7 @@ columns:
       value: "" #0-100 progress in %
   - type: "list" #skills progress type - default, dotted, circles, list
     title: "Design Skills"
-    enabled: 1
+    enabled: 0
     items:
     - label: "Player-Centric Design Philosophy"
       value: "" #0-100 progress in %

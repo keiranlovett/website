@@ -11,10 +11,9 @@
 {% endif %}
 
 
-{% for column in content.columns %}
-{% if column.enabled == 1 %}
 
-<!-- Skills -->
+
+<!-- Skills + Qualifications -->
 <div class="section">
     <div class="content">
     	{{ if ui_text.skills != '' }}
@@ -52,6 +51,8 @@
             </ul>
 		</div>
 
+		{% for column in content.columns %}
+		{% if column.enabled == 1 %}
 		<!-- Skills -->
 		<div class="skills{% if column.type %} {{ column.type }}{% endif %}">
 			<ul>
@@ -104,7 +105,8 @@
 				{% endif %}
 			</ul>
 		</div>
+		{% endif %}
+		{% endfor %}
+
 	</div>
 </div>
-{% endif %}
-{% endfor %}
