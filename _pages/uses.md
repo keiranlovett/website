@@ -9,11 +9,11 @@ Welcome to my `/uses` page! This isn't meant to be a complete list of everything
 
 ## Workspace
 
-| Workstation| Mac Mini M1 2020                                       |
+| Workstation| Macbook Pro M4 14"                                     |
 | Speakers   | Bose Companion 2 Series II                             |
 | Monitor    | LG 34WN780-B 34" WQHD  Ultrawide                       |
 | Keyboard   | Apple Keyboard with TouchID   		                      |
-| Mouse      | Logitech MX Master 3                                   |
+| Mouse      | Logitech MX Master 4                                   |
 | Dongle     | OWC Thunderbolt 3 Dock                                 |
 | Webcam     | Alogic Illuminate USB-C Monitor Light Bar w/ 4K Webcam |
 | Mic        | Shure MV7                                              |
